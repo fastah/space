@@ -19,3 +19,5 @@
 
 # Go workspace file
 go.work
+
+bootstrap-5.3.2-examples/
