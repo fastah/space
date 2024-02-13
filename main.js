@@ -111,7 +111,7 @@ function updateUIwithNewLocation(event) {
         console.log("Not a location change event?");
         return;
     }
-    if (!('sd' in event.detail)) {
+    if (!('sd' in event.detail) || event.detail.sd == null) {
         console.log("Not a starlink IP address");
         let explainerText = "You are not on Starlink";
         if ('ld' in event.detail) {
