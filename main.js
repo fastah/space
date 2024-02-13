@@ -12,8 +12,8 @@ async function initRfc8805meta(provider) {
         const request = new Request(requestURL);
         const response = await fetch(request);
         const feedmeta = await response.json();
-        const lmt = Date.parse(feedmeta["last-modified"]);
-        console.log("[" + provider + "] RFC8805 metadata last-modified:" + lmt);
+        const lmt = Date.parse(feedmeta["lastModified"]);
+        console.log("[" + provider + "] RFC8805 metadata lastModified:" + lmt);
         allFeedMeta[provider] = feedmeta;
     } catch (error) {
         console.error("[", provider, "] RFC8805 metadata read error:", error);
