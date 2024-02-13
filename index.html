@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="IP-based geolocation for Starlink by SpaceX and ViaWeb satellite internet services">
     <meta name="author" content="Fastah">
-    <title>Starwatch by Fastah™ - IP-based geolocation for Starlink by SpaceX and ViaWeb satellite internet services</title>
+    <title>StarWatch by Fastah™ - IP-based geolocation for Starlink by SpaceX and ViaWeb satellite internet services</title>
+    <link rel="preconnect" href="https://fastah-v2.azure-api.net" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -31,7 +32,7 @@
         background-color: rgba(0, 0, 0, .1);
         border: solid rgba(0, 0, 0, .15);
         border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(231, 231, 231, 0.15);
       }
 
       .b-example-vr {
@@ -108,40 +109,6 @@
       </symbol>
     </svg>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="arrow-right-circle" viewBox="0 0 16 16">
@@ -157,21 +124,26 @@
 <div class="col-lg-8 mx-auto p-4 py-md-5">
   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
     <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
-      <span class="fs-4">Satellite Internet Profiler by Fastah™</span>
+      <span class="fs-4">StarWatch - satellite internet profiler by Fastah™</span>
     </a>
   </header>
 
   <main>
-    <h1 class="text-body-emphasis">Starwatch</h1>
-    <p class="fs-5 col-md-8">Look up your internet connection's <a href="https://developer.mozilla.org/en-US/docs/Glossary/IP_Address">public IP address</a> in the <a href="/latest-feed/starlink/rfc8805.csv">Starlink-published IP geolocation feed</a> and check your <i>approximate geolocation</i> as advertised by Starlink® to app developers and streaming services worldwide.</p>
+    <h1 class="text-body-emphasis">StarWatch</h1>
+    <p class="fs-5 col-md-8">Look up your internet connection's <a href="https://developer.mozilla.org/en-US/docs/Glossary/IP_Address">public IP address</a> in the <a href="./gen/latest-feeds/starlink/rfc8805.csv">Starlink-published IP geolocation feed</a> and check your <i>approximate geolocation</i> as advertised by Starlink® to app developers and streaming services worldwide.</p>
 
     <div class="mb-5">
-      <a href="../examples/" class="btn btn-primary btn-lg px-4">Geolocate My IP!</a>
+        <button id='scanIpButton' type="button" class="btn btn-primary btn-lg">Check my IP!</button> <span id='ctaExplainer'></span>
     </div>
+
+
+    <div class="mb-5">
+        <button hidden id='feelingLuckyButton'  type="button" class="btn btn-secondary btn-lg">I am feeling lucky!</button>
+      </div>
 
     <hr class="col-3 col-md-2 mb-5">
 
-    <div class="row g-5">
+    <!--div class="row g-5">
       <div class="col-md-6">
         <h2 class="text-body-emphasis">Starter projects</h2>
         <p>Ready to go beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
@@ -239,11 +211,11 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div-->
   </main>
   <footer class="pt-5 my-5 text-body-secondary border-top">
-    &copy; 2024 &middot Fastah™ by Blackbuck Computing Inc. All rights reserved. <a class="link-secondary href="https://github.com/fastah/starwatch/issues">Open an issue on Github</a><br>
-    Starlink and SpaceX are registered trademarks of Space Exploration Technologies Corp. 
+    &copy; 2024 Fastah™ by Blackbuck Computing Inc. All rights reserved. <a class="link-secondary href="https://github.com/fastah/starwatch/issues">Report an issue on Github.</a><br>
+    Starlink® and SpaceX® are registered trademarks of Space Exploration Technologies Corp. 
   </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
