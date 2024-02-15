@@ -13,7 +13,7 @@ async function initRfc8805meta(provider) {
         const response = await fetch(request);
         const feedmeta = await response.json();
         const lmt = Date.parse(feedmeta["lastModified"]);
-        console.log("[" + provider + "] RFC8805 metadata lastModified:" + lmt);
+        console.log("[" + provider + "] RFC8805 metadata lastModified:" + new Date(lmt));
         allFeedMeta[provider] = feedmeta;
     } catch (error) {
         console.error("[", provider, "] RFC8805 metadata read error:", error);
@@ -91,7 +91,16 @@ function simulateRandomLocation(provider = 'starlink', fallbackIp = '98.97.5.1',
             simulatedCountry = cc;
         }
     }  );
-    let samples = allFeedSamples[provider][simulatedCountry];
+    let samples = null
+    for (const feat of allFeedSamples[provider].features) {
+        if (feat.properties["cciso2"] === simulatedCountry) {
+            console.log(element);
+            samples = element.properties["samples"]
+        }
+    }
+    if (samples == nil) {
+        return 
+    }
     fallbackIp = samples[Math.floor(Math.random() * samples.length)];
     const randomLocationChange = new CustomEvent("locationchanged", {
         detail: {
@@ -134,6 +143,53 @@ ctaButton.addEventListener("click", (event) => {
     }
   });
 
+
+function initMaps() { 
+    mapboxgl.accessToken = 'pk.eyJ1IjoiczhtYXRodXIiLCJhIjoiY2xzbHl1Zjg0MGZpdjJrcGVpa2pkbG0wNiJ9.rFDdt45Wd4s6a-RfqvAQiQ';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [-96, 37.8],
+        zoom: 3,
+        maxZoom: 4,
+        minZoom: 2
+    });
+    
+    map.on('load', () => {
+        // Add an image to use as a custom marker
+        map.loadImage(
+            './static/marker-icons/mapbox-marker-icon-20px-gray.png',
+            (error, image) => {
+                if (error) throw error;
+                map.addImage('custom-marker', image);
+    
+                map.addSource('starlink', {
+                    type: 'geojson',
+                    // Use a URL for the value for the `data` property.
+                    data: 'gen/latest-feeds/starlink/samples.json'
+                });
+
+                map.addSource('viasat', {
+                    type: 'geojson',
+                    // Use a URL for the value for the `data` property.
+                    data: 'gen/latest-feeds/viasat/samples.json'
+                });
+
+                // Add a symbol layer
+                map.addLayer({
+                    'id': 'starlink-layer',
+                    'type': 'symbol',
+                    'source': 'starlink',
+                    'layout': {
+                        'icon-image': 'custom-marker', // reference the image
+                        'icon-size': 1.0
+                        }
+                });
+            }
+        );
+    });    
+}    
 // This is automatically done via Fastah API on page load
 initRfc8805meta("starlink");
 initRfc8805sampleIp("starlink");
@@ -143,7 +199,4 @@ document.addEventListener("locationchanged", (event) => {
     updateUIwithNewLocation(event);
 });
 getIPGeolocation();
-
-
-
-  
+initMaps();
