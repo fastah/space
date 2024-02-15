@@ -94,13 +94,13 @@ function simulateRandomLocation(provider = 'starlink', fallbackIp = '98.97.5.1',
     let samples = null
     for (const feat of allFeedSamples[provider].features) {
         if (feat.properties["cciso2"] === simulatedCountry) {
-            console.log(element);
-            samples = element.properties["samples"]
+            samples = feat.properties["ip-samples"]
         }
     }
-    if (samples == nil) {
+    if (samples === null) {
         return 
     }
+    console.log(samples);
     fallbackIp = samples[Math.floor(Math.random() * samples.length)];
     const randomLocationChange = new CustomEvent("locationchanged", {
         detail: {
@@ -168,13 +168,13 @@ function initMaps() {
                 map.addSource('starlink', {
                     type: 'geojson',
                     // Use a URL for the value for the `data` property.
-                    data: 'gen/latest-feeds/starlink/samples.json'
+                    data: './gen/latest-feeds/starlink/samples.json'
                 });
 
                 map.addSource('viasat', {
                     type: 'geojson',
                     // Use a URL for the value for the `data` property.
-                    data: 'gen/latest-feeds/viasat/samples.json'
+                    data: './gen/latest-feeds/viasat/samples.json'
                 });
 
                 // Add a symbol layer
