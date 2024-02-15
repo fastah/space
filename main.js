@@ -145,6 +145,7 @@ ctaButton.addEventListener("click", (event) => {
 
 
 function initMaps() { 
+    // This is a browser-side API key, and it's to have it in public Git repos. It should be ideally configured to only serve from the domain of this website.
     mapboxgl.accessToken = 'pk.eyJ1IjoiczhtYXRodXIiLCJhIjoiY2xzbHl1Zjg0MGZpdjJrcGVpa2pkbG0wNiJ9.rFDdt45Wd4s6a-RfqvAQiQ';
     const map = new mapboxgl.Map({
         container: 'map',
