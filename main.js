@@ -43,7 +43,8 @@ async function getIPGeolocation(searchIp = 'auto') {
     })
     .then((response) => {
         if (!response.ok) {
-            console.log("Error response from Fastah API: " + response.status + " " + response.statusText);
+            console.log("Error response from Fastah API (likely CORS?): " + response.status + " " + response.statusText);
+            return null;
         }
         return response.json();
     })
