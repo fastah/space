@@ -56,7 +56,7 @@ func readCSVUrl(key, url string) ([][]string, *time.Time, error) {
 
 func main() {
 	feeds := []GeoFeed{
-		{key: "starlink", providerName: "Starlink by SpaceX", url: "https://geoip.starlinkisp.net/feed.csv"},
+		{key: "starlink", providerName: "SpaceX Starlink", url: "https://geoip.starlinkisp.net/feed.csv"},
 		{key: "viasat", providerName: "Viasat", url: "https://raw.githubusercontent.com/Viasat/geofeed/main/geofeed.csv"},
 	}
 
@@ -223,7 +223,7 @@ func ipToGeoJson(key string, providerLabel string, locations map[string]netip.Ad
 		var resp *http.Response
 		var err error
 		// Fastah lookup to provide a lat/long for the IP address
-		req, err = http.NewRequest("GET", fmt.Sprintf("https://fastah-v2.azure-api.net/whereis/v1/json/%s", ip.String()), nil)
+		req, err = http.NewRequest("GET", fmt.Sprintf("https://ep.api.getfastah.com/whereis/v1/json/%s", ip.String()), nil)
 		if err != nil {
 			fmt.Printf("[%s] Error preparing request for Fastah IP Geolocation API: %v\n", key, err)
 			continue
