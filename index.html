@@ -1,241 +1,223 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head><script src="color-modes.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="IP-based geolocation for Starlink by SpaceX and ViaWeb satellite internet services">
-    <meta name="author" content="Fastah">
-    <title>StarWatch by Fastah™ - IP-based geolocation for Starlink by SpaceX and ViaWeb satellite internet services</title>
-    <link rel="preconnect" href="https://fastah-v2.azure-api.net" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
-    <script fetchpriority="low" src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mapbox GL JS - Custom AWS and Starlink Markers with Dynamic Icon Sizes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.css" rel="stylesheet" />
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(231, 231, 231, 0.15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
     </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    // Mapbox access token
+    mapboxgl.accessToken = 'pk.eyJ1IjoiczhtYXRodXIiLCJhIjoiY2xzbHl1Zjg0MGZpdjJrcGVpa2pkbG0wNiJ9.rFDdt45Wd4s6a-RfqvAQiQ';
 
-    
-  </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
+    // Initialize the map
+    const map = new mapboxgl.Map({
+        container: 'map', // ID of the container
+        style: 'mapbox://styles/mapbox/light-v11', // Map style
+        center: [-98.5795, 39.8283], // Center on USA
+        zoom: 4 // Initial zoom level
+    });
 
+    // GeoJSON for Starlink IP-based cities in the USA
+    const starlinkCitiesGeoJSON = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.24, 34.05]}, "properties": {"city": "Los Angeles", "state": "California", "iphosts": 528}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-104.98, 39.74]}, "properties": {"city": "Denver", "state": "Colorado", "iphosts": 480}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-157.86, 21.31]}, "properties": {"city": "Honolulu", "state": "Hawaii", "iphosts": 71}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.26, 44.98]}, "properties": {"city": "Minneapolis", "state": "Minnesota", "iphosts": 256}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-76.49, 38.98]}, "properties": {"city": "Annapolis", "state": "Maryland", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.65, 41.85]}, "properties": {"city": "Chicago", "state": "Illinois", "iphosts": 952}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-111.91, 33.41]}, "properties": {"city": "Tempe", "state": "Arizona", "iphosts": 410}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.6, 28.41]}, "properties": {"city": "Cape Canaveral", "state": "Florida", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-95.47, 33.06]}, "properties": {"city": "Como", "state": "Texas", "iphosts": 80}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.49, 39.04]}, "properties": {"city": "Ashburn", "state": "Virginia", "iphosts": 480}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-166.54, 53.89]}, "properties": {"city": "Dutch Harbor", "state": "Alaska", "iphosts": 8}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.01, 40.71]}, "properties": {"city": "New York City", "state": "New York", "iphosts": 784}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-96.81, 32.78]}, "properties": {"city": "Dallas", "state": "Texas", "iphosts": 990}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-112.04, 46.59]}, "properties": {"city": "Helena", "state": "Montana", "iphosts": 120}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-165.41, 64.5]}, "properties": {"city": "Nome", "state": "Alaska", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.33, 47.61]}, "properties": {"city": "Seattle", "state": "Washington", "iphosts": 1762}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-111.89, 40.76]}, "properties": {"city": "Salt Lake City", "state": "Utah", "iphosts": 386}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-121.89, 37.34]}, "properties": {"city": "San Jose", "state": "California", "iphosts": 496}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.35, 33.92]}, "properties": {"city": "Hawthorne", "state": "California", "iphosts": 40}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-84.39, 33.75]}, "properties": {"city": "Atlanta", "state": "Georgia", "iphosts": 712}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.19, 25.77]}, "properties": {"city": "Miami", "state": "Florida", "iphosts": 726}}]};
 
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="arrow-right-circle" viewBox="0 0 16 16">
-          <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-        </symbol>
-        <symbol id="bootstrap" viewBox="0 0 118 94">
-          <title>Bootstrap</title>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
-        </symbol>
-      </svg>
-    
+    // GeoJSON for AWS regions in the USA
+    const awsRegionsGeoJSON = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.68, 45.52]}, "properties": {"name": "us-west-2", "region": "US West (Oregon)", "country": "US", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83, 39.96]}, "properties": {"name": "us-east-2", "region": "US East (Ohio)", "country": "US", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.4, 43.71]}, "properties": {"name": "ca-central-1", "region": "Canada (Central)", "country": "CA", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-114.09, 51.05]}, "properties": {"name": "ca-west-1", "region": "Canada (West)", "country": "CA", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.13, 19.43]}, "properties": {"name": "mx-central-1", "region": "Mexico (Central)", "country": "MX", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [139.69, 35.69]}, "properties": {"name": "ap-northeast-1", "region": "Asia Pacific (Tokyo)", "country": "JP", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.42, 37.77]}, "properties": {"name": "us-west-1", "region": "US West (N. California)", "country": "US", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [135.5, 34.69]}, "properties": {"name": "ap-northeast-3", "region": "Asia Pacific (Osaka)", "country": "JP", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.49, 39.04]}, "properties": {"name": "us-east-1", "region": "US East (N. Virginia)", "country": "US", "subcloud": ""}}]};
 
-<div class="col-lg-8 mx-auto p-4 py-md-5">
-  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-    <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
-      <img class="bi me-2" src="static/fastah-rounded-corners.jpeg" alt="Fastah" width="32" height="32">
-      <span class="fs-4">StarWatch - satellite internet profiler by Fastah™</span>
-    </a>
-  </header>
+    map.on('load', () => {
+        // Load custom marker image for Starlink
+        map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Starlink_Logo.svg/320px-Starlink_Logo.svg.png', (error, starlinkImage) => {
+            if (error) throw error;
 
-  <main>
-    <h1 class="text-body-emphasis">StarWatch</h1>
-    <p class="fs-5 col-md-8">Look up your internet connection's <a href="https://developer.mozilla.org/en-US/docs/Glossary/IP_Address">public IP address</a> in the <a href="./gen/latest-feeds/starlink/rfc8805.csv">Starlink-published IP geolocation feed</a> and check your <i>approximate geolocation</i> as advertised by Starlink® to app developers and streaming services worldwide.</p>
+            // Add the Starlink image to the map
+            map.addImage('starlink-marker', starlinkImage);
 
-    <div class="mb-5">
-        <button id='scanIpButton' type="button" class="btn btn-primary btn-lg">Check my IP!</button> <span id='ctaExplainer'></span>
-    </div>
+            // Add Starlink Cities as a layer of symbol markers
+            map.addSource('starlink-cities', {
+                type: 'geojson',
+                data: starlinkCitiesGeoJSON
+            });
 
+            map.addLayer({
+                id: 'starlink-cities-layer',
+                type: 'symbol',
+                source: 'starlink-cities',
+                layout: {
+                    'icon-image': 'starlink-marker',
+                    'icon-allow-overlap': true,
+                    'background-color': '#FF9900',
+                    'icon-size': [
+                        'case',
+                        ['<', ['get', 'iphosts'], 100], 0.2,     // iphosts < 100
+                        ['<=', ['get', 'iphosts'], 400], 0.4,    // 100 <= iphosts <= 400
+                        ['>', ['get', 'iphosts'], 600], 0.7,     // iphosts > 600
+                        0.4                                    // Default size
+                    ]
+                }
+            });
+        });
 
-    <div class="mb-5">
-        <button hidden id='feelingLuckyButton'  type="button" class="btn btn-secondary btn-lg">I am feeling lucky!</button>
-      </div>
+        // Load custom marker image for AWS
+        map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/320px-Amazon_Web_Services_Logo.svg.png', (error, awsImage) => {
+            if (error) throw error;
 
-      <ul class="col-md-6 list-group">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-      </ul>
+            // Add the AWS image to the map
+            map.addImage('aws-marker', awsImage);
 
-    <hr class="col-3 col-md-2 mb-5">
-    <div class="embed-responsive embed-responsive-16by9" class="col-md-6 user-select-none">
-      <div id="map" style="top: 10px; bottom: 10px; height: 100vh; width: 800px;"></div>
-    </div>
+            // Add AWS Regions as a layer of symbol markers
+            map.addSource('aws-regions', {
+                type: 'geojson',
+                data: awsRegionsGeoJSON
+            });
 
-    <hr class="col-3 col-md-2 mb-5">
-  
-  
-    <!--div class="row g-5">
-      <div class="col-md-6">
-        <h2 class="text-body-emphasis">Starter projects</h2>
-        <p>Ready to go beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
-        <ul class="list-unstyled ps-0">
-          <li>
-            <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/icons-font" rel="noopener" target="_blank">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Bootstrap npm starter
-            </a>
-          </li>
-          <li>
-            <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/parcel" rel="noopener" target="_blank">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Bootstrap Parcel starter
-            </a>
-          </li>
-          <li>
-            <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/vite" rel="noopener" target="_blank">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Bootstrap Vite starter
-            </a>
-          </li>
-          <li>
-            <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/webpack" rel="noopener" target="_blank">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Bootstrap Webpack starter
-            </a>
-          </li>
-        </ul>
-      </div>
+            map.addLayer({
+                id: 'aws-regions-layer',
+                type: 'symbol',
+                source: 'aws-regions',
+                layout: {
+                    'icon-image': 'aws-marker',
+                    'icon-allow-overlap': true,
+                    'icon-size': 0.15 // Fixed size for AWS marker
+                }
+            });
+        });
 
-      <div class="col-md-6">
-        <h2 class="text-body-emphasis">Guides</h2>
-        <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-        <ul class="list-unstyled ps-0">
-          <li>
-            <a class="icon-link mb-1" href="../getting-started/introduction/">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Bootstrap quick start guide
-            </a>
-          </li>
-          <li>
-            <a class="icon-link mb-1" href="../getting-started/webpack/">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Bootstrap Webpack guide
-            </a>
-          </li>
-          <li>
-            <a class="icon-link mb-1" href="../getting-started/parcel/">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Bootstrap Parcel guide
-            </a>
-          </li>
-          <li>
-            <a class="icon-link mb-1" href="../getting-started/vite/">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Bootstrap Vite guide
-            </a>
-          </li>
-          <li>
-            <a class="icon-link mb-1" href="../getting-started/contribute/">
-              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Contributing to Bootstrap
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div-->
-  </main>
-  <footer class="pt-5 my-5 text-body-secondary border-top">
-    &copy; 2024 Fastah Inc. All rights reserved. <a class="link-secondary href="https://github.com/fastah/starwatch/issues">Report an issue on Github.</a><br>
-    Starlink® and SpaceX® are registered trademarks of Space Exploration Technologies Corp. 
-  </footer>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="main.js"></script>
-    </body>
+        map.addSource('curved-lines', {
+          type: 'geojson',
+          data: {
+              type: 'FeatureCollection',
+              features: [] // Empty initially
+          }
+      });
+
+      map.addLayer({
+        id: 'curved-lines-layer',
+        type: 'line',
+        source: 'curved-lines',
+        layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        paint: {
+            'line-color': '#FFD700', // Yellow
+            'line-width': 4,
+            'line-dasharray': [4, 2] // Dashed line: 4px dash, 2px gap
+        }
+    });
+
+        // Add popups for Starlink Cities
+        map.on('click', 'starlink-cities-layer', (e) => {
+          const coordinates = e.features[0].geometry.coordinates.slice();
+          const { city, state, iphosts } = e.features[0].properties;
+      
+          // Prepare AWS points for Turf.js
+          const awsPoints = awsRegionsGeoJSON.features.map((feature) => ({
+              type: 'Feature',
+              geometry: feature.geometry,
+              properties: feature.properties
+          }));
+      
+          // Convert Starlink marker to a Turf.js point
+          const starlinkPoint = turf.point(coordinates);
+      
+          // Compute distances to all AWS regions
+          const distances = awsPoints.map((awsPoint) => {
+              const distance = turf.distance(starlinkPoint, awsPoint, { units: 'kilometers' });
+              return { ...awsPoint.properties, distance, coordinates: awsPoint.geometry.coordinates };
+          });
+      
+          // Sort by distance and take the 3 nearest regions
+          const nearestRegions = distances.sort((a, b) => a.distance - b.distance).slice(0, 2);
+      
+          // Build the curved lines GeoJSON
+          const curvedLinesGeoJSON = {
+              type: 'FeatureCollection',
+              features: nearestRegions.map((region) => {
+                  const midPoint = turf.midpoint(starlinkPoint, turf.point(region.coordinates));
+      
+                  // Create a bezier curve-like geometry using Turf.js
+                  const line = turf.lineString([coordinates, midPoint.geometry.coordinates, region.coordinates]);
+                  const curvedLine = turf.bezierSpline(line);
+      
+                  return {
+                      type: 'Feature',
+                      geometry: curvedLine.geometry,
+                      properties: {
+                          name: region.name,
+                          distance: region.distance.toFixed(2)
+                      }
+                  };
+              })
+          };
+      
+          // Update the curved-lines source
+          map.getSource('curved-lines').setData(curvedLinesGeoJSON);
+      
+          // Build the popup content
+          const nearestRegionsHtml = nearestRegions
+              .map(
+                  (region) => {
+                    const distanceInMiles = Math.round(region.distance * 0.621371); // Convert km to miles and round
+                    return `<li>${region.region} - ${distanceInMiles} miles</li>`;
+                })
+              .join('');
+      
+          new mapboxgl.Popup()
+              .setLngLat(coordinates)
+              .setHTML(`
+                  <div style="font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5;">
+                      <strong>${city}, ${state}</strong><br>
+                      <span style="color: #FF9900;">Capacity for 2<sup>${iphosts}</sup> unique dish IPs</span>
+                      <br><br>
+                      <strong>Nearest AWS Regions:</strong>
+                      <ul>${nearestRegionsHtml}</ul>
+                  </div>
+              `)
+              .addTo(map);
+        });
+
+        // Add popups for AWS Regions
+        map.on('click', 'aws-regions-layer', (e) => {
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const { region, name } = e.features[0].properties;
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(`<div style="
+            font-family: Arial, sans-serif; 
+            font-size: 12px; 
+            color: #333; 
+            line-height: 1.5;
+        ">
+            <strong>${name}</strong><br>
+            <span style="color: #1E90FF;">${region}</span>
+        </div>`)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when hovering over layers
+        map.on('mouseenter', 'starlink-cities-layer', () => {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+        map.on('mouseleave', 'starlink-cities-layer', () => {
+            map.getCanvas().style.cursor = '';
+        });
+
+        map.on('mouseenter', 'aws-regions-layer', () => {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+        map.on('mouseleave', 'aws-regions-layer', () => {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+</script>
+</body>
 </html>
