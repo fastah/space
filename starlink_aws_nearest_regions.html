@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Nearest AWS Regions | Look Ma, It's a Starlink!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    #map {
+        width: 100%;
+        height: 500px; /* Add a fixed height */
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    p.lead {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    table {
+      margin-top: 20px;
+    }
+
+    footer {
+      border-top: 1px solid #dee2e6;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="py-4 text-center">
+    <div class="container">
+      <h1>Look Ma, It's a Starlink!</h1>
+      <p class="lead">AWS networking explorer</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <!-- First Section: Table -->
+    <section hidden id="regions-table" class="mb-5">
+      <h2>Closest AWS regions by Starlink service area</h2>
+      <p><em>As a developer, where do I host my AWS-resident deployments such as they are served with low latency to Starlink users</em></p>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th>Service country</th>
+              <th>Earth Geolocation</th>
+              <th>Nearest AWS Region ID</th>
+              <th>Distance (km)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example data -->
+            <tr>
+              <td rowspan="3">USA</td>
+              <td>Los Angeles</td>
+              <td>us-west-1</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>San Francisco</td>
+              <td>us-west-1</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>Seattle</td>
+              <td>us-west-2</td>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td rowspan="2">India</td>
+              <td>New Delhi</td>
+              <td>ap-south-1</td>
+              <td>1200</td>
+            </tr>
+            <tr>
+              <td>Mumbai</td>
+              <td>ap-south-1</td>
+              <td>800</td>
+            </tr>
+            <!-- Add additional rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </section> 
+
+    <section id="mapbox-map">
+      <h2>Interactive Map</h2>
+      <p><em>As a developer, where do I host my AWS-resident deployments such as they are served with low latency to Starlink users</em></p>
+      <div id="country-pills" class="mb-3">
+        <!-- Pills will be dynamically populated here -->
+      </div>
+      <div id="map" style="width: 100%; height: 800px;"></div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4">
+    <p>Optimize satellite internet user experience with Fastah's API on <a href="https://aws.amazon.com/marketplace/pp/B084VR96P3">AWS Marketplace</a> and <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/fastah.ip_location_api_01">Azure Marketplace</a></p>
+    <p>Powered by public domain information from SpaceX and other organizations</p>  
+    <p>&copy; 2025 Fastah Inc.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Mapbox access token
+    mapboxgl.accessToken = 'pk.eyJ1IjoiczhtYXRodXIiLCJhIjoiY2xzbHl1Zjg0MGZpdjJrcGVpa2pkbG0wNiJ9.rFDdt45Wd4s6a-RfqvAQiQ';
+    console.log("Initializing map...");
+
+    // Initialize the map
+    const map = new mapboxgl.Map({
+        container: 'map', // ID of the container
+        style: 'mapbox://styles/mapbox/light-v11', // Map style
+        center: [-98.5795, 39.8283], // Center on USA
+        zoom: 4 // Initial zoom level
+    });
+    console.log("Map initialized:", map);
+    // GeoJSON for Starlink IP-based cities in the USA
+    const starlinkCitiesGeoJSON = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-62.85, 17.9]}, "properties": {"city": "Gustavia", "state": "", "cciso2": "BL", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [24.75, 59.44]}, "properties": {"city": "Tallinn", "state": "Harjumaa", "cciso2": "EE", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [73.51, 4.18]}, "properties": {"city": "Male", "state": "", "cciso2": "MV", "iphosts": 193}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.59, 45.51]}, "properties": {"city": "Montréal", "state": "Quebec", "cciso2": "CA", "iphosts": 310}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [32.58, -25.97]}, "properties": {"city": "Maputo", "state": "Maputo City", "cciso2": "MZ", "iphosts": 515}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-3.7, 40.42]}, "properties": {"city": "Madrid", "state": "Madrid", "cciso2": "ES", "iphosts": 472}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.13, 49.61]}, "properties": {"city": "Luxembourg", "state": "Luxembourg", "cciso2": "LU", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.41, 52.52]}, "properties": {"city": "Berlin", "state": "Berlin", "cciso2": "DE", "iphosts": 902}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-175.2, -21.14]}, "properties": {"city": "Nuku‘alofa", "state": "Tongatapu", "cciso2": "TO", "iphosts": 277}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [35.2, 31.9]}, "properties": {"city": "Ramallah", "state": "", "cciso2": "PS", "iphosts": 119}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [47.54, -18.91]}, "properties": {"city": "Antananarivo", "state": "", "cciso2": "MG", "iphosts": 389}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-13.24, 8.49]}, "properties": {"city": "Freetown", "state": "Western Area", "cciso2": "SL", "iphosts": 290}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.6, 28.41]}, "properties": {"city": "Cape Canaveral", "state": "Florida", "cciso2": "US", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-46.64, -23.55]}, "properties": {"city": "São Paulo", "state": "São Paulo", "cciso2": "BR", "iphosts": 1746}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [46.72, 24.69]}, "properties": {"city": "Riyadh", "state": "Riyadh Region", "cciso2": "SA", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.08, 4.61]}, "properties": {"city": "Bogotá", "state": "Bogota D.C.", "cciso2": "CO", "iphosts": 634}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.01, 40.71]}, "properties": {"city": "New York City", "state": "New York", "cciso2": "US", "iphosts": 784}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [55.31, 25.08]}, "properties": {"city": "Dubai", "state": "Dubai", "cciso2": "AE", "iphosts": 218}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [31.13, -26.32]}, "properties": {"city": "Mbabane", "state": "Hhohho Region", "cciso2": "SZ", "iphosts": 442}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-10.8, 6.3]}, "properties": {"city": "Monrovia", "state": "Montserrado County", "cciso2": "LR", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [50.59, 26.23]}, "properties": {"city": "Manama", "state": "Manama", "cciso2": "BH", "iphosts": 172}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [96.82, -12.16]}, "properties": {"city": "West Island", "state": "", "cciso2": "CC", "iphosts": 115}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.19, 45.46]}, "properties": {"city": "Milan", "state": "Lombardy", "cciso2": "IT", "iphosts": 358}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-69.89, 18.47]}, "properties": {"city": "Santo Domingo", "state": "Nacional", "cciso2": "DO", "iphosts": 291}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [125.57, -8.56]}, "properties": {"city": "Dili", "state": "Dili Municipality", "cciso2": "TL", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [35.74, -6.17]}, "properties": {"city": "Dodoma", "state": "Dodoma", "cciso2": "TZ", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [158.16, 6.92]}, "properties": {"city": "Palikir - National Government Center", "state": "Pohnpei State", "cciso2": "FM", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-72.34, 18.54]}, "properties": {"city": "Port-au-Prince", "state": "Ouest", "cciso2": "HT", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [21.43, 42]}, "properties": {"city": "Skopje", "state": "", "cciso2": "MK", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.26, 44.98]}, "properties": {"city": "Minneapolis", "state": "Minnesota", "cciso2": "US", "iphosts": 256}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-21.9, 64.14]}, "properties": {"city": "Reykjavík", "state": "", "cciso2": "IS", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [25.28, 54.69]}, "properties": {"city": "Vilnius", "state": "Vilnius", "cciso2": "LT", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [103.85, 1.29]}, "properties": {"city": "Singapore", "state": "", "cciso2": "SG", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-61.52, 10.67]}, "properties": {"city": "Port of Spain", "state": "Port of Spain", "cciso2": "TT", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-157.86, 21.31]}, "properties": {"city": "Honolulu", "state": "Hawaii", "cciso2": "US", "iphosts": 71}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [144.75, 13.48]}, "properties": {"city": "Hagåtña", "state": "", "cciso2": "GU", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [47.98, 29.37]}, "properties": {"city": "Kuwait City", "state": "Al Asimah", "cciso2": "KW", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.52, 8.99]}, "properties": {"city": "Panamá", "state": "Panamá", "cciso2": "PA", "iphosts": 112}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-66.67, 45.95]}, "properties": {"city": "Fredericton", "state": "New Brunswick", "cciso2": "CA", "iphosts": 104}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.21, 14.08]}, "properties": {"city": "Tegucigalpa", "state": "Francisco Morazán Department", "cciso2": "HN", "iphosts": 342}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [49.89, 40.38]}, "properties": {"city": "Baku", "state": "", "cciso2": "AZ", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.49, 39.04]}, "properties": {"city": "Ashburn", "state": "Virginia", "cciso2": "US", "iphosts": 480}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [19.04, 47.5]}, "properties": {"city": "Budapest", "state": "Budapest", "cciso2": "HU", "iphosts": 464}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-63.08, 18.07]}, "properties": {"city": "Marigot", "state": "", "cciso2": "MF", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.51, 41.89]}, "properties": {"city": "Rome", "state": "Lazio", "cciso2": "IT", "iphosts": 493}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [35.22, 31.77]}, "properties": {"city": "Jerusalem", "state": "Jerusalem", "cciso2": "IL", "iphosts": 102}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.65, 41.85]}, "properties": {"city": "Chicago", "state": "Illinois", "cciso2": "US", "iphosts": 952}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [44.4, 33.34]}, "properties": {"city": "Baghdad", "state": "Baghdad", "cciso2": "IQ", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-76.49, 38.98]}, "properties": {"city": "Annapolis", "state": "Maryland", "cciso2": "US", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-61.07, 14.6]}, "properties": {"city": "Fort-de-France", "state": "", "cciso2": "MQ", "iphosts": 205}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [159.95, -9.43]}, "properties": {"city": "Honiara", "state": "Honiara", "cciso2": "SB", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.54, 49.46]}, "properties": {"city": "Saint Peter Port", "state": "", "cciso2": "GG", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-38.54, -3.72]}, "properties": {"city": "Fortaleza", "state": "Ceará", "cciso2": "BR", "iphosts": 254}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-68.52, 63.75]}, "properties": {"city": "Iqaluit", "state": "Nunavut", "cciso2": "CA", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [31.05, -17.83]}, "properties": {"city": "Harare", "state": "Harare", "cciso2": "ZW", "iphosts": 641}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [151.21, -33.87]}, "properties": {"city": "Sydney", "state": "New South Wales", "cciso2": "AU", "iphosts": 1411}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-61.75, 12.05]}, "properties": {"city": "Saint George's", "state": "", "cciso2": "GD", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [71.45, 51.18]}, "properties": {"city": "Astana", "state": "", "cciso2": "KZ", "iphosts": 118}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [20.47, 44.8]}, "properties": {"city": "Belgrade", "state": "", "cciso2": "RS", "iphosts": 118}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.6, 6.5]}, "properties": {"city": "Porto-Novo", "state": "Ouémé", "cciso2": "BJ", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-23.51, 14.93]}, "properties": {"city": "Praia", "state": "Praia", "cciso2": "CV", "iphosts": 376}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [168.31, -17.74]}, "properties": {"city": "Port-Vila", "state": "Shefa", "cciso2": "VU", "iphosts": 118}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [44.21, 15.35]}, "properties": {"city": "Sanaa", "state": "Amanat Alasimah", "cciso2": "YE", "iphosts": 468}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-70.65, -33.46]}, "properties": {"city": "Santiago", "state": "Santiago Metropolitan", "cciso2": "CL", "iphosts": 618}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.75, 59.91]}, "properties": {"city": "Oslo", "state": "Oslo", "cciso2": "NO", "iphosts": 150}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [106.88, 47.91]}, "properties": {"city": "Ulan Bator", "state": "Ulaanbaatar", "cciso2": "MN", "iphosts": 107}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.35, 50.85]}, "properties": {"city": "Brussels", "state": "Brussels Capital", "cciso2": "BE", "iphosts": 218}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.33, 47.61]}, "properties": {"city": "Seattle", "state": "Washington", "cciso2": "US", "iphosts": 1762}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-56.19, -34.9]}, "properties": {"city": "Montevideo", "state": "Montevideo Department", "cciso2": "UY", "iphosts": 195}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [79.85, 6.94]}, "properties": {"city": "Colombo", "state": "Western Province", "cciso2": "LK", "iphosts": 104}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-104.98, 39.74]}, "properties": {"city": "Denver", "state": "Colorado", "cciso2": "US", "iphosts": 480}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [112.75, -7.25]}, "properties": {"city": "Surabaya", "state": "East Java", "cciso2": "ID", "iphosts": 16}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [16.37, 48.21]}, "properties": {"city": "Vienna", "state": "Vienna", "cciso2": "AT", "iphosts": 509}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.52, -0.23]}, "properties": {"city": "Quito", "state": "Pichincha", "cciso2": "EC", "iphosts": 243}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [89.64, 27.47]}, "properties": {"city": "Thimphu", "state": "Thimphu District", "cciso2": "BT", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.2, 5.56]}, "properties": {"city": "Accra", "state": "Greater Accra", "cciso2": "GH", "iphosts": 218}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.34, 25.06]}, "properties": {"city": "Nassau", "state": "", "cciso2": "BS", "iphosts": 210}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.13, 38.72]}, "properties": {"city": "Lisbon", "state": "Lisbon", "cciso2": "PT", "iphosts": 104}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [106.85, -6.21]}, "properties": {"city": "Jakarta", "state": "Jakarta", "cciso2": "ID", "iphosts": 488}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.55, 47.37]}, "properties": {"city": "Zürich", "state": "Zurich", "cciso2": "CH", "iphosts": 248}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-111.91, 33.41]}, "properties": {"city": "Tempe", "state": "Arizona", "cciso2": "US", "iphosts": 410}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-95.36, 29.76]}, "properties": {"city": "Houston", "state": "Texas", "cciso2": "US", "iphosts": 80}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [3.39, 6.45]}, "properties": {"city": "Lagos", "state": "Lagos", "cciso2": "NG", "iphosts": 252}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [24.11, 56.95]}, "properties": {"city": "Riga", "state": "Riga", "cciso2": "LV", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-165.41, 64.5]}, "properties": {"city": "Nome", "state": "Alaska", "cciso2": "US", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [45.23, -12.78]}, "properties": {"city": "Mamoudzou", "state": "", "cciso2": "YT", "iphosts": 341}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [72.88, 19.07]}, "properties": {"city": "Mumbai", "state": "Maharashtra", "cciso2": "IN", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-112.04, 46.59]}, "properties": {"city": "Helena", "state": "Montana", "cciso2": "US", "iphosts": 120}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-57.65, -25.29]}, "properties": {"city": "Asunción", "state": "Asunción", "cciso2": "PY", "iphosts": 308}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [174.76, -36.85]}, "properties": {"city": "Auckland", "state": "Auckland", "cciso2": "NZ", "iphosts": 428}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-96.81, 32.78]}, "properties": {"city": "Dallas", "state": "Texas", "cciso2": "US", "iphosts": 990}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-104.62, 50.45]}, "properties": {"city": "Regina", "state": "Saskatchewan", "cciso2": "CA", "iphosts": 328}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [139.69, 35.69]}, "properties": {"city": "Tokyo", "state": "Tokyo", "cciso2": "JP", "iphosts": 190}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [35.95, 31.96]}, "properties": {"city": "Amman", "state": "Amman", "cciso2": "JO", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.89, 52.37]}, "properties": {"city": "Amsterdam", "state": "North Holland", "cciso2": "NL", "iphosts": 263}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.13, 19.43]}, "properties": {"city": "Mexico City", "state": "", "cciso2": "MX", "iphosts": 1051}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [58.41, 23.58]}, "properties": {"city": "Muscat", "state": "Muscat", "cciso2": "OM", "iphosts": 206}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-61.01, 14]}, "properties": {"city": "Castries", "state": "", "cciso2": "LC", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [44.83, 41.69]}, "properties": {"city": "Tbilisi", "state": "Tbilisi", "cciso2": "GE", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-68.89, 12.12]}, "properties": {"city": "Willemstad", "state": "", "cciso2": "CW", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.24, 34.05]}, "properties": {"city": "Los Angeles", "state": "California", "cciso2": "US", "iphosts": 528}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-97.15, 49.88]}, "properties": {"city": "Winnipeg", "state": "Manitoba", "cciso2": "CA", "iphosts": 296}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.22, 6.13]}, "properties": {"city": "Lomé", "state": "Maritime", "cciso2": "TG", "iphosts": 118}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [144.96, -37.81]}, "properties": {"city": "Melbourne", "state": "Victoria", "cciso2": "AU", "iphosts": 64}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.03, -12.04]}, "properties": {"city": "Lima", "state": "Lima Province", "cciso2": "PE", "iphosts": 447}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [150.8, -2.57]}, "properties": {"city": "Kavieng", "state": "New Ireland", "cciso2": "PG", "iphosts": 80}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-59.62, 13.11]}, "properties": {"city": "Bridgetown", "state": "Saint Michael", "cciso2": "BB", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.13, 51.51]}, "properties": {"city": "London", "state": "", "cciso2": "GB", "iphosts": 484}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-61.39, 15.3]}, "properties": {"city": "Roseau", "state": "", "cciso2": "DM", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [101.69, 3.14]}, "properties": {"city": "Kuala Lumpur", "state": "Kuala Lumpur", "cciso2": "MY", "iphosts": 280}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [115.86, -31.95]}, "properties": {"city": "Perth", "state": "Western Australia", "cciso2": "AU", "iphosts": 194}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [145.75, 15.21]}, "properties": {"city": "Saipan", "state": "", "cciso2": "MP", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [179.19, -8.52]}, "properties": {"city": "Funafuti", "state": "Funafuti", "cciso2": "TV", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [21.01, 52.23]}, "properties": {"city": "Warsaw", "state": "Mazovia", "cciso2": "PL", "iphosts": 419}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.42, 50.09]}, "properties": {"city": "Prague", "state": "", "cciso2": "CZ", "iphosts": 440}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [35.5, 33.89]}, "properties": {"city": "Beirut", "state": "Beyrouth", "cciso2": "LB", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-52.33, 4.94]}, "properties": {"city": "Cayenne", "state": "", "cciso2": "GF", "iphosts": 291}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [23.73, 37.98]}, "properties": {"city": "Athens", "state": "", "cciso2": "GR", "iphosts": 404}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-111.89, 40.76]}, "properties": {"city": "Salt Lake City", "state": "Utah", "cciso2": "US", "iphosts": 386}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [23.32, 42.7]}, "properties": {"city": "Sofia", "state": "Sofia-Capital", "cciso2": "BG", "iphosts": 378}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [31.25, 30.06]}, "properties": {"city": "Cairo", "state": "Cairo", "cciso2": "EG", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.51, 35.9]}, "properties": {"city": "Valletta", "state": "", "cciso2": "MT", "iphosts": 322}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [26.11, 44.43]}, "properties": {"city": "Bucharest", "state": "București", "cciso2": "RO", "iphosts": 322}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [33.36, 35.18]}, "properties": {"city": "Nicosia", "state": "Nicosia", "cciso2": "CY", "iphosts": 232}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [24.94, 60.17]}, "properties": {"city": "Helsinki", "state": "Uusimaa", "cciso2": "FI", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [15.98, 45.81]}, "properties": {"city": "Zagreb", "state": "Zagreb", "cciso2": "HR", "iphosts": 322}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-166.54, 53.89]}, "properties": {"city": "Dutch Harbor", "state": "Alaska", "cciso2": "US", "iphosts": 8}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-63.58, 44.64]}, "properties": {"city": "Halifax", "state": "Nova Scotia", "cciso2": "CA", "iphosts": 104}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-170.7, -14.28]}, "properties": {"city": "Pago Pago", "state": "", "cciso2": "AS", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.58, 13.45]}, "properties": {"city": "Banjul", "state": "Banjul", "cciso2": "GM", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [30.52, 50.45]}, "properties": {"city": "Kyiv", "state": "Kyiv City", "cciso2": "UA", "iphosts": 596}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [31.58, 4.85]}, "properties": {"city": "Juba", "state": "Central Equatoria", "cciso2": "SS", "iphosts": 268}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.19, 25.77]}, "properties": {"city": "Miami", "state": "Florida", "cciso2": "US", "iphosts": 726}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [33.79, -13.97]}, "properties": {"city": "Lilongwe", "state": "", "cciso2": "MW", "iphosts": 589}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-66.11, 18.47]}, "properties": {"city": "San Juan", "state": "", "cciso2": "PR", "iphosts": 196}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-159.78, -21.21]}, "properties": {"city": "Avarua", "state": "", "cciso2": "CK", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.07, 59.33]}, "properties": {"city": "Stockholm", "state": "Stockholm", "cciso2": "SE", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-76.79, 18]}, "properties": {"city": "Kingston", "state": "Kingston", "cciso2": "JM", "iphosts": 196}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [67.01, 24.86]}, "properties": {"city": "Karachi", "state": "Sindh", "cciso2": "PK", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.48, -29.32]}, "properties": {"city": "Maseru", "state": "Maseru District", "cciso2": "LS", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.57, 55.68]}, "properties": {"city": "Copenhagen", "state": "Capital Region", "cciso2": "DK", "iphosts": 148}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-121.89, 37.34]}, "properties": {"city": "San Jose", "state": "California", "cciso2": "US", "iphosts": 496}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.4, 43.71]}, "properties": {"city": "Toronto", "state": "Ontario", "cciso2": "CA", "iphosts": 788}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [19.82, 41.33]}, "properties": {"city": "Tirana", "state": "Tirana", "cciso2": "AL", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-84.39, 33.75]}, "properties": {"city": "Atlanta", "state": "Georgia", "cciso2": "US", "iphosts": 712}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-130.1, -25.07]}, "properties": {"city": "Adamstown", "state": "", "cciso2": "PN", "iphosts": 105}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.11, 13.51]}, "properties": {"city": "Niamey", "state": "Niamey", "cciso2": "NE", "iphosts": 190}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [25.91, -24.65]}, "properties": {"city": "Gaborone", "state": "Gaborone", "cciso2": "BW", "iphosts": 441}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-56.18, 46.78]}, "properties": {"city": "Saint-Pierre", "state": "", "cciso2": "PM", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [28.86, 47.01]}, "properties": {"city": "Chisinau", "state": "Chișinău Municipality", "cciso2": "MD", "iphosts": 322}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-90.51, 14.64]}, "properties": {"city": "Guatemala City", "state": "", "cciso2": "GT", "iphosts": 320}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [29.92, -3.43]}, "properties": {"city": "Gitega", "state": "Gitega", "cciso2": "BI", "iphosts": 322}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-171.77, -13.83]}, "properties": {"city": "Apia", "state": "Tuamasaga", "cciso2": "WS", "iphosts": 118}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.51, 46.05]}, "properties": {"city": "Ljubljana", "state": "Ljubljana", "cciso2": "SI", "iphosts": 354}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.789059639, -82.676277161]}, "properties": {"city": "Antarctica", "state": "", "cciso2": "AQ", "iphosts": 119}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-64.93, 18.34]}, "properties": {"city": "Charlotte Amalie", "state": "", "cciso2": "VI", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-123.12, 49.25]}, "properties": {"city": "Vancouver", "state": "British Columbia", "cciso2": "CA", "iphosts": 448}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [36.82, -1.28]}, "properties": {"city": "Nairobi", "state": "Nairobi County", "cciso2": "KE", "iphosts": 438}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [51.53, 25.29]}, "properties": {"city": "Doha", "state": "Baladīyat ad Dawḩah", "cciso2": "QA", "iphosts": 488}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [120.98, 14.6]}, "properties": {"city": "Manila", "state": "National Capital Region", "cciso2": "PH", "iphosts": 586}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.44, 14.69]}, "properties": {"city": "Dakar", "state": "Dakar", "cciso2": "SN", "iphosts": 88}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [55.45, -20.88]}, "properties": {"city": "Saint-Denis", "state": "", "cciso2": "RE", "iphosts": 513}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-61.73, 16]}, "properties": {"city": "Basse-Terre", "state": "", "cciso2": "GP", "iphosts": 191}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [147.15, -9.48]}, "properties": {"city": "Port Moresby", "state": "National Capital", "cciso2": "PG", "iphosts": 86}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-114.09, 51.05]}, "properties": {"city": "Calgary", "state": "Alberta", "cciso2": "CA", "iphosts": 672}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [178.43, -18.14]}, "properties": {"city": "Suva", "state": "Central", "cciso2": "FJ", "iphosts": 205}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-84.08, 9.93]}, "properties": {"city": "San José", "state": "San José", "cciso2": "CR", "iphosts": 407}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-6.25, 53.33]}, "properties": {"city": "Dublin", "state": "", "cciso2": "IE", "iphosts": 188}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [30.06, -1.95]}, "properties": {"city": "Kigali", "state": "Kigali", "cciso2": "RW", "iphosts": 378}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-89.19, 13.69]}, "properties": {"city": "San Salvador", "state": "San Salvador Department", "cciso2": "SV", "iphosts": 195}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.35, 48.85]}, "properties": {"city": "Paris", "state": "Île-de-France", "cciso2": "FR", "iphosts": 890}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.35, 33.92]}, "properties": {"city": "Hawthorne", "state": "California", "cciso2": "US", "iphosts": 40}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-58.38, -34.61]}, "properties": {"city": "Buenos Aires", "state": "Buenos Aires F.D.", "cciso2": "AR", "iphosts": 862}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [28.29, -15.41]}, "properties": {"city": "Lusaka", "state": "Lusaka Province", "cciso2": "ZM", "iphosts": 677}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.11, 48.15]}, "properties": {"city": "Bratislava", "state": "Bratislava Region", "cciso2": "SK", "iphosts": 440}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [166.93, -0.55]}, "properties": {"city": "Yaren", "state": "Yaren District", "cciso2": "NR", "iphosts": 204}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-58.16, 6.8]}, "properties": {"city": "Georgetown", "state": "Demerara-Mahaica", "cciso2": "GY", "iphosts": 86}}]};
+
+    // GeoJSON for AWS regions in the USA
+    const awsRegionsGeoJSON = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.68, 45.52]}, "properties": {"name": "us-west-2", "region": "US West (Oregon)", "country": "US", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [151.21, -33.87]}, "properties": {"name": "ap-southeast-2", "region": "Asia Pacific (Sydney)", "country": "AU", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [106.85, -6.21]}, "properties": {"name": "ap-southeast-3", "region": "Asia Pacific (Jakarta)", "country": "ID", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [144.96, -37.81]}, "properties": {"name": "ap-southeast-4", "region": "Asia Pacific (Melbourne)", "country": "AU", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [101.69, 3.14]}, "properties": {"name": "ap-southeast-5", "region": "Asia Pacific (Malaysia)", "country": "MY", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [100.5, 13.75]}, "properties": {"name": "ap-southeast-6", "region": "Asia Pacific (Bangkok)", "country": "TH", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [174.76, -36.85]}, "properties": {"name": "ap-southeast-7", "region": "Asia Pacific (Auckland)", "country": "NZ", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83, 39.96]}, "properties": {"name": "us-east-2", "region": "US East (Ohio)", "country": "US", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.4, 43.71]}, "properties": {"name": "ca-central-1", "region": "Canada (Central)", "country": "CA", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-114.09, 51.05]}, "properties": {"name": "ca-west-1", "region": "Canada (West)", "country": "CA", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.13, 19.43]}, "properties": {"name": "mx-central-1", "region": "Mexico (Central)", "country": "MX", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.35, 48.85]}, "properties": {"name": "eu-west-3", "region": "Europe (Paris)", "country": "FR", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [139.69, 35.69]}, "properties": {"name": "ap-northeast-1", "region": "Asia Pacific (Tokyo)", "country": "JP", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.68, 50.12]}, "properties": {"name": "eu-central-1", "region": "Europe (Frankfurt)", "country": "DE", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.55, 47.37]}, "properties": {"name": "eu-central-2", "region": "Europe (Zurich)", "country": "CH", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.42, 37.77]}, "properties": {"name": "us-west-1", "region": "US West (N. California)", "country": "US", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [126.98, 37.57]}, "properties": {"name": "ap-northeast-2", "region": "Asia Pacific (Seoul)", "country": "KR", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [135.5, 34.69]}, "properties": {"name": "ap-northeast-3", "region": "Asia Pacific (Osaka)", "country": "JP", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.07, 59.33]}, "properties": {"name": "eu-north-1", "region": "Europe (Stockholm)", "country": "SE", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.19, 45.46]}, "properties": {"name": "eu-south-1", "region": "Europe (Milan)", "country": "IT", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.88, 41.66]}, "properties": {"name": "eu-south-2", "region": "Europe (Spain)", "country": "ES", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [50.59, 26.23]}, "properties": {"name": "me-south-1", "region": "Middle East (Bahrain)", "country": "BH", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [55.31, 25.08]}, "properties": {"name": "me-central-1", "region": "Middle East (UAE)", "country": "AE", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-46.64, -23.55]}, "properties": {"name": "sa-east-1", "region": "South America (São Paulo)", "country": "BR", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [114.17, 22.28]}, "properties": {"name": "ap-east-1", "region": "Asia Pacific (Hong Kong)", "country": "HK", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [121.53, 25.05]}, "properties": {"name": "ap-east-2", "region": "Asia Pacific (Taipei)", "country": "TW", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.13, 51.51]}, "properties": {"name": "eu-west-2", "region": "Europe (London)", "country": "GB", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [ 34.7818, 32.0853]}, "properties": {"name": "il-central-1", "region": "Israel (Tel Aviv)", "country": "IL", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.42, -33.93]}, "properties": {"name": "af-south-1", "region": "Africa (Cape Town)", "country": "ZA", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-6.25, 53.33]}, "properties": {"name": "eu-west-1", "region": "Europe (Ireland)", "country": "IE", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [72.88, 19.07]}, "properties": {"name": "ap-south-1", "region": "Asia Pacific (Mumbai)", "country": "IN", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [78.46, 17.38]}, "properties": {"name": "ap-south-2", "region": "Asia Pacific (Hyderabad)", "country": "IN", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [103.85, 1.29]}, "properties": {"name": "ap-southeast-1", "region": "Asia Pacific (Singapore)", "country": "SG", "subcloud": ""}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.49, 39.04]}, "properties": {"name": "us-east-1", "region": "US East (N. Virginia)", "country": "US", "subcloud": ""}}]};
+
+    map.on('load', () => {
+        // Load custom marker image for Starlink
+        map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Starlink_Logo.svg/320px-Starlink_Logo.svg.png', (error, starlinkImage) => {
+            if (error) throw error;
+
+            // Add the Starlink image to the map
+            map.addImage('starlink-marker', starlinkImage);
+
+            // Add Starlink Cities as a layer of symbol markers
+            map.addSource('starlink-cities', {
+                type: 'geojson',
+                data: starlinkCitiesGeoJSON
+            });
+
+            map.addLayer({
+                id: 'starlink-cities-layer',
+                type: 'symbol',
+                source: 'starlink-cities',
+                layout: {
+                    'icon-image': 'starlink-marker',
+                    'icon-allow-overlap': true,
+                    'background-color': '#FF9900',
+                    'icon-size': [
+                        'case',
+                        ['<', ['get', 'iphosts'], 100], 0.2,     // iphosts < 100
+                        ['<=', ['get', 'iphosts'], 400], 0.2,    // 100 <= iphosts <= 400
+                        ['>', ['get', 'iphosts'], 600], 0.2,     // iphosts > 600
+                        0.4                                    // Default size
+                    ]
+                },
+                paint: {
+                    'icon-color': '#FF9900' // Replace background-color with icon-color
+                }
+            });
+        });
+
+        // Load custom marker image for AWS
+        map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/320px-Amazon_Web_Services_Logo.svg.png', (error, awsImage) => {
+            if (error) throw error;
+
+            // Add the AWS image to the map
+            map.addImage('aws-marker', awsImage);
+
+            // Add AWS Regions as a layer of symbol markers
+            map.addSource('aws-regions', {
+                type: 'geojson',
+                data: awsRegionsGeoJSON
+            });
+
+            map.addLayer({
+                id: 'aws-regions-layer',
+                type: 'symbol',
+                source: 'aws-regions',
+                layout: {
+                    'icon-image': 'aws-marker',
+                    'icon-allow-overlap': true,
+                    'icon-size': 0.2 // Fixed size for AWS marker
+                }
+            });
+        });
+
+        map.addSource('curved-lines', {
+          type: 'geojson',
+          data: {
+              type: 'FeatureCollection',
+              features: [] // Empty initially
+          }
+      });
+
+      map.addLayer({
+        id: 'curved-lines-layer',
+        type: 'line',
+        source: 'curved-lines',
+        layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        paint: {
+            'line-color': '#FFD700', // Yellow
+            'line-width': 4,
+            'line-dasharray': [4, 2] // Dashed line: 4px dash, 2px gap
+        }
+    });
+
+        // Populate the country pills dynamically
+        const pillsContainer = document.getElementById('country-pills');
+        // Get unique country codes (ISO2) from Starlink GeoJSON
+        const countryCodes = [...new Set(starlinkCitiesGeoJSON.features.map(f => f.properties.cciso2))];
+        countryCodes.forEach(cciso2 => {
+        const pill = document.createElement('button');
+        pill.className = 'btn btn-primary btn-sm me-2 mb-2';
+        pill.textContent = cciso2;
+        pill.onclick = () => {
+            // Find a random Starlink location in the selected country
+            const countryFeatures = starlinkCitiesGeoJSON.features.filter(f => f.properties.cciso2 === cciso2);
+            if (countryFeatures.length > 0) {
+            const randomFeature = countryFeatures[Math.floor(Math.random() * countryFeatures.length)];
+            const [lng, lat] = randomFeature.geometry.coordinates;
+
+            // Center the map on the random feature
+            map.flyTo({ center: [lng, lat], zoom: 6 });
+            }
+        };
+        pillsContainer.appendChild(pill);
+        });
+
+        // Add a "Show All" button to reset the map view
+        const showAllPill = document.createElement('button');
+        showAllPill.className = 'btn btn-secondary btn-sm me-2 mb-2';
+        showAllPill.textContent = 'United States';
+        showAllPill.onclick = () => {
+        map.flyTo({ center: [-98.5795, 39.8283], zoom: 4 }); // Reset to default USA center and zoom
+        };
+        pillsContainer.appendChild(showAllPill);
+
+        // Add popups for Starlink Cities
+        map.on('click', 'starlink-cities-layer', (e) => {
+          const coordinates = e.features[0].geometry.coordinates.slice();
+          const { city, state, iphosts, cciso2 } = e.features[0].properties;
+      
+          // Prepare AWS points for Turf.js
+          const awsPoints = awsRegionsGeoJSON.features.map((feature) => ({
+              type: 'Feature',
+              geometry: feature.geometry,
+              properties: feature.properties
+          }));
+      
+          // Convert Starlink marker to a Turf.js point
+          const starlinkPoint = turf.point(coordinates);
+      
+          // Compute distances to all AWS regions
+          const distances = awsPoints.map((awsPoint) => {
+              const distance = turf.distance(starlinkPoint, awsPoint, { units: 'kilometers' });
+              return { ...awsPoint.properties, distance, coordinates: awsPoint.geometry.coordinates };
+          });
+      
+          // Sort by distance and take the 3 nearest regions
+          const nearestRegions = distances.sort((a, b) => a.distance - b.distance).slice(0, 2);
+      
+          // Build the curved lines GeoJSON
+          const curvedLinesGeoJSON = {
+              type: 'FeatureCollection',
+              features: nearestRegions.map((region) => {
+                  const midPoint = turf.midpoint(starlinkPoint, turf.point(region.coordinates));
+      
+                  // Create a bezier curve-like geometry using Turf.js
+                  const line = turf.lineString([coordinates, midPoint.geometry.coordinates, region.coordinates]);
+                  const curvedLine = turf.bezierSpline(line);
+      
+                  return {
+                      type: 'Feature',
+                      geometry: curvedLine.geometry,
+                      properties: {
+                          name: region.name,
+                          distance: region.distance.toFixed(2)
+                      }
+                  };
+              })
+          };
+      
+          // Update the curved-lines source
+          map.getSource('curved-lines').setData(curvedLinesGeoJSON);
+      
+          // Build the popup content
+          const nearestRegionsHtml = nearestRegions
+              .map(
+                  (region) => {
+                    const distanceInMiles = Math.round(region.distance * 0.621371); // Convert km to miles and round
+                    return `<li>${region.region} - ${distanceInMiles} miles</li>`;
+                })
+              .join('');
+      
+            // Determine the label based on whether the state is empty
+            const locationLabel = (!state || state === city)
+                ? `${city} (${cciso2})`
+                : `${city}, ${state} (${cciso2})`;
+
+          new mapboxgl.Popup()
+              .setLngLat(coordinates)
+              .setHTML(`
+                  <div style="font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5;">
+                      <strong>${locationLabel}</strong><br>
+                      <span style="color: #FF9900;">Capacity for 2<sup>${iphosts}</sup> unique dish IPs</span>
+                      <br><br>
+                      <strong>Nearest AWS Regions:</strong>
+                      <ul>${nearestRegionsHtml}</ul>
+                  </div>
+              `)
+              .addTo(map);
+        });
+
+        // Add popups for AWS Regions
+        map.on('click', 'aws-regions-layer', (e) => {
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const { region, name } = e.features[0].properties;
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(`<div style="
+            font-family: Arial, sans-serif; 
+            font-size: 12px; 
+            color: #333; 
+            line-height: 1.5;
+        ">
+            <strong>${name}</strong><br>
+            <span style="color: #1E90FF;">${region}</span>
+        </div>`)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when hovering over layers
+        map.on('mouseenter', 'starlink-cities-layer', () => {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+        map.on('mouseleave', 'starlink-cities-layer', () => {
+            map.getCanvas().style.cursor = '';
+        });
+
+        map.on('mouseenter', 'aws-regions-layer', () => {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+        map.on('mouseleave', 'aws-regions-layer', () => {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+</script>
+</body>
+</html>

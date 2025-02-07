@@ -1,0 +1,592 @@
+{
+    "XE": {
+      "common_name": "JSX",
+      "starlink_enabled_airframe": [
+        {
+          "aircraft_id": "N241JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N242JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N251JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N252JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N253JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N254JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N256JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N257JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N258JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N259JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N260JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N261JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N262JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N263JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N264JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N265JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N268JX",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N819AE",
+          "aircraft_type": "E135",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N11535",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N16981",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N243JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N245JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N246JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N247JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N912JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N913JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N914JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N915JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N916JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N917JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N918JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N919JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N920JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N921JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N922JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N924JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N926JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N927JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N928JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N929JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N930JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N931JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N932JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N933JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N934JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N935JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N936JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N937JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N938JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N939JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N940JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N941JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N942JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N943JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N944JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N945JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N946JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N947JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N948JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N949JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N950JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N951JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N952JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N953JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N954JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N955JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N956JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N957JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N958JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N959JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N960JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N961JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N962JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        },
+        {
+          "aircraft_id": "N963JX",
+          "aircraft_type": "E145",
+          "recent_routes": []
+        }
+      ]
+    },
+    "HA": {
+          "common_name": "Hawaiian Airlines",
+          "starlink_enabled_airframe": [
+            {
+              "aircraft_id": "N202HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N204HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N205HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N208HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N209HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N212HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N213HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N214HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N215HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N216HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N217HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N218HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N220HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N223HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N226HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N227HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N228HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N230HA",
+              "aircraft_type": "A21N",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N360HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N361HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N370HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N373HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N374HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N375HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N378HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N379HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N380HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N381HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N382HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N383HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N384HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N385HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N386HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N388HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N389HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N390HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N391HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N392HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N393HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N395HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N396HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            },
+            {
+              "aircraft_id": "N399HA",
+              "aircraft_type": "A332",
+              "recent_routes": []
+            }
+          ]
+        }
+  }

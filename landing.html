@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look Ma, It's a Starlink! | Satellite internet nerdery for users and developers alike | Fastah API for IP Geolocation & Security</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa; /* Default light background for simplicity */
+      color: #212529; /* Default text color */
+    }
+
+    header {
+      background-color: #ffffff; /* Plain white header */
+      border-bottom: 1px solid #dee2e6; /* Subtle divider */
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    p.lead {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #ffffff; /* Plain white footer */
+      border-top: 1px solid #dee2e6; /* Subtle divider */
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #007bff; /* Bootstrap's default link color */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline; /* Underline on hover for clarity */
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="py-4 text-center">
+    <div class="container">
+      <h1>Look Ma, It's a Starlink!</h1>
+      <p class="lead">Satellite internet nerdery for users and developers alike</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <!-- Cloud Section -->
+    <section id="cloud" class="mb-5">
+      <h2>Cloud</h2>
+      <div class="accordion" id="cloudAccordion">
+        <!-- AWS Section -->
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingAWS">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAWS" aria-expanded="true" aria-controls="collapseAWS">
+              AWS
+            </button>
+          </h3>
+          <div id="collapseAWS" class="accordion-collapse collapse show" aria-labelledby="headingAWS" data-bs-parent="#cloudAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li><a href="/starlink_aws_nearest_regions.html">Nearest Regions</a></li>
+                <li><a href="/aws/nearest-cdn">Nearest CDN</a></li>
+                <li><a href="/aws/nearest-ground-stations">Nearest AWS Ground Stations</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Azure Section -->
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingAzure">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAzure" aria-expanded="false" aria-controls="collapseAzure">
+              Azure
+            </button>
+          </h3>
+          <div id="collapseAzure" class="accordion-collapse collapse" aria-labelledby="headingAzure" data-bs-parent="#cloudAccordion">
+            <div class="accordion-body">
+              <p>Azure-specific content coming soon!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Airlines Section -->
+    <section id="airlines" class="mb-5">
+      <h2>Airlines</h2>
+      <div class="accordion" id="airlinesAccordion">
+        <!-- JSX Section -->
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingJSX">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJSX" aria-expanded="true" aria-controls="collapseJSX">
+              JSX
+            </button>
+          </h3>
+          <div id="collapseJSX" class="accordion-collapse collapse show" aria-labelledby="headingJSX" data-bs-parent="#airlinesAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li><a href="/airlines/jsx/inflight-wifi">Inflight WiFi Details</a></li>
+                <li><a href="/airlines/jsx/routes">Routes with Starlink</a></li>
+                <li><a href="/airlines/jsx/faq">JSX FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- United Airlines Section -->
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingUnited">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnited" aria-expanded="false" aria-controls="collapseUnited">
+              United Airlines
+            </button>
+          </h3>
+          <div id="collapseUnited" class="accordion-collapse collapse" aria-labelledby="headingUnited" data-bs-parent="#airlinesAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li><a href="/airlines/united/inflight-wifi">Inflight WiFi Details</a></li>
+                <li><a href="/airlines/united/routes">Routes with Starlink</a></li>
+                <li><a href="/airlines/united/faq">United Airlines FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4">
+    <p>Optimize satellite internet user experience with Fastah's API on <a href=""https://aws.amazon.com/marketplace/pp/B084VR96P3>AWS Marketplace</a> and <a href=""https://azuremarketplace.microsoft.com/en-us/marketplace/apps/fastah.ip_location_api_01>Azure Marketplace</a></p>
+    <p>Powered by public domain information from SpaceX and other organizations</p>  
+    <p>&copy; 2025 Fastah Inc.</p>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
