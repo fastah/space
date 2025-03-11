@@ -588,5 +588,25 @@
               "recent_routes": []
             }
           ]
-        }
+        },
+    "UA": {
+        "common_name": "United Airlines",
+        "starlink_enabled_airframe": [
+            {
+                "aircraft_id": "N127SY",
+                "aircraft_type": "E75L",
+                "recent_routes": []
+            }
+        ]
+    },
+    "QR": {
+        "common_name": "Qatar Airways",
+        "starlink_enabled_airframe": [
+            {
+                "aircraft_id": "A7-BEO",
+                "aircraft_type": "B77W",
+                "recent_routes": []
+            }
+        ]
+    }
   }
