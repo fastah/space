@@ -187,27 +187,46 @@ func feedColumnsToKey(cols []string) string {
 }
 
 type fastahResponse struct {
-	IP              string `json:"ip"`
-	IsEuropeanUnion bool   `json:"isEuropeanUnion"`
-	L10N            struct {
-		CurrencyName   string   `json:"currencyName"`
-		CurrencyCode   string   `json:"currencyCode"`
-		CurrencySymbol string   `json:"currencySymbol"`
-		LangCodes      []string `json:"langCodes"`
-	} `json:"l10n"`
-	LocationData struct {
+	IP          string `json:"ip"`
+	IsSatellite bool   `json:"isSatellite"`
+	UserGeo     struct {
 		CountryName    string  `json:"countryName"`
 		CountryCode    string  `json:"countryCode"`
+		StateName      string  `json:"stateName"`
+		StateCode      string  `json:"stateCode"`
 		CityName       string  `json:"cityName"`
-		CityGeonamesID int     `json:"cityGeonamesId"`
 		Lat            float64 `json:"lat"`
 		Lng            float64 `json:"lng"`
+		AccuracyRadius int     `json:"accuracyRadius"`
 		Tz             string  `json:"tz"`
+		CityGeonamesID int     `json:"cityGeonamesId"`
 		ContinentCode  string  `json:"continentCode"`
-	} `json:"locationData"`
+	} `json:"userGeo"`
 	Satellite struct {
 		Provider string `json:"provider"`
 	} `json:"satellite"`
+	OnAws struct {
+		Filter  []string `json:"filter"`
+		Nearest []struct {
+			Name      string `json:"name"`
+			Svc       string `json:"svc"`
+			ID        string `json:"id"`
+			SimpleRtt int    `json:"simpleRtt"`
+		} `json:"nearest"`
+	} `json:"onAws"`
+	OnAzure struct {
+		Filter  []string `json:"filter"`
+		Nearest []struct {
+			Name      string `json:"name"`
+			Svc       string `json:"svc"`
+			ID        string `json:"id"`
+			SimpleRtt int    `json:"simpleRtt"`
+		} `json:"nearest"`
+	} `json:"onAzure"`
+	ExpiresAt struct {
+		Epoch int64     `json:"epoch"`
+		Time  time.Time `json:"time"`
+	} `json:"expiresAt"`
 }
 
 // ipToGeoJson makes API calls to the remote Fastah service and maps IP addresses to locations inside a GeoJSON fit for rendering on a map
@@ -223,15 +242,16 @@ func ipToGeoJson(key string, providerLabel string, locations map[string]netip.Ad
 		var resp *http.Response
 		var err error
 		// Fastah lookup to provide a lat/long for the IP address
-		req, err = http.NewRequest("GET", fmt.Sprintf("https://ep.api.getfastah.com/whereis/v1/json/%s", ip.String()), nil)
+		req, err = http.NewRequest("GET", fmt.Sprintf("https://space.us-east-1.aws.api.getfastah.com/ip/%s", ip.String()), nil)
 		if err != nil {
 			fmt.Printf("[%s] Error preparing request for Fastah IP Geolocation API: %v\n", key, err)
 			continue
 		}
 		req.Header.Set("Fastah-Key", fastahKey)
+		req.Header.Set("x-api-key", fastahKey)
 		resp, err = c.Do(req)
 		if err != nil || resp.StatusCode != http.StatusOK {
-			fmt.Printf("[%s] Error calling Fastah IP Geolocation API for IP %s: %v\n", key, ip.String(), err)
+			fmt.Printf("[%s] Error calling Fastah IP Geolocation API for IP %s: %v (http code = %d)\n", key, ip.String(), err, resp.StatusCode)
 			panic("API call error")
 		}
 		defer resp.Body.Close()
@@ -242,19 +262,19 @@ func ipToGeoJson(key string, providerLabel string, locations map[string]netip.Ad
 			continue
 		}
 		fmt.Printf("[%s] Fastah IP Geolocation API reports RFC8805 entry %s/%s maps to %+v\n", key, ip.String(), uniqueloc, fr)
-		if countries[fr.LocationData.CountryCode] == nil {
+		if countries[fr.UserGeo.CountryCode] == nil {
 			f := geojson.NewFeature(orb.MultiPoint{})
-			f.Properties["cciso2"] = fr.LocationData.CountryCode
-			f.Properties["countryName"] = fr.LocationData.CountryName
+			f.Properties["cciso2"] = fr.UserGeo.CountryCode
+			f.Properties["countryName"] = fr.UserGeo.CountryName
 			f.Properties["marker-color"] = colorForBrand(key)
 			f.Properties["marker-size"] = "large"
 			f.Properties["title"] = providerLabel
 			f.Properties["description"] = "Approximate location as advertised by " + providerLabel
-			countries[fr.LocationData.CountryCode] = f
+			countries[fr.UserGeo.CountryCode] = f
 		}
-		var mp orb.MultiPoint = countries[fr.LocationData.CountryCode].Geometry.(orb.MultiPoint)
-		mp = append(mp, orb.Point{fr.LocationData.Lng, fr.LocationData.Lat})
-		countries[fr.LocationData.CountryCode].Geometry = mp
+		var mp orb.MultiPoint = countries[fr.UserGeo.CountryCode].Geometry.(orb.MultiPoint)
+		mp = append(mp, orb.Point{fr.UserGeo.Lng, fr.UserGeo.Lat})
+		countries[fr.UserGeo.CountryCode].Geometry = mp
 	}
 
 	// Assemble a FeatureCollection with one Feature per country, and each Feature having a MultiPoint representing all the markers/points within that country
