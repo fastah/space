@@ -35,10 +35,10 @@ async function initRfc8805sampleIp(provider) {
 
 // Loads the IP-metadata using Fastah API's endpoint
 async function getIPGeolocation(searchIp = 'auto') {
-    fetch('https://fastah-v2.azure-api.net/whereis/v1/json/' + searchIp, {
+    fetch('https://space.us-east-1.aws.api.getfastah.com/ip/auto', {
         mode: 'cors',
         headers: {
-            'Fastah-Key': '39d645630da04953b52a29bbb7ad3903'
+            'X-Api-Key': 'NKEdnwRSyxreD4Xswg6jaVVxqt0tr3G90uPMpurh'
         }
     })
     .then((response) => {
