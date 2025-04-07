@@ -144,7 +144,7 @@
             <div class="map-overlays">
                 <!-- Flight Controls (left side) -->
                 <div id="flight-controls">
-                    <span>Fly Hawaiian <em>HA 90</em> - Honolulu to Boston</span>
+                    <span>Fly <em>San Francisco to Lisbon</em> </span>
                     <button id="startFlight" class="btn btn-primary btn-sm">Start</button>
                     <button id="stopFlight" class="btn btn-secondary btn-sm">Stop</button>
                     <button id="resetFlight" class="btn btn-warning btn-sm">Reset</button>
@@ -412,12 +412,12 @@
             });
 
             // Coordinates: [longitude, latitude]
-            const honolulu = [-157.8581, 21.3099];
-            const boston = [-71.05, 42.35];
+            const sfo = [-122.419, 37.77];
+            const lis = [-9.1393, 38.7163];
 
             // Create a Turf lineString using great circle (round earth) method
-            const route = turf.greatCircle(turf.point(honolulu), turf.point(boston), {
-                properties: { name: "Honolulu to Paris" },
+            const route = turf.greatCircle(turf.point(sfo), turf.point(lis), {
+                properties: { name: "San Francisco to Lisbon" },
               });
 
             // Calculate the total distance of the route in miles
