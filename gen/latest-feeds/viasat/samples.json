@@ -6,43 +6,23 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      8.680000305175781,
-      50.119998931884766
+      15.979999542236328,
+      45.810001373291016
      ]
     ]
    },
    "properties": {
-    "cciso2": "DE",
-    "countryName": "Germany",
+    "cciso2": "HR",
+    "countryName": "Croatia",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "37.1.161.129",
-     "37.1.166.1",
-     "37.1.167.1",
-     "37.1.188.1",
-     "37.252.111.1",
-     "165.220.140.1",
-     "165.220.145.193",
-     "165.220.148.65",
-     "165.220.148.137",
-     "165.220.148.201",
-     "165.220.148.241",
-     "165.220.149.33",
-     "165.220.149.57",
-     "165.220.159.1",
-     "165.220.162.1",
-     "165.220.167.153",
-     "165.220.167.161",
-     "165.220.168.105",
-     "165.220.178.225",
-     "165.220.179.97",
-     "165.220.187.17",
-     "165.220.233.33",
-     "165.220.234.1",
-     "165.220.235.89",
-     "70.41.71.129",
-     "70.41.247.129",
-     "75.104.163.129"
+     "37.1.188.193",
+     "165.220.162.129",
+     "165.220.168.33",
+     "165.220.168.81",
+     "165.220.230.25",
+     "165.220.233.137",
+     "165.220.235.97"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -55,28 +35,79 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      -80.19000244140625,
-      25.770000457763672
-     ],
-     [
-      -117.3499984741211,
-      33.15999984741211
+      -4,
+      40
      ]
     ]
    },
    "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
+    "cciso2": "ES",
+    "countryName": "Spain",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "165.220.238.9",
-     "165.220.239.1",
-     "165.220.242.1",
-     "8.17.107.1",
-     "8.17.109.1",
-     "70.41.71.1",
-     "70.41.247.1",
-     "75.104.163.1"
+     "5.8.184.1",
+     "5.8.185.1",
+     "5.8.186.1",
+     "5.8.187.1",
+     "5.8.190.1",
+     "5.8.191.1",
+     "5.152.170.1",
+     "37.1.183.1",
+     "37.1.184.1",
+     "37.19.98.241",
+     "165.220.128.1",
+     "165.220.130.1",
+     "165.220.136.1",
+     "165.220.141.1",
+     "165.220.142.1",
+     "165.220.146.65",
+     "165.220.146.225",
+     "165.220.147.33",
+     "165.220.147.225",
+     "165.220.148.145",
+     "165.220.148.169",
+     "165.220.148.185",
+     "165.220.148.225",
+     "165.220.149.49",
+     "165.220.149.73",
+     "165.220.149.105",
+     "165.220.150.1",
+     "165.220.151.129",
+     "165.220.151.225",
+     "165.220.157.1",
+     "165.220.166.129",
+     "165.220.167.1",
+     "165.220.167.97",
+     "165.220.168.9",
+     "165.220.168.17",
+     "165.220.179.49",
+     "165.220.179.81",
+     "165.220.179.185",
+     "165.220.188.1",
+     "165.220.189.1",
+     "165.220.190.1",
+     "165.220.191.1",
+     "165.220.191.153",
+     "165.220.191.169",
+     "165.220.191.193",
+     "165.220.227.225",
+     "165.220.231.1",
+     "165.220.232.193",
+     "165.220.232.241",
+     "165.220.233.1",
+     "165.220.235.113",
+     "185.15.33.1",
+     "185.15.33.193",
+     "185.15.100.129",
+     "185.15.100.137",
+     "185.15.100.145",
+     "185.15.100.153",
+     "185.15.101.1",
+     "185.15.102.1",
+     "185.15.103.1",
+     "70.41.71.97",
+     "70.41.247.97",
+     "75.104.163.97"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -89,24 +120,63 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      -55,
-      -10
+      -0.7599999904632568,
+      51.290000915527344
      ]
     ]
    },
    "properties": {
-    "cciso2": "BR",
-    "countryName": "Brazil",
+    "cciso2": "GB",
+    "countryName": "United Kingdom",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "70.41.71.193",
-     "70.41.247.193",
-     "75.104.163.193",
-     "99.198.72.1",
-     "99.198.80.1",
-     "99.198.84.1",
-     "181.199.212.1",
-     "190.98.181.1"
+     "5.8.189.113",
+     "37.1.163.1",
+     "37.1.185.129",
+     "37.1.188.209",
+     "37.19.98.193",
+     "37.203.192.1",
+     "165.220.133.1",
+     "165.220.134.1",
+     "165.220.139.1",
+     "165.220.141.129",
+     "165.220.142.129",
+     "165.220.144.1",
+     "165.220.144.129",
+     "165.220.144.193",
+     "165.220.145.65",
+     "165.220.146.161",
+     "165.220.146.193",
+     "165.220.147.161",
+     "165.220.148.33",
+     "165.220.149.9",
+     "165.220.149.113",
+     "165.220.149.121",
+     "165.220.152.41",
+     "165.220.167.129",
+     "165.220.167.145",
+     "165.220.167.185",
+     "165.220.167.193",
+     "165.220.167.249",
+     "165.220.169.1",
+     "165.220.172.1",
+     "165.220.173.1",
+     "165.220.177.1",
+     "165.220.177.65",
+     "165.220.178.1",
+     "165.220.178.193",
+     "165.220.179.113",
+     "165.220.191.185",
+     "165.220.227.129",
+     "165.220.227.209",
+     "165.220.233.17",
+     "165.220.235.105",
+     "165.220.237.1",
+     "165.220.238.1",
+     "165.220.238.33",
+     "70.41.71.161",
+     "70.41.247.161",
+     "75.104.163.161"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -156,18 +226,81 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      55.310001373291016,
-      25.079999923706055
+      5.730000019073486,
+      58.970001220703125
      ]
     ]
    },
    "properties": {
-    "cciso2": "AE",
-    "countryName": "United Arab Emirates",
+    "cciso2": "NO",
+    "countryName": "Norway",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "45.248.143.209",
-     "103.217.100.113"
+     "37.1.186.65",
+     "165.220.151.241",
+     "165.220.179.65",
+     "165.220.235.49"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      15,
+      62
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "SE",
+    "countryName": "Sweden",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.187.241",
+     "165.220.235.73",
+     "75.104.78.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -9.130000114440918,
+      38.720001220703125
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "PT",
+    "countryName": "Portugal",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.187.1",
+     "37.252.202.129",
+     "165.220.148.121",
+     "165.220.149.153",
+     "165.220.151.1",
+     "165.220.151.65",
+     "165.220.152.1",
+     "165.220.168.113",
+     "165.220.179.193",
+     "165.220.187.129",
+     "165.220.229.25",
+     "165.220.233.129",
+     "165.220.235.17",
+     "185.15.34.129"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -317,18 +450,128 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      14.420000076293945,
-      50.09000015258789
+      13.1899995803833,
+      32.88999938964844
      ]
     ]
    },
    "properties": {
-    "cciso2": "CZ",
-    "countryName": "Czechia",
+    "cciso2": "LY",
+    "countryName": "Libya",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "37.1.187.209",
-     "165.220.241.1"
+     "37.1.187.105",
+     "37.1.187.113",
+     "37.1.187.129",
+     "165.220.235.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      45,
+      25
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "SA",
+    "countryName": "Saudi Arabia",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "165.220.238.97",
+     "67.54.193.97",
+     "70.41.219.65",
+     "70.41.223.97",
+     "165.220.238.97",
+     "184.63.129.201",
+     "184.63.131.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -99.19999694824219,
+      19.43000030517578
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "MX",
+    "countryName": "Mexico",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "70.41.71.65",
+     "70.41.247.65",
+     "75.104.163.65",
+     "99.198.64.1",
+     "99.198.65.1",
+     "99.198.66.1",
+     "99.198.68.1",
+     "213.209.183.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      8.680000305175781,
+      50.119998931884766
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "DE",
+    "countryName": "Germany",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.161.129",
+     "37.1.166.1",
+     "37.1.167.1",
+     "37.1.188.1",
+     "37.252.111.1",
+     "165.220.140.1",
+     "165.220.145.193",
+     "165.220.148.65",
+     "165.220.148.137",
+     "165.220.148.201",
+     "165.220.148.241",
+     "165.220.149.33",
+     "165.220.149.57",
+     "165.220.159.1",
+     "165.220.162.1",
+     "165.220.167.153",
+     "165.220.167.161",
+     "165.220.168.105",
+     "165.220.178.225",
+     "165.220.179.97",
+     "165.220.187.17",
+     "165.220.233.33",
+     "165.220.234.1",
+     "165.220.235.89",
+     "70.41.71.129",
+     "70.41.247.129",
+     "75.104.163.129"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -354,6 +597,478 @@
      "37.1.188.185",
      "37.1.190.1",
      "165.220.148.249"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      20.079999923706055,
+      41.11000061035156
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "AL",
+    "countryName": "Albania",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "165.220.230.33",
+     "165.220.248.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -75.25,
+      -10
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "PE",
+    "countryName": "Peru",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "198.45.242.129",
+     "198.45.242.193"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -86.5,
+      15
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "HN",
+    "countryName": "Honduras",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "198.45.242.33",
+     "198.45.242.49"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      23.729999542236328,
+      37.97999954223633
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "GR",
+    "countryName": "Greece",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.186.193",
+     "37.252.202.33",
+     "165.220.129.1",
+     "165.220.132.1",
+     "165.220.140.129",
+     "165.220.143.129",
+     "165.220.148.193",
+     "165.220.149.89",
+     "165.220.149.97",
+     "165.220.151.161",
+     "165.220.167.113",
+     "165.220.168.89",
+     "165.220.178.65",
+     "165.220.178.129",
+     "165.220.229.33",
+     "165.220.232.225",
+     "165.220.233.193",
+     "165.220.235.33",
+     "165.220.235.145",
+     "185.84.124.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -80.19000244140625,
+      25.770000457763672
+     ],
+     [
+      -117.3499984741211,
+      33.15999984741211
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "165.220.238.9",
+     "165.220.239.1",
+     "165.220.242.1",
+     "8.17.107.1",
+     "8.17.109.1",
+     "70.41.71.1",
+     "70.41.247.1",
+     "75.104.163.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -73.25,
+      4
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "CO",
+    "countryName": "Colombia",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "198.45.242.97",
+     "198.45.243.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      20,
+      47
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "HU",
+    "countryName": "Hungary",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.186.129",
+     "165.220.235.41"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      121.45999908447266,
+      25.059999465942383
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "TW",
+    "countryName": "Taiwan",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "165.220.238.65",
+     "165.220.239.129",
+     "103.217.100.17",
+     "103.217.100.49"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -8,
+      53
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "IE",
+    "countryName": "Ireland",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.187.65",
+     "37.1.187.97",
+     "37.19.96.1",
+     "37.19.97.1",
+     "37.19.98.129",
+     "37.19.98.225",
+     "37.19.101.1",
+     "37.19.102.1",
+     "37.19.103.1",
+     "37.203.198.1",
+     "37.203.199.1",
+     "37.252.202.65",
+     "165.220.149.65",
+     "165.220.164.129",
+     "165.220.168.49",
+     "165.220.168.73",
+     "165.220.177.129",
+     "165.220.179.137",
+     "165.220.179.169",
+     "165.220.191.161",
+     "165.220.227.241",
+     "165.220.229.41",
+     "165.220.229.49",
+     "165.220.233.177",
+     "185.4.192.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      5.75,
+      52.25
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "NL",
+    "countryName": "The Netherlands",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.188.161",
+     "70.41.52.1",
+     "213.209.180.129",
+     "213.209.180.193",
+     "213.209.181.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -90.51000213623047,
+      14.640000343322754
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "GT",
+    "countryName": "Guatemala",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "198.45.242.65",
+     "198.45.242.81"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      112.5,
+      2.5
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "MY",
+    "countryName": "Malaysia",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "165.220.238.17",
+     "103.217.100.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      55.310001373291016,
+      25.079999923706055
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "AE",
+    "countryName": "United Arab Emirates",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "45.248.143.209",
+     "103.217.100.113"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      80.75,
+      7.75
+     ],
+     [
+      80.75,
+      7.75
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "LK",
+    "countryName": "Sri Lanka",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "165.220.238.113",
+     "67.54.193.113",
+     "70.41.219.97",
+     "70.41.223.129",
+     "165.220.238.113",
+     "184.63.95.233",
+     "184.63.129.249",
+     "184.63.131.9"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      43.499900817871094,
+      41.99998092651367
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "GE",
+    "countryName": "Georgia",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.188.201"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      6.166669845581055,
+      49.75
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "LU",
+    "countryName": "Luxembourg",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.188.145"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -58.15999984741211,
+      6.800000190734863
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "GY",
+    "countryName": "Guyana",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "198.45.242.1",
+     "198.45.242.17"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -475,28 +1190,20 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      80.75,
-      7.75
-     ],
-     [
-      80.75,
-      7.75
+      19.5,
+      48.66667175292969
      ]
     ]
    },
    "properties": {
-    "cciso2": "LK",
-    "countryName": "Sri Lanka",
+    "cciso2": "SK",
+    "countryName": "Slovakia",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "165.220.238.113",
-     "67.54.193.113",
-     "70.41.219.97",
-     "70.41.223.129",
-     "165.220.238.113",
-     "184.63.95.233",
-     "184.63.129.249",
-     "184.63.131.9"
+     "37.1.187.145",
+     "37.1.187.161",
+     "165.220.235.121",
+     "165.220.240.1"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -509,196 +1216,18 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      147,
-      -6
+      14.420000076293945,
+      50.09000015258789
      ]
     ]
    },
    "properties": {
-    "cciso2": "PG",
-    "countryName": "Papua New Guinea",
+    "cciso2": "CZ",
+    "countryName": "Czechia",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "198.45.244.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -4,
-      40
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "ES",
-    "countryName": "Spain",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "5.8.184.1",
-     "5.8.185.1",
-     "5.8.186.1",
-     "5.8.187.1",
-     "5.8.190.1",
-     "5.8.191.1",
-     "5.152.170.1",
-     "37.1.183.1",
-     "37.1.184.1",
-     "37.19.98.241",
-     "165.220.128.1",
-     "165.220.130.1",
-     "165.220.136.1",
-     "165.220.141.1",
-     "165.220.142.1",
-     "165.220.146.65",
-     "165.220.146.225",
-     "165.220.147.33",
-     "165.220.147.225",
-     "165.220.148.145",
-     "165.220.148.169",
-     "165.220.148.185",
-     "165.220.148.225",
-     "165.220.149.49",
-     "165.220.149.73",
-     "165.220.149.105",
-     "165.220.150.1",
-     "165.220.151.129",
-     "165.220.151.225",
-     "165.220.157.1",
-     "165.220.166.129",
-     "165.220.167.1",
-     "165.220.167.97",
-     "165.220.168.9",
-     "165.220.168.17",
-     "165.220.179.49",
-     "165.220.179.81",
-     "165.220.179.185",
-     "165.220.188.1",
-     "165.220.189.1",
-     "165.220.190.1",
-     "165.220.191.1",
-     "165.220.191.153",
-     "165.220.191.169",
-     "165.220.191.193",
-     "165.220.227.225",
-     "165.220.231.1",
-     "165.220.232.193",
-     "165.220.232.241",
-     "165.220.233.1",
-     "165.220.235.113",
-     "185.15.33.1",
-     "185.15.33.193",
-     "185.15.100.129",
-     "185.15.100.137",
-     "185.15.100.145",
-     "185.15.100.153",
-     "185.15.101.1",
-     "185.15.102.1",
-     "185.15.103.1",
-     "70.41.71.97",
-     "70.41.247.97",
-     "75.104.163.97"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      15.979999542236328,
-      45.810001373291016
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "HR",
-    "countryName": "Croatia",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.188.193",
-     "165.220.162.129",
-     "165.220.168.33",
-     "165.220.168.81",
-     "165.220.230.25",
-     "165.220.233.137",
-     "165.220.235.97"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      23.729999542236328,
-      37.97999954223633
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "GR",
-    "countryName": "Greece",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.186.193",
-     "37.252.202.33",
-     "165.220.129.1",
-     "165.220.132.1",
-     "165.220.140.129",
-     "165.220.143.129",
-     "165.220.148.193",
-     "165.220.149.89",
-     "165.220.149.97",
-     "165.220.151.161",
-     "165.220.167.113",
-     "165.220.168.89",
-     "165.220.178.65",
-     "165.220.178.129",
-     "165.220.229.33",
-     "165.220.232.225",
-     "165.220.233.193",
-     "165.220.235.33",
-     "165.220.235.145",
-     "185.84.124.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      16.3700008392334,
-      48.209999084472656
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "AT",
-    "countryName": "Austria",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.187.225"
+     "37.1.187.209",
+     "165.220.241.1"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -743,18 +1272,21 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      20,
-      47
+      6.630000114440918,
+      46.52000045776367
      ]
     ]
    },
    "properties": {
-    "cciso2": "HU",
-    "countryName": "Hungary",
+    "cciso2": "CH",
+    "countryName": "Switzerland",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "37.1.186.129",
-     "165.220.235.41"
+     "37.1.187.249",
+     "45.140.216.1",
+     "165.220.147.129",
+     "165.220.167.233",
+     "165.220.235.65"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -767,20 +1299,40 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      5.730000019073486,
-      58.970001220703125
+      147,
+      -6
      ]
     ]
    },
    "properties": {
-    "cciso2": "NO",
-    "countryName": "Norway",
+    "cciso2": "PG",
+    "countryName": "Papua New Guinea",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "37.1.186.65",
-     "165.220.151.241",
-     "165.220.179.65",
-     "165.220.235.49"
+     "198.45.244.1"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      4.349999904632568,
+      50.849998474121094
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "BE",
+    "countryName": "Belgium",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "37.1.188.129"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -817,20 +1369,47 @@
     "type": "MultiPoint",
     "coordinates": [
      [
-      121.45999908447266,
-      25.059999465942383
+      16.3700008392334,
+      48.209999084472656
      ]
     ]
    },
    "properties": {
-    "cciso2": "TW",
-    "countryName": "Taiwan",
+    "cciso2": "AT",
+    "countryName": "Austria",
     "description": "Approximate location as advertised by Viasat",
     "ip-samples": [
-     "165.220.238.65",
-     "165.220.239.129",
-     "103.217.100.17",
-     "103.217.100.49"
+     "37.1.187.225"
+    ],
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+     [
+      -55,
+      -10
+     ]
+    ]
+   },
+   "properties": {
+    "cciso2": "BR",
+    "countryName": "Brazil",
+    "description": "Approximate location as advertised by Viasat",
+    "ip-samples": [
+     "70.41.71.193",
+     "70.41.247.193",
+     "75.104.163.193",
+     "99.198.72.1",
+     "99.198.80.1",
+     "99.198.84.1",
+     "181.199.212.1",
+     "190.98.181.1"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
@@ -865,585 +1444,6 @@
      "165.220.149.137",
      "165.220.233.73",
      "165.220.233.161"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      43.499900817871094,
-      41.99998092651367
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "GE",
-    "countryName": "Georgia",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.188.201"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      112.5,
-      2.5
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "MY",
-    "countryName": "Malaysia",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "165.220.238.17",
-     "103.217.100.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -9.130000114440918,
-      38.720001220703125
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "PT",
-    "countryName": "Portugal",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.187.1",
-     "37.252.202.129",
-     "165.220.148.121",
-     "165.220.149.153",
-     "165.220.151.1",
-     "165.220.151.65",
-     "165.220.152.1",
-     "165.220.168.113",
-     "165.220.179.193",
-     "165.220.187.129",
-     "165.220.229.25",
-     "165.220.233.129",
-     "165.220.235.17",
-     "185.15.34.129"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -75.25,
-      -10
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "PE",
-    "countryName": "Peru",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "198.45.242.129",
-     "198.45.242.193"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -99.19999694824219,
-      19.43000030517578
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "MX",
-    "countryName": "Mexico",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "70.41.71.65",
-     "70.41.247.65",
-     "75.104.163.65",
-     "99.198.64.1",
-     "99.198.65.1",
-     "99.198.66.1",
-     "99.198.68.1",
-     "213.209.183.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -8,
-      53
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "IE",
-    "countryName": "Ireland",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.187.65",
-     "37.1.187.97",
-     "37.19.96.1",
-     "37.19.97.1",
-     "37.19.98.129",
-     "37.19.98.225",
-     "37.19.101.1",
-     "37.19.102.1",
-     "37.19.103.1",
-     "37.203.198.1",
-     "37.203.199.1",
-     "37.252.202.65",
-     "165.220.149.65",
-     "165.220.164.129",
-     "165.220.168.49",
-     "165.220.168.73",
-     "165.220.177.129",
-     "165.220.179.137",
-     "165.220.179.169",
-     "165.220.191.161",
-     "165.220.227.241",
-     "165.220.229.41",
-     "165.220.229.49",
-     "165.220.233.177",
-     "185.4.192.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      4.349999904632568,
-      50.849998474121094
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "BE",
-    "countryName": "Belgium",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.188.129"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -58.15999984741211,
-      6.800000190734863
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "GY",
-    "countryName": "Guyana",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "198.45.242.1",
-     "198.45.242.17"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      19.5,
-      48.66667175292969
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "SK",
-    "countryName": "Slovakia",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.187.145",
-     "37.1.187.161",
-     "165.220.235.121",
-     "165.220.240.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -73.25,
-      4
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "CO",
-    "countryName": "Colombia",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "198.45.242.97",
-     "198.45.243.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      13.1899995803833,
-      32.88999938964844
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "LY",
-    "countryName": "Libya",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.187.105",
-     "37.1.187.113",
-     "37.1.187.129",
-     "165.220.235.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      15,
-      62
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "SE",
-    "countryName": "Sweden",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.187.241",
-     "165.220.235.73",
-     "75.104.78.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      6.166669845581055,
-      49.75
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "LU",
-    "countryName": "Luxembourg",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.188.145"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -90.51000213623047,
-      14.640000343322754
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "GT",
-    "countryName": "Guatemala",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "198.45.242.65",
-     "198.45.242.81"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -0.7599999904632568,
-      51.290000915527344
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "GB",
-    "countryName": "United Kingdom",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "5.8.189.113",
-     "37.1.163.1",
-     "37.1.185.129",
-     "37.1.188.209",
-     "37.19.98.193",
-     "37.203.192.1",
-     "165.220.133.1",
-     "165.220.134.1",
-     "165.220.139.1",
-     "165.220.141.129",
-     "165.220.142.129",
-     "165.220.144.1",
-     "165.220.144.129",
-     "165.220.144.193",
-     "165.220.145.65",
-     "165.220.146.161",
-     "165.220.146.193",
-     "165.220.147.161",
-     "165.220.148.33",
-     "165.220.149.9",
-     "165.220.149.113",
-     "165.220.149.121",
-     "165.220.152.41",
-     "165.220.167.129",
-     "165.220.167.145",
-     "165.220.167.185",
-     "165.220.167.193",
-     "165.220.167.249",
-     "165.220.169.1",
-     "165.220.172.1",
-     "165.220.173.1",
-     "165.220.177.1",
-     "165.220.177.65",
-     "165.220.178.1",
-     "165.220.178.193",
-     "165.220.179.113",
-     "165.220.191.185",
-     "165.220.227.129",
-     "165.220.227.209",
-     "165.220.233.17",
-     "165.220.235.105",
-     "165.220.237.1",
-     "165.220.238.1",
-     "165.220.238.33",
-     "70.41.71.161",
-     "70.41.247.161",
-     "75.104.163.161"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      5.75,
-      52.25
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "NL",
-    "countryName": "The Netherlands",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.188.161",
-     "70.41.52.1",
-     "213.209.180.129",
-     "213.209.180.193",
-     "213.209.181.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      6.630000114440918,
-      46.52000045776367
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "CH",
-    "countryName": "Switzerland",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "37.1.187.249",
-     "45.140.216.1",
-     "165.220.147.129",
-     "165.220.167.233",
-     "165.220.235.65"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      45,
-      25
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "SA",
-    "countryName": "Saudi Arabia",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "165.220.238.97",
-     "67.54.193.97",
-     "70.41.219.65",
-     "70.41.223.97",
-     "165.220.238.97",
-     "184.63.129.201",
-     "184.63.131.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      20.079999923706055,
-      41.11000061035156
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "AL",
-    "countryName": "Albania",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "165.220.230.33",
-     "165.220.248.1"
-    ],
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "MultiPoint",
-    "coordinates": [
-     [
-      -86.5,
-      15
-     ]
-    ]
-   },
-   "properties": {
-    "cciso2": "HN",
-    "countryName": "Honduras",
-    "description": "Approximate location as advertised by Viasat",
-    "ip-samples": [
-     "198.45.242.33",
-     "198.45.242.49"
     ],
     "marker-color": "#009FE3",
     "marker-size": "large",
