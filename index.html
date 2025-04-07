@@ -133,7 +133,7 @@
         <!-- Header using Bootstrap navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <h2 class="navbar-brand">Edge Optimizer for Starlink and ViaSat</h2>
+                <a class="navbar-brand">Edge Optimizer for Starlink and ViaSat - Fastah Inc.</a>
             </div>
         </nav>
 
@@ -198,6 +198,9 @@
     <!-- Include Turf.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"></script>
     <script>
+        // At the top, define the default zoom level
+        const defaultZoomLevelOnLoad = 4;
+
         // Set your Mapbox access token
         mapboxgl.accessToken = 'pk.eyJ1IjoiczhtYXRodXIiLCJhIjoiY2xzbHl1Zjg0MGZpdjJrcGVpa2pkbG0wNiJ9.rFDdt45Wd4s6a-RfqvAQiQ';
 
@@ -206,8 +209,12 @@
             container: 'map', // HTML container id
             style: 'mapbox://styles/mapbox/light-v11', // Map style
             center: [-98.5795, 39.8283], // Center on USA
-            zoom: 6 // Initial zoom level
+            zoom: defaultZoomLevelOnLoad, // Use the default zoom level from variable,
+            attributionControl: false
         });
+        map.addControl(new mapboxgl.AttributionControl({
+            customAttribution: 'Powered by Fastah™ API with public data from AWS, Azure, SpaceX, and ViaSat'
+        }))
 
         // Define the layers with properties
         const layers = [
@@ -218,7 +225,8 @@
                 downloadUrl: 'https://space.us-east-1.aws.api.getfastah.com/cloud/aws?format=geojson',
                 symbolName: 'aws-marker',
                 markerImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/320px-Amazon_Web_Services_Logo.svg.png',
-                markerSize: 0.1
+                markerSize: 0.1,
+                iconOffset: [20, -20]  // Default offset for AWS icons
             },
             {
                 id: 'azure',
@@ -227,7 +235,8 @@
                 downloadUrl: 'https://space.us-east-1.aws.api.getfastah.com/cloud/azure?format=geojson',
                 symbolName: 'azure-marker',
                 markerImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/240px-Microsoft_Azure.svg.png',
-                markerSize: 0.1
+                markerSize: 0.1,
+                iconOffset: [-20, 20]  // Default offset for Azure icons
             },
             {
                 id: 'starlink',
@@ -236,7 +245,8 @@
                 downloadUrl: './gen/latest-feeds/starlink/samples.json',
                 symbolName: 'starlink-marker',
                 markerImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Starlink_Logo.svg/320px-Starlink_Logo.svg.png',
-                markerSize: 0.1
+                markerSize: 0.1,
+                iconOffset: [10, -10]  // Default offset for Starlink icons
             },
             {
                 id: 'viasat',
@@ -245,7 +255,8 @@
                 downloadUrl: './gen/latest-feeds/viasat/samples.json',
                 symbolName: 'viasat-marker',
                 markerImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Viasat.svg/320px-Viasat.svg.png',
-                markerSize: 0.2
+                markerSize: 0.2,
+                iconOffset: [0, -30]  // Default offset for ViaSat icons
             }
         ];
 
@@ -261,12 +272,13 @@
                         layer.symbolName
                     ];
                 }
-                // Set default visibility to 'none' for both AWS and Azure layers
                 const baseLayout = {
                     'icon-image': iconImage,
                     'icon-size': layer.markerSize,
                     'icon-allow-overlap': true,
-                    'visibility': 'none'
+                    'visibility': 'none',
+                    // Pass the default icon offset; if not defined, fallback to [0,0]
+                    'icon-offset': layer.iconOffset || [0, 0]
                 };
                 map.addLayer({
                     'id': layer.id,
@@ -524,33 +536,40 @@
             // We'll store the interval ID so that we can stop the animation.
             let flightIntervalId = null;
 
+            // Define a central delay value (in milliseconds) for viewing each segment
+            const viewDelay = 5000; // 5 seconds
+
             function startFlightAnimation() {
-              // Prevent multiple intervals from being set
               if (flightIntervalId === null) {
-                flightIntervalId = setInterval(() => {
+                // Define a recursive function for the animation loop
+                function animateSegment() {
                   let nextIndex = currentSegment + 1;
-                  // When reaching the last segment, stop the animation.
+                  // Stop the animation if reaching the last segment
                   if (nextIndex >= segmentMidpoints.length) {
                     stopFlightAnimation();
                     return;
                   }
-                  
+
                   const currentPos = segmentMidpoints[currentSegment];
                   const nextPos = segmentMidpoints[nextIndex];
                   // Calculate the bearing between the current and next points
                   const bearing = turf.bearing(currentPos, nextPos);
-                  
+
                   // Update the plane feature with the new coordinates and rotation
                   planeFeature.geometry.coordinates = nextPos.geometry.coordinates;
                   planeFeature.properties.rotation = bearing;
-                  
                   map.getSource('plane').setData(planeFeature);
-                  
-                  // Pan the map to center on the new airplane position
+
+                  // Set zoom to 6 then pan to center on the new airplane position
+                  map.setZoom(6);
                   map.panTo(nextPos.geometry.coordinates, { animate: true });
-                  
+
                   currentSegment = nextIndex;
-                }, 2000); // Move one segment every 2 seconds
+                  // Wait viewDelay milliseconds AFTER panTo and zoom actions, then animate the next segment
+                  flightIntervalId = setTimeout(animateSegment, viewDelay);
+                }
+                // Start the recursive animation
+                animateSegment();
               }
             }
 
@@ -568,7 +587,8 @@
               planeFeature.geometry.coordinates = segmentMidpoints[0].geometry.coordinates;
               planeFeature.properties.rotation = 0;
               map.getSource('plane').setData(planeFeature);
-              // Pan the map back to the initial point
+              // Reset the zoom level to the default value and pan to the starting position
+              map.setZoom(defaultZoomLevelOnLoad);
               map.panTo(segmentMidpoints[0].geometry.coordinates, { animate: true });
             }
 
