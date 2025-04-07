@@ -144,7 +144,7 @@
             <div class="map-overlays">
                 <!-- Flight Controls (left side) -->
                 <div id="flight-controls">
-                    <span>Fly Honolulu to Boston</span>
+                    <span>Fly Hawaiian <em>HA 90</em> - Honolulu to Boston</span>
                     <button id="startFlight" class="btn btn-primary btn-sm">Start</button>
                     <button id="stopFlight" class="btn btn-secondary btn-sm">Stop</button>
                     <button id="resetFlight" class="btn btn-warning btn-sm">Reset</button>
@@ -279,7 +279,7 @@
                     iconOffsetExpr = [
                         'case',
                         ['==', ['get', 'type'], 'GroundStation'],
-                        ["literal", [500, 500]],
+                        ["literal", [0, 450]],
                         ["literal", layer.iconOffset || [0, 0]]
                     ];
                 } else {
