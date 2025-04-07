@@ -226,7 +226,7 @@
                 symbolName: 'aws-marker',
                 markerImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/320px-Amazon_Web_Services_Logo.svg.png',
                 markerSize: 0.1,
-                iconOffset: [20, -20]  // Default offset for AWS icons
+                iconOffset: [30, -30]  // Default offset for AWS icons
             },
             {
                 id: 'azure',
@@ -236,7 +236,7 @@
                 symbolName: 'azure-marker',
                 markerImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/240px-Microsoft_Azure.svg.png',
                 markerSize: 0.1,
-                iconOffset: [-20, 20]  // Default offset for Azure icons
+                iconOffset: [-30, 30]  // Default offset for Azure icons
             },
             {
                 id: 'starlink',
@@ -246,7 +246,7 @@
                 symbolName: 'starlink-marker',
                 markerImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Starlink_Logo.svg/320px-Starlink_Logo.svg.png',
                 markerSize: 0.1,
-                iconOffset: [10, -10]  // Default offset for Starlink icons
+                iconOffset: [-60, 60]  // Default offset for Starlink icons
             },
             {
                 id: 'viasat',
@@ -256,7 +256,7 @@
                 symbolName: 'viasat-marker',
                 markerImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Viasat.svg/320px-Viasat.svg.png',
                 markerSize: 0.2,
-                iconOffset: [0, -30]  // Default offset for ViaSat icons
+                iconOffset: [200, -200]  // Default offset for ViaSat icons
             }
         ];
 
@@ -272,14 +272,29 @@
                         layer.symbolName
                     ];
                 }
+                
+                let iconOffsetExpr;
+                if (layer.id === 'aws') {
+                    // For AWS: use a case expression for a GroundStation special offset, otherwise use the default
+                    iconOffsetExpr = [
+                        'case',
+                        ['==', ['get', 'type'], 'GroundStation'],
+                        ["literal", [500, 500]],
+                        ["literal", layer.iconOffset || [0, 0]]
+                    ];
+                } else {
+                    // For azure, starlink, and viasat: use the literal offset from the layer definition
+                    iconOffsetExpr = ["literal", layer.iconOffset || [0, 0]];
+                }
+                
                 const baseLayout = {
                     'icon-image': iconImage,
                     'icon-size': layer.markerSize,
                     'icon-allow-overlap': true,
                     'visibility': 'none',
-                    // Pass the default icon offset; if not defined, fallback to [0,0]
-                    'icon-offset': layer.iconOffset || [0, 0]
+                    'icon-offset': iconOffsetExpr
                 };
+                
                 map.addLayer({
                     'id': layer.id,
                     'type': 'symbol',
@@ -358,7 +373,7 @@
                 const coordinates = feature.geometry.coordinates.slice();
                 const popupContent = `
                     <div style="font-family: Arial, sans-serif; font-size: 12px; color: #333;">
-                        <strong>${feature.properties.type || 'AWS'}</strong><br>
+                        <strong>AWS ${feature.properties.type}</strong><br>
                         <span>${feature.properties.display_name || 'No display name available'}</span>
                     </div>`;
                 new mapboxgl.Popup()
@@ -373,7 +388,7 @@
                 const coordinates = feature.geometry.coordinates.slice();
                 const popupContent = `
                     <div style="font-family: Arial, sans-serif; font-size: 12px; color: #333;">
-                        <strong>${feature.properties.type || 'Azure'}</strong><br>
+                        <strong>Azure ${feature.properties.type}</strong><br>
                         <span>${feature.properties.display_name || 'No display name available'}</span>
                     </div>`;
                 new mapboxgl.Popup()
