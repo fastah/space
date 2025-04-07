@@ -420,14 +420,14 @@
                 properties: { name: "San Francisco to Lisbon" },
               });
 
-            // Calculate the total distance of the route in miles
-            const totalDistance = turf.length(route, {units: 'miles'});
-            console.log("Total route distance (miles):", totalDistance);
+            // Calculate the total distance of the route in kilometers
+            const totalDistance = turf.length(route, {units: 'kilometers'});
+            console.log("Total route distance (kilometers):", totalDistance);
 
             // Generate points along the route at 1000-mile increments
             const segmentPoints = [];
             for (let i = 0; i <= totalDistance; i += 1000) {
-                const pt = turf.along(route, i, {units: 'miles'});
+                const pt = turf.along(route, i, {units: 'kilometers'});
                 segmentPoints.push(pt);
             }
 
@@ -576,7 +576,7 @@
                   map.getSource('plane').setData(planeFeature);
 
                   // Set zoom to 6 then pan to center on the new airplane position
-                  map.setZoom(6);
+                  map.setZoom(5);
                   map.panTo(nextPos.geometry.coordinates, { animate: true });
 
                   currentSegment = nextIndex;
