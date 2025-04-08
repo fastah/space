@@ -91,7 +91,7 @@
             display: none;
         }
 
-        .listing-group input[type='checkbox'] + label {
+        .listing-group input[type='checkbox']+label {
             background-color: #3386c0;
             display: block;
             cursor: pointer;
@@ -100,12 +100,12 @@
             text-transform: capitalize;
         }
 
-        .listing-group input[type='checkbox'] + label:hover,
-        .listing-group input[type='checkbox']:checked + label {
+        .listing-group input[type='checkbox']+label:hover,
+        .listing-group input[type='checkbox']:checked+label {
             background-color: #4ea0da;
         }
 
-        .listing-group input[type='checkbox']:checked + label:before {
+        .listing-group input[type='checkbox']:checked+label:before {
             content: '✔';
             margin-right: 5px;
         }
@@ -158,14 +158,17 @@
                         <button id="resetFlight" class="btn btn-warning btn-sm">Reset</button>
                     </div>
                     <!-- Satellite Control -->
-                    <div id="satellite-control" class="mb-2" style="background: rgba(255,255,255,0.8); padding: 10px; border-radius: 3px; pointer-events: auto;">
+                    <div id="satellite-control" class="mb-2"
+                        style="background: rgba(255,255,255,0.8); padding: 10px; border-radius: 3px; pointer-events: auto;">
                         <span style="margin-right: 10px;">Simulate</span>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-starlink" value="starlink" checked>
+                            <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-starlink"
+                                value="starlink" checked>
                             <label class="form-check-label" for="satellite-starlink">Starlink</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-viasat" value="viasat">
+                            <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-viasat"
+                                value="viasat">
                             <label class="form-check-label" for="satellite-viasat">ViaSat</label>
                         </div>
                     </div>
@@ -175,7 +178,8 @@
                     <div class="listing-group" id="aws-group">
                         <input type="checkbox" id="aws-toggle" checked>
                         <label for="aws-toggle">AWS</label>
-                        <div class="aws-children" style="padding-left: 10px; margin-top: 5px; display: flex; flex-direction: column; gap: 0;">
+                        <div class="aws-children"
+                            style="padding-left: 10px; margin-top: 5px; display: flex; flex-direction: column; gap: 0;">
                             <div class="aws-child">
                                 <input type="checkbox" id="aws-regions" checked>
                                 <label for="aws-regions">Regions</label>
@@ -286,7 +290,7 @@
                         layer.symbolName
                     ];
                 }
-                
+
                 let iconOffsetExpr;
                 if (layer.id === 'aws') {
                     // For AWS: use a case expression for a GroundStation special offset, otherwise use the default
@@ -300,7 +304,7 @@
                     // For azure, starlink, and viasat: use the literal offset from the layer definition
                     iconOffsetExpr = ["literal", layer.iconOffset || [0, 0]];
                 }
-                
+
                 const baseLayout = {
                     'icon-image': iconImage,
                     'icon-size': layer.markerSize,
@@ -308,7 +312,7 @@
                     'visibility': 'none',
                     'icon-offset': iconOffsetExpr
                 };
-                
+
                 map.addLayer({
                     'id': layer.id,
                     'type': 'symbol',
@@ -356,14 +360,14 @@
                                     'X-API-Key': 'NKEdnwRSyxreD4Xswg6jaVVxqt0tr3G90uPMpurh'
                                 }
                             })
-                            .then(response => response.json())
-                            .then(data => {
-                                addLayerWithDataNonVisible(layer, data);
-                                // Optionally, you can call the update function here for each layer:
-                                if (layer.id === 'aws') updateAWSFilter();
-                                if (layer.id === 'azure') updateAzureFilter();
-                            })
-                            .catch(err => console.error('Error fetching ' + layer.id + ' data:', err));
+                                .then(response => response.json())
+                                .then(data => {
+                                    addLayerWithDataNonVisible(layer, data);
+                                    // Optionally, you can call the update function here for each layer:
+                                    if (layer.id === 'aws') updateAWSFilter();
+                                    if (layer.id === 'azure') updateAzureFilter();
+                                })
+                                .catch(err => console.error('Error fetching ' + layer.id + ' data:', err));
                         } else {
                             addLayerWithDataNonVisible(layer, layer.downloadUrl);
                         }
@@ -381,7 +385,7 @@
                 });
 
             // Add click handlers for AWS and Azure layers to display popups with metadata
-            map.on('click', 'aws', function(e) {
+            map.on('click', 'aws', function (e) {
                 const feature = e.features[0];
                 if (!feature) return;
                 const coordinates = feature.geometry.coordinates.slice();
@@ -396,7 +400,7 @@
                     .addTo(map);
             });
 
-            map.on('click', 'azure', function(e) {
+            map.on('click', 'azure', function (e) {
                 const feature = e.features[0];
                 if (!feature) return;
                 const coordinates = feature.geometry.coordinates.slice();
@@ -412,58 +416,58 @@
             });
 
             // Popup for the Starlink layer
-            map.on('click', 'starlink', function(e) {
-              const feature = e.features[0];
-              if (!feature) return;
-              const coordinates = feature.geometry.coordinates.slice();
-              const markerColor = feature.properties["marker-color"] || "#009FE3";
-              const displayName = feature.properties.displayName || feature.properties.display_name || "No display name";
-              const countryName = feature.properties.countryName || "No country";
-            
-              const popupContent = `
+            map.on('click', 'starlink', function (e) {
+                const feature = e.features[0];
+                if (!feature) return;
+                const coordinates = feature.geometry.coordinates.slice();
+                const markerColor = feature.properties["marker-color"] || "#009FE3";
+                const displayName = feature.properties.displayName || feature.properties.display_name || "No display name";
+                const countryName = feature.properties.countryName || "No country";
+
+                const popupContent = `
                 <div style="font-family: Arial, sans-serif; border: 2px solid ${markerColor}; border-radius: 5px; padding: 5px;">
                   <p style="margin: 0; color: ${markerColor};">${countryName}</p>
                   <h4 style="margin: 0;">${displayName}</h4>
                 </div>`;
-                
-              new mapboxgl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(popupContent)
-                .addTo(map);
+
+                new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(popupContent)
+                    .addTo(map);
             });
-            
+
             // Popup for the ViaSat layer
-            map.on('click', 'viasat', function(e) {
-              const feature = e.features[0];
-              if (!feature) return;
-              const coordinates = feature.geometry.coordinates.slice();
-              const markerColor = feature.properties["marker-color"] || "#009FE3";
-              const displayName = feature.properties.displayName || feature.properties.display_name || "No display name";
-              const countryName = feature.properties.countryName || "No country";
-            
-              const popupContent = `
+            map.on('click', 'viasat', function (e) {
+                const feature = e.features[0];
+                if (!feature) return;
+                const coordinates = feature.geometry.coordinates.slice();
+                const markerColor = feature.properties["marker-color"] || "#009FE3";
+                const displayName = feature.properties.displayName || feature.properties.display_name || "No display name";
+                const countryName = feature.properties.countryName || "No country";
+
+                const popupContent = `
                 <div style="font-family: Arial, sans-serif; border: 2px solid ${markerColor}; border-radius: 5px; padding: 5px;">
                   <p style="margin: 0; color: ${markerColor};">${countryName}</p>
                   <h4 style="margin: 0;">${displayName}</h4>
                 </div>`;
-                
-              new mapboxgl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(popupContent)
-                .addTo(map);
+
+                new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(popupContent)
+                    .addTo(map);
             });
 
             // Change the cursor to a pointer when hovering over AWS and Azure features
-            map.on('mouseenter', 'aws', function() {
+            map.on('mouseenter', 'aws', function () {
                 map.getCanvas().style.cursor = 'pointer';
             });
-            map.on('mouseleave', 'aws', function() {
+            map.on('mouseleave', 'aws', function () {
                 map.getCanvas().style.cursor = '';
             });
-            map.on('mouseenter', 'azure', function() {
+            map.on('mouseenter', 'azure', function () {
                 map.getCanvas().style.cursor = 'pointer';
             });
-            map.on('mouseleave', 'azure', function() {
+            map.on('mouseleave', 'azure', function () {
                 map.getCanvas().style.cursor = '';
             });
 
@@ -474,16 +478,16 @@
             // Create a Turf lineString using great circle (round earth) method
             const route = turf.greatCircle(turf.point(sfo), turf.point(lis), {
                 properties: { name: "San Francisco to Lisbon" },
-              });
+            });
 
             // Calculate the total distance of the route in kilometers
-            const totalDistance = turf.length(route, {units: 'kilometers'});
+            const totalDistance = turf.length(route, { units: 'kilometers' });
             console.log("Total route distance (kilometers):", totalDistance);
 
             // Generate points along the route at 1000-mile increments
             const segmentPoints = [];
             for (let i = 0; i <= totalDistance; i += 1000) {
-                const pt = turf.along(route, i, {units: 'kilometers'});
+                const pt = turf.along(route, i, { units: 'kilometers' });
                 segmentPoints.push(pt);
             }
 
@@ -528,7 +532,7 @@
             });
 
             // Split the route into 1000 km segments
-            const routeChunks = turf.lineChunk(route, 1000, {units: 'kilometers'});
+            const routeChunks = turf.lineChunk(route, 1000, { units: 'kilometers' });
             console.log("Number of 1000-km segments:", routeChunks.features.length);
 
             // Add the segmented red line as a source and layer
@@ -561,8 +565,8 @@
             // Compute midpoints along each segment of the route
             const segmentMidpoints = [];
             routeChunks.features.forEach(segment => {
-                const segLength = turf.length(segment, {units: 'kilometers'});
-                const midPoint = turf.along(segment, segLength / 2, {units: 'kilometers'});
+                const segLength = turf.length(segment, { units: 'kilometers' });
+                const midPoint = turf.along(segment, segLength / 2, { units: 'kilometers' });
                 segmentMidpoints.push(midPoint);
             });
 
@@ -611,83 +615,99 @@
             const viewDelay = 5000; // 5 seconds
 
             function startFlightAnimation() {
-              if (flightIntervalId === null) {
-                // Define a recursive function for the animation loop
-                function animateSegment() {
-                  let nextIndex = currentSegment + 1;
-                  // Stop the animation if reaching the last segment
-                  if (nextIndex >= segmentMidpoints.length) {
-                    stopFlightAnimation();
-                    return;
-                  }
+                if (flightIntervalId === null) {
+                    // Define a recursive function for the animation loop
+                    function animateSegment() {
+                        let nextIndex = currentSegment + 1;
+                        // Stop the animation if reaching the last segment
+                        if (nextIndex >= segmentMidpoints.length) {
+                            stopFlightAnimation();
+                            return;
+                        }
 
-                  const currentPos = segmentMidpoints[currentSegment];
-                  const nextPos = segmentMidpoints[nextIndex];
-                  // Calculate the bearing between the current and next points
-                  const bearing = turf.bearing(currentPos, nextPos);
+                        const currentPos = segmentMidpoints[currentSegment];
+                        const nextPos = segmentMidpoints[nextIndex];
+                        // Calculate the bearing between the current and next points
+                        const bearing = turf.bearing(currentPos, nextPos);
 
-                  // Update the plane feature with the new coordinates and rotation
-                  planeFeature.geometry.coordinates = nextPos.geometry.coordinates;
-                  planeFeature.properties.rotation = bearing;
-                  map.getSource('plane').setData(planeFeature);
+                        // Update the plane feature with the new coordinates and rotation
+                        planeFeature.geometry.coordinates = nextPos.geometry.coordinates;
+                        planeFeature.properties.rotation = bearing;
+                        map.getSource('plane').setData(planeFeature);
 
-                  // Recalculate the nearest point for the active satellite system
-                  let provider = document.getElementById('satellite-starlink').checked ? 'starlink' : 'viasat';
+                        // Recalculate the nearest point for the active satellite system
+                        let provider = document.getElementById('satellite-starlink').checked ? 'starlink' : 'viasat';
 
-                  const features = map.queryRenderedFeatures(
-                    {target: {layerId: provider}}
-                  );
-                  if (features.length) {
-                    const featureCollection = turf.featureCollection(features);
-                    console.log("Source to search for nearest point to plane:", featureCollection);
-                    const planePoint = turf.point(planeFeature.geometry.coordinates);
-                    const nearest = turf.nearestPoint(planePoint, featureCollection);
-                    console.log("Nearest point to plane:", nearest.Properties);
-                    if (nearest) {
-                      // Raise or highlight the nearest point marker.
-                      showMarker(nearest);
+                        // Step 1: Find the nearest satellite network advertised geolocated city and raise its popup
+                        const satelliteCityFeatures = map.queryRenderedFeatures(
+                            { target: { layerId: provider } }
+                        );
+                        if (satelliteCityFeatures.length) {
+                            const featureCollection = turf.featureCollection(satelliteCityFeatures);
+                            console.log("Source to search for nearest point to plane:", featureCollection);
+                            const planePoint = turf.point(planeFeature.geometry.coordinates);
+                            const nearest = turf.nearestPoint(planePoint, featureCollection);
+                            console.log("Nearest point to plane:", nearest.Properties);
+                            if (nearest) {
+                                // Raise or highlight the nearest point marker.
+                                showSatCityMarker(nearest);
+                            }
+                        }
+
+                        // Step 2: Find the nearest AWS node and raise its popup
+                        const cloudPopFeatures = map.queryRenderedFeatures(
+                            {layers: ['aws', 'azure']}
+                        );
+                        if (cloudPopFeatures.length) {
+                            const featureCollection = turf.featureCollection(cloudPopFeatures);
+                            const planePoint = turf.point(planeFeature.geometry.coordinates);
+                            const nearest = turf.nearestPoint(planePoint, featureCollection);
+                            //console.log("Nearest cloud PoP to plane:", nearest.Properties);
+                            if (nearest) {
+                                // Raise or highlight the nearest point marker.
+                                showCloudPopMarker(nearest);
+                            }
+                        }
+
+                        // Then continue with the rest of your animation (pan, delay, etc.)
+                        map.setZoom(3);
+                        map.panTo(nextPos.geometry.coordinates, { animate: true });
+                        currentSegment = nextIndex;
+                        flightIntervalId = setTimeout(animateSegment, viewDelay);
                     }
-                  }
-
-                  // Then continue with the rest of your animation (pan, delay, etc.)
-                  map.setZoom(3);
-                  map.panTo(nextPos.geometry.coordinates, { animate: true });
-                  currentSegment = nextIndex;
-                  flightIntervalId = setTimeout(animateSegment, viewDelay);
+                    // Start the recursive animation
+                    animateSegment();
                 }
-                // Start the recursive animation
-                animateSegment();
-              }
             }
 
             function stopFlightAnimation() {
-              if (flightIntervalId !== null) {
-                clearInterval(flightIntervalId);
-                flightIntervalId = null;
-              }
+                if (flightIntervalId !== null) {
+                    clearInterval(flightIntervalId);
+                    flightIntervalId = null;
+                }
             }
 
             function resetFlightAnimation() {
-              stopFlightAnimation();
-              // Reset the animation state to the first segment
-              currentSegment = 0;
-              planeFeature.geometry.coordinates = segmentMidpoints[0].geometry.coordinates;
-              planeFeature.properties.rotation = 0;
-              map.getSource('plane').setData(planeFeature);
-              // Reset the zoom level to the default value and pan to the starting position
-              map.setZoom(defaultZoomLevelOnLoad);
-              map.panTo(segmentMidpoints[0].geometry.coordinates, { animate: true });
+                stopFlightAnimation();
+                // Reset the animation state to the first segment
+                currentSegment = 0;
+                planeFeature.geometry.coordinates = segmentMidpoints[0].geometry.coordinates;
+                planeFeature.properties.rotation = 0;
+                map.getSource('plane').setData(planeFeature);
+                // Reset the zoom level to the default value and pan to the starting position
+                map.setZoom(defaultZoomLevelOnLoad);
+                map.panTo(segmentMidpoints[0].geometry.coordinates, { animate: true });
 
-              removeAllPopups();
+                removeAllPopups();
 
-              // Ensure that the satellite system control is still in sync with the right-hand layers:
-              if (document.getElementById('satellite-starlink').checked) {
-                document.getElementById('starlink-toggle').checked = true;
-                map.setLayoutProperty('starlink', 'visibility', 'visible');
-              } else if (document.getElementById('satellite-viasat').checked) {
-                document.getElementById('viasat-toggle').checked = true;
-                map.setLayoutProperty('viasat', 'visibility', 'visible');
-              }
+                // Ensure that the satellite system control is still in sync with the right-hand layers:
+                if (document.getElementById('satellite-starlink').checked) {
+                    document.getElementById('starlink-toggle').checked = true;
+                    map.setLayoutProperty('starlink', 'visibility', 'visible');
+                } else if (document.getElementById('satellite-viasat').checked) {
+                    document.getElementById('viasat-toggle').checked = true;
+                    map.setLayoutProperty('viasat', 'visibility', 'visible');
+                }
             }
 
             // Attach event listeners to the buttons
@@ -701,7 +721,7 @@
             });
 
             // Toggle layer visibility based on checkbox state for all layers
-            document.getElementById('aws-toggle').addEventListener('change', function() {
+            document.getElementById('aws-toggle').addEventListener('change', function () {
                 const visibility = this.checked ? 'visible' : 'none';
                 map.setLayoutProperty('aws', 'visibility', visibility);
                 // Update only Regions and Local Zones automatically
@@ -711,31 +731,31 @@
                 // Do not auto-toggle Ground Stations and Wavelength Zones.
                 updateAWSFilter();
             });
-            document.getElementById('azure-toggle').addEventListener('change', function() {
+            document.getElementById('azure-toggle').addEventListener('change', function () {
                 const visibility = this.checked ? 'visible' : 'none';
                 map.setLayoutProperty('azure', 'visibility', visibility);
             });
-            document.getElementById('starlink-toggle').addEventListener('change', function() {
+            document.getElementById('starlink-toggle').addEventListener('change', function () {
                 const visibility = this.checked ? 'visible' : 'none';
                 map.setLayoutProperty('starlink', 'visibility', visibility);
             });
-            document.getElementById('viasat-toggle').addEventListener('change', function() {
+            document.getElementById('viasat-toggle').addEventListener('change', function () {
                 const visibility = this.checked ? 'visible' : 'none';
                 map.setLayoutProperty('viasat', 'visibility', visibility);
             });
 
             // Function to update the AWS layer filter based on children checkboxes
             function updateAWSFilter() {
-                const showRegion         = document.getElementById('aws-regions').checked;
-                const showLocalZones     = document.getElementById('aws-localzones').checked;
+                const showRegion = document.getElementById('aws-regions').checked;
+                const showLocalZones = document.getElementById('aws-localzones').checked;
                 const showGroundStations = document.getElementById('aws-groundstations').checked;
-                const showWavelengthZones= document.getElementById('aws-wavelengthzones').checked;
-                
+                const showWavelengthZones = document.getElementById('aws-wavelengthzones').checked;
+
                 const conditions = [];
-                if (showRegion)         { conditions.push(["==", ["get", "type"], "Region"]); }
-                if (showLocalZones)     { conditions.push(["==", ["get", "type"], "LocalZone"]); }
+                if (showRegion) { conditions.push(["==", ["get", "type"], "Region"]); }
+                if (showLocalZones) { conditions.push(["==", ["get", "type"], "LocalZone"]); }
                 if (showGroundStations) { conditions.push(["==", ["get", "type"], "GroundStation"]); }
-                if (showWavelengthZones){ conditions.push(["==", ["get", "type"], "WavelengthZone"]); }
+                if (showWavelengthZones) { conditions.push(["==", ["get", "type"], "WavelengthZone"]); }
 
                 if (conditions.length === 0) {
                     // if nothing is selected, set a filter that never passes and hide the layer:
@@ -793,55 +813,76 @@
         });
 
         // Listen for changes to the satellite system radio buttons
-        document.getElementById('satellite-starlink').addEventListener('change', function() {
-          if (this.checked) {
-            // Check the right-hand Starlink control and make sure the Starlink layer is visible
-            document.getElementById('starlink-toggle').checked = true;
-            map.setLayoutProperty('starlink', 'visibility', 'visible');
-            // Optionally, uncheck Viasat control and hide its layer
-            document.getElementById('viasat-toggle').checked = false;
-            map.setLayoutProperty('viasat', 'visibility', 'none');
-          }
+        document.getElementById('satellite-starlink').addEventListener('change', function () {
+            if (this.checked) {
+                // Check the right-hand Starlink control and make sure the Starlink layer is visible
+                document.getElementById('starlink-toggle').checked = true;
+                map.setLayoutProperty('starlink', 'visibility', 'visible');
+                // Optionally, uncheck Viasat control and hide its layer
+                document.getElementById('viasat-toggle').checked = false;
+                map.setLayoutProperty('viasat', 'visibility', 'none');
+            }
         });
 
-        document.getElementById('satellite-viasat').addEventListener('change', function() {
-          if (this.checked) {
-            // Check the right-hand ViaSat control and make sure the ViaSat layer is visible
-            document.getElementById('viasat-toggle').checked = true;
-            map.setLayoutProperty('viasat', 'visibility', 'visible');
-            // Optionally, uncheck Starlink control and hide its layer
-            document.getElementById('starlink-toggle').checked = false;
-            map.setLayoutProperty('starlink', 'visibility', 'none');
-          }
+        document.getElementById('satellite-viasat').addEventListener('change', function () {
+            if (this.checked) {
+                // Check the right-hand ViaSat control and make sure the ViaSat layer is visible
+                document.getElementById('viasat-toggle').checked = true;
+                map.setLayoutProperty('viasat', 'visibility', 'visible');
+                // Optionally, uncheck Starlink control and hide its layer
+                document.getElementById('starlink-toggle').checked = false;
+                map.setLayoutProperty('starlink', 'visibility', 'none');
+            }
         });
 
-        function showMarker(feature) {
-          // For example, display a temporary popup at the nearest feature location.
-          // You can adjust this to instead change the feature state for visual emphasis.
-          const coordinates = feature.geometry.coordinates;
-          const displayName = feature.properties.displayName || feature.properties.display_name || "Unnamed";
-          const countryName = feature.properties.countryName || "No country";
-          const markerColor = feature.properties["marker-color"] || "#009FE3";
+        function showSatCityMarker(feature) {
+            // For example, display a temporary popup at the nearest feature location.
+            // You can adjust this to instead change the feature state for visual emphasis.
+            const coordinates = feature.geometry.coordinates;
+            const title = feature.properties.title;
+            const displayName = feature.properties.displayName || feature.properties.display_name || "Unnamed";
+            const countryName = feature.properties.countryName || "No country";
+            const markerColor = feature.properties["marker-color"] || "#009FE3";
 
             const popupContent = `
               <div style="font-family: Arial, sans-serif; border: 2px solid ${markerColor}; border-radius: 5px; padding: 5px;">
-                <p style="margin: 0; color: ${markerColor};">${countryName}</p>
+                <p style="margin: 0; color: ${markerColor};">${title}</p>
                 <h4 style="margin: 0;">${displayName}</h4>
               </div>`;
-              
+
             new mapboxgl.Popup({ closeButton: false, closeOnClick: false, offset: 25 })
-              .setLngLat(coordinates)
-              .setHTML(popupContent)
-              .addTo(map);
+                .setLngLat(coordinates)
+                .setHTML(popupContent)
+                .addTo(map);
+        }
+
+        function showCloudPopMarker(feature) {
+            // For example, display a temporary popup at the nearest feature location.
+            // You can adjust this to instead change the feature state for visual emphasis.
+            const coordinates = feature.geometry.coordinates;
+            const iataCode = feature.properties.airport;
+            const displayName = feature.properties.displayName || feature.properties.display_name || "Unnamed";
+            const markerColor = feature.properties["marker-color"] || "#009FE3";
+
+            const popupContent = `
+              <div style="font-family: Arial, sans-serif; border: 2px solid ${markerColor}; border-radius: 5px; padding: 5px;">
+                <p style="margin: 0; color: ${markerColor};">Cloud Edge @ ${iataCode}</p>
+                <h4 style="margin: 0;">${displayName}</h4>
+              </div>`;
+
+            new mapboxgl.Popup({ closeButton: false, closeOnClick: false, offset: 25 })
+                .setLngLat(coordinates)
+                .setHTML(popupContent)
+                .addTo(map);
         }
 
         function removeAllPopups() {
             const elements = document.getElementsByClassName("mapboxgl-popup");
             const elementsArray = Array.from(elements);
-            elementsArray.forEach(function(el) {
+            elementsArray.forEach(function (el) {
                 el.remove();
             });
-          }
+        }
     </script>
 </body>
 
