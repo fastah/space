@@ -135,17 +135,6 @@ func main() {
 
 		// Write JSON file with IP samples and their locations : gen/latest-feeds/<feed-key>/samples.json
 		fc := ipToGeoJson(feed.key, feed.providerName, locations)
-		for _, f := range fc.Features {
-			// this block runs once per country, because each counntry has one and only one feature in the GeoJSON FeatureCollection
-			cc := f.Properties["cciso2"].(string)
-			if sampleIps[cc] != nil {
-				ips := make([]string, 0, len(sampleIps[cc]))
-				for _, ip := range sampleIps[cc] {
-					ips = append(ips, ip.String())
-				}
-				f.Properties["ip-samples"] = ips
-			}
-		}
 		gj, _ := json.MarshalIndent(fc, "", " ")
 		//fmt.Println(string(gj))
 		err = os.WriteFile(filepath.Join(dirpath, "samples.json"), gj, 0644)
@@ -234,7 +223,6 @@ func ipToGeoJson(key string, providerLabel string, locations map[string]netip.Ad
 	// Convert the map of sample IP addresses to a map of reverse-geocoded locations
 	fastahKey := os.Getenv("FASTAH_PRIVATE_API_KEY") // Not for use with browser-side requests
 	fc := geojson.NewFeatureCollection()
-	var countries = make(map[string]*geojson.Feature) // key = countryCode , value = a GeoJSON feature with per-country properties and one MultiPoint collection of locations
 	var c = &http.Client{Timeout: 5 * time.Second}
 	for uniqueloc, ip := range locations {
 		fmt.Printf("[%s] Processing loc %s\n", key, uniqueloc)
@@ -262,25 +250,32 @@ func ipToGeoJson(key string, providerLabel string, locations map[string]netip.Ad
 			continue
 		}
 		fmt.Printf("[%s] Fastah IP Geolocation API reports RFC8805 entry %s/%s maps to %+v\n", key, ip.String(), uniqueloc, fr)
-		if countries[fr.UserGeo.CountryCode] == nil {
-			f := geojson.NewFeature(orb.MultiPoint{})
-			f.Properties["cciso2"] = fr.UserGeo.CountryCode
-			f.Properties["countryName"] = fr.UserGeo.CountryName
-			f.Properties["marker-color"] = colorForBrand(key)
-			f.Properties["marker-size"] = "large"
-			f.Properties["title"] = providerLabel
-			f.Properties["description"] = "Approximate location as advertised by " + providerLabel
-			countries[fr.UserGeo.CountryCode] = f
+		f := geojson.NewFeature(orb.Point{fr.UserGeo.Lng, fr.UserGeo.Lat})
+		f.Properties["cciso2"] = fr.UserGeo.CountryCode
+		f.Properties["countryName"] = fr.UserGeo.CountryName
+		displayName := fr.UserGeo.CityName
+		if fr.UserGeo.StateName != "" {
+			if len(displayName) > 0 && displayName != fr.UserGeo.StateName {
+				if fr.UserGeo.CountryCode == "US" || fr.UserGeo.CountryCode == "CA" || fr.UserGeo.CountryCode == "AU" || fr.UserGeo.CountryCode == "NZ" || fr.UserGeo.CountryCode == "GB" || fr.UserGeo.CountryCode == "CH" {
+					displayName = displayName + ", " + fr.UserGeo.StateCode
+				} else {
+					displayName = displayName + ", " + fr.UserGeo.StateName
+				}
+			} else {
+				displayName = fr.UserGeo.StateName
+			}
 		}
-		var mp orb.MultiPoint = countries[fr.UserGeo.CountryCode].Geometry.(orb.MultiPoint)
-		mp = append(mp, orb.Point{fr.UserGeo.Lng, fr.UserGeo.Lat})
-		countries[fr.UserGeo.CountryCode].Geometry = mp
+		if displayName == "" {
+			displayName = fr.UserGeo.CountryName
+		}
+		f.Properties["displayName"] = displayName
+		f.Properties["marker-color"] = colorForBrand(key)
+		f.Properties["marker-size"] = "large"
+		f.Properties["title"] = providerLabel
+		f.Properties["ip"] = ip.String()
+		fc.Append(f)
 	}
 
-	// Assemble a FeatureCollection with one Feature per country, and each Feature having a MultiPoint representing all the markers/points within that country
-	for _, v := range countries {
-		fc.Append(v)
-	}
 	return fc
 }
 
