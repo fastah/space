@@ -139,7 +139,9 @@
         <!-- Header using Bootstrap navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand">Edge Delivery Optimizer for Starlink - Fastah Inc.</a>
+                <a class="navbar-brand" href="#" style="font-size: 2.0rem;">
+                    <img src="./static/wordicon-fastah-h249-wx.png" alt="Fastah Logo" style="height:40px; margin-right:10px;">Edge Delivery Optimization for Starlink @ 600mph
+                </a>
             </div>
         </nav>
 
@@ -148,28 +150,31 @@
             <div id="map"></div>
             <!-- Overlays container using flex -->
             <div class="map-overlays">
-                <!-- Left-side: Flight Controls and Satellite Control -->
+                <!-- Left-side Controls -->
                 <div class="left-controls">
                     <!-- Flight Controls -->
-                    <div id="flight-controls">
-                        <span>Fly <em>San Francisco to Lisbon</em></span>
-                        <button id="startFlight" class="btn btn-primary btn-sm">Start</button>
-                        <button id="stopFlight" class="btn btn-secondary btn-sm">Stop</button>
-                        <button id="resetFlight" class="btn btn-warning btn-sm">Reset</button>
+                    <div id="flight-controls" class="mb-3">
+                        <h4 class="mb-2">
+                            Fly <em class="fst-italic">San Francisco <-> Lisbon</em>
+                        </h4>
+                        <div>
+                            <button id="startFlight" class="btn btn-primary btn-sm me-1">Start</button>
+                            <button id="stopFlight" class="btn btn-secondary btn-sm me-1">Stop</button>
+                            <button id="resetFlight" class="btn btn-warning btn-sm">Reset</button>
+                        </div>
                     </div>
                     <!-- Satellite Control -->
-                    <div id="satellite-control" class="mb-2"
-                        style="background: rgba(255,255,255,0.8); padding: 10px; border-radius: 3px; pointer-events: auto;">
-                        <span style="margin-right: 10px;">Simulate</span>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-starlink"
-                                value="starlink" checked>
-                            <label class="form-check-label" for="satellite-starlink">Starlink</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-viasat"
-                                value="viasat">
-                            <label class="form-check-label" for="satellite-viasat">ViaSat</label>
+                    <div id="satellite-control" class="mb-2 p-2" style="background: rgba(255,255,255,0.8); border-radius: 3px; pointer-events: auto;">
+                        <p class="h5 mb-2">Simulate</p>
+                        <div class="d-inline-flex">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-starlink" value="starlink" checked>
+                                <label class="form-check-label" for="satellite-starlink">Starlink</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-viasat" value="viasat">
+                                <label class="form-check-label" for="satellite-viasat">ViaSat</label>
+                            </div>
                         </div>
                     </div>
                 </div>
