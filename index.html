@@ -148,14 +148,29 @@
             <div id="map"></div>
             <!-- Overlays container using flex -->
             <div class="map-overlays">
-                <!-- Flight Controls (left side) -->
-                <div id="flight-controls">
-                    <span>Fly <em>San Francisco to Lisbon</em> </span>
-                    <button id="startFlight" class="btn btn-primary btn-sm">Start</button>
-                    <button id="stopFlight" class="btn btn-secondary btn-sm">Stop</button>
-                    <button id="resetFlight" class="btn btn-warning btn-sm">Reset</button>
+                <!-- Left-side: Flight Controls and Satellite Control -->
+                <div class="left-controls">
+                    <!-- Flight Controls -->
+                    <div id="flight-controls">
+                        <span>Fly <em>San Francisco to Lisbon</em></span>
+                        <button id="startFlight" class="btn btn-primary btn-sm">Start</button>
+                        <button id="stopFlight" class="btn btn-secondary btn-sm">Stop</button>
+                        <button id="resetFlight" class="btn btn-warning btn-sm">Reset</button>
+                    </div>
+                    <!-- Satellite Control -->
+                    <div id="satellite-control" class="mb-2" style="background: rgba(255,255,255,0.8); padding: 10px; border-radius: 3px; pointer-events: auto;">
+                        <span style="margin-right: 10px;">Simulate</span>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-starlink" value="starlink" checked>
+                            <label class="form-check-label" for="satellite-starlink">Starlink</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="satelliteSystem" id="satellite-viasat" value="viasat">
+                            <label class="form-check-label" for="satellite-viasat">ViaSat</label>
+                        </div>
+                    </div>
                 </div>
-                <!-- Layer Controls (right side) -->
+                <!-- Right-side: Layer Controls -->
                 <div id="menu">
                     <div class="listing-group" id="aws-group">
                         <input type="checkbox" id="aws-toggle" checked>
@@ -198,7 +213,7 @@
     </div>
     <script>
         // At the top, define the default zoom level
-        const defaultZoomLevelOnLoad = 4;
+        const defaultZoomLevelOnLoad = 3;
 
         // Set your Mapbox access token
         mapboxgl.accessToken = 'pk.eyJ1IjoiczhtYXRodXIiLCJhIjoiY2xzbHl1Zjg0MGZpdjJrcGVpa2pkbG0wNiJ9.rFDdt45Wd4s6a-RfqvAQiQ';
@@ -616,12 +631,28 @@
                   planeFeature.properties.rotation = bearing;
                   map.getSource('plane').setData(planeFeature);
 
-                  // Set zoom to 6 then pan to center on the new airplane position
-                  map.setZoom(5);
-                  map.panTo(nextPos.geometry.coordinates, { animate: true });
+                  // Recalculate the nearest point for the active satellite system
+                  let provider = document.getElementById('satellite-starlink').checked ? 'starlink' : 'viasat';
 
+                  const features = map.queryRenderedFeatures(
+                    {target: {layerId: provider}}
+                  );
+                  if (features.length) {
+                    const featureCollection = turf.featureCollection(features);
+                    console.log("Source to search for nearest point to plane:", featureCollection);
+                    const planePoint = turf.point(planeFeature.geometry.coordinates);
+                    const nearest = turf.nearestPoint(planePoint, featureCollection);
+                    console.log("Nearest point to plane:", nearest.Properties);
+                    if (nearest) {
+                      // Raise or highlight the nearest point marker.
+                      showMarker(nearest);
+                    }
+                  }
+
+                  // Then continue with the rest of your animation (pan, delay, etc.)
+                  map.setZoom(3);
+                  map.panTo(nextPos.geometry.coordinates, { animate: true });
                   currentSegment = nextIndex;
-                  // Wait viewDelay milliseconds AFTER panTo and zoom actions, then animate the next segment
                   flightIntervalId = setTimeout(animateSegment, viewDelay);
                 }
                 // Start the recursive animation
@@ -646,6 +677,17 @@
               // Reset the zoom level to the default value and pan to the starting position
               map.setZoom(defaultZoomLevelOnLoad);
               map.panTo(segmentMidpoints[0].geometry.coordinates, { animate: true });
+
+              removeAllPopups();
+
+              // Ensure that the satellite system control is still in sync with the right-hand layers:
+              if (document.getElementById('satellite-starlink').checked) {
+                document.getElementById('starlink-toggle').checked = true;
+                map.setLayoutProperty('starlink', 'visibility', 'visible');
+              } else if (document.getElementById('satellite-viasat').checked) {
+                document.getElementById('viasat-toggle').checked = true;
+                map.setLayoutProperty('viasat', 'visibility', 'visible');
+              }
             }
 
             // Attach event listeners to the buttons
@@ -749,6 +791,57 @@
                 updateAzureFilter();
             }
         });
+
+        // Listen for changes to the satellite system radio buttons
+        document.getElementById('satellite-starlink').addEventListener('change', function() {
+          if (this.checked) {
+            // Check the right-hand Starlink control and make sure the Starlink layer is visible
+            document.getElementById('starlink-toggle').checked = true;
+            map.setLayoutProperty('starlink', 'visibility', 'visible');
+            // Optionally, uncheck Viasat control and hide its layer
+            document.getElementById('viasat-toggle').checked = false;
+            map.setLayoutProperty('viasat', 'visibility', 'none');
+          }
+        });
+
+        document.getElementById('satellite-viasat').addEventListener('change', function() {
+          if (this.checked) {
+            // Check the right-hand ViaSat control and make sure the ViaSat layer is visible
+            document.getElementById('viasat-toggle').checked = true;
+            map.setLayoutProperty('viasat', 'visibility', 'visible');
+            // Optionally, uncheck Starlink control and hide its layer
+            document.getElementById('starlink-toggle').checked = false;
+            map.setLayoutProperty('starlink', 'visibility', 'none');
+          }
+        });
+
+        function showMarker(feature) {
+          // For example, display a temporary popup at the nearest feature location.
+          // You can adjust this to instead change the feature state for visual emphasis.
+          const coordinates = feature.geometry.coordinates;
+          const displayName = feature.properties.displayName || feature.properties.display_name || "Unnamed";
+          const countryName = feature.properties.countryName || "No country";
+          const markerColor = feature.properties["marker-color"] || "#009FE3";
+
+            const popupContent = `
+              <div style="font-family: Arial, sans-serif; border: 2px solid ${markerColor}; border-radius: 5px; padding: 5px;">
+                <p style="margin: 0; color: ${markerColor};">${countryName}</p>
+                <h4 style="margin: 0;">${displayName}</h4>
+              </div>`;
+              
+            new mapboxgl.Popup({ closeButton: false, closeOnClick: false, offset: 25 })
+              .setLngLat(coordinates)
+              .setHTML(popupContent)
+              .addTo(map);
+        }
+
+        function removeAllPopups() {
+            const elements = document.getElementsByClassName("mapboxgl-popup");
+            const elementsArray = Array.from(elements);
+            elementsArray.forEach(function(el) {
+                el.remove();
+            });
+          }
     </script>
 </body>
 
