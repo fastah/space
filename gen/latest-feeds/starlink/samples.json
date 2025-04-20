@@ -5,1184 +5,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     47.540000915527344,
-     -18.90999984741211
-    ]
-   },
-   "properties": {
-    "cciso2": "MG",
-    "countryName": "Madagascar",
-    "displayName": "Antananarivo, Analamanga",
-    "ip": "2c0f:2a80:2180::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -63.58000183105469,
-     44.63999938964844
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Halifax, NS",
-    "ip": "2605:59c8:2c00::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     27.479999542236328,
-     -29.31999969482422
-    ]
-   },
-   "properties": {
-    "cciso2": "LS",
-    "countryName": "Lesotho",
-    "displayName": "Maseru, Maseru District",
-    "ip": "2c0f:2a80:2580::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -87.6500015258789,
-     41.849998474121094
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Chicago, IL",
-    "ip": "2605:59c8:1b00::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -70.6500015258789,
-     -33.459999084472656
-    ]
-   },
-   "properties": {
-    "cciso2": "CL",
-    "countryName": "Chile",
-    "displayName": "Santiago, Santiago Metropolitan",
-    "ip": "2803:9810:62c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -13.239999771118164,
-     8.489999771118164
-    ]
-   },
-   "properties": {
-    "cciso2": "SL",
-    "countryName": "Sierra Leone",
-    "displayName": "Freetown, Western Area",
-    "ip": "2c0f:2a80:1240::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.220001220703125,
-     31.770000457763672
-    ]
-   },
-   "properties": {
-    "cciso2": "IL",
-    "countryName": "Israel",
-    "displayName": "Jerusalem",
-    "ip": "2a0d:3344:17c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -77.33999633789062,
-     25.059999465942383
-    ]
-   },
-   "properties": {
-    "cciso2": "BS",
-    "countryName": "Bahamas",
-    "displayName": "Nassau, New Providence",
-    "ip": "2605:59c8:67c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     15.3100004196167,
-     -4.329999923706055
-    ]
-   },
-   "properties": {
-    "cciso2": "CD",
-    "countryName": "Democratic Republic of the Congo",
-    "displayName": "Kinshasa",
-    "ip": "2c0f:2a80:2740::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -108.5,
-     45.779998779296875
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Billings, MT",
-    "ip": "2605:59c0:5800::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     36.81999969482422,
-     -1.2799999713897705
-    ]
-   },
-   "properties": {
-    "cciso2": "KE",
-    "countryName": "Kenya",
-    "displayName": "Nairobi, Nairobi County",
-    "ip": "2c0f:2a80:12c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     23.31999969482422,
-     42.70000076293945
-    ]
-   },
-   "properties": {
-    "cciso2": "BG",
-    "countryName": "Bulgaria",
-    "displayName": "Sofia, Sofia-Capital",
-    "ip": "2a0d:3344:1900::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     106.87999725341797,
-     47.90999984741211
-    ]
-   },
-   "properties": {
-    "cciso2": "MN",
-    "countryName": "Mongolia",
-    "displayName": "Ulan Bator, Ulaanbaatar",
-    "ip": "2406:2d40:3300::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     145.75,
-     15.1899995803833
-    ]
-   },
-   "properties": {
-    "cciso2": "MP",
-    "countryName": "Northern Mariana Islands",
-    "displayName": "Saipan Island, Saipan",
-    "ip": "2406:2d40:9500::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     45.08000183105469,
-     -12.760000228881836
-    ]
-   },
-   "properties": {
-    "cciso2": "YT",
-    "countryName": "Mayotte",
-    "displayName": "M'Tsangamouji",
-    "ip": "2c0f:2a80:2080::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -157.86000061035156,
-     21.309999465942383
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Honolulu, HI",
-    "ip": "170.203.195.65",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -104.62000274658203,
-     50.45000076293945
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Regina, SK",
-    "ip": "2605:59ca:1100::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -73.58999633789062,
-     45.5099983215332
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Montréal, QC",
-    "ip": "2605:59c8:2700::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -79.5199966430664,
-     8.989999771118164
-    ]
-   },
-   "properties": {
-    "cciso2": "PA",
-    "countryName": "Panama",
-    "displayName": "Panamá",
-    "ip": "2605:59c0:6800::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -17.440000534057617,
-     14.6899995803833
-    ]
-   },
-   "properties": {
-    "cciso2": "SN",
-    "countryName": "Senegal",
-    "displayName": "Dakar",
-    "ip": "2c0f:2a80:500::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     96.81999969482422,
-     -12.15999984741211
-    ]
-   },
-   "properties": {
-    "cciso2": "CC",
-    "countryName": "Cocos Islands",
-    "displayName": "West Island",
-    "ip": "2406:2d40:2180::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -38.540000915527344,
-     -3.7200000286102295
-    ]
-   },
-   "properties": {
-    "cciso2": "BR",
-    "countryName": "Brazil",
-    "displayName": "Fortaleza, Ceará",
-    "ip": "2803:9810:7200::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     58.40999984741211,
-     23.579999923706055
-    ]
-   },
-   "properties": {
-    "cciso2": "OM",
-    "countryName": "Oman",
-    "displayName": "Muscat",
-    "ip": "2a0d:3341:c180::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -97.1500015258789,
-     49.880001068115234
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Winnipeg, MB",
-    "ip": "2605:59ca:1000::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -87.20999908447266,
-     14.079999923706055
-    ]
-   },
-   "properties": {
-    "cciso2": "HN",
-    "countryName": "Honduras",
-    "displayName": "Tegucigalpa, Francisco Morazán Department",
-    "ip": "2803:9810:a3c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -56.18000030517578,
-     46.779998779296875
-    ]
-   },
-   "properties": {
-    "cciso2": "PM",
-    "countryName": "Saint Pierre and Miquelon",
-    "displayName": "Saint-Pierre",
-    "ip": "2605:59c9:1000::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.95000076293945,
-     31.959999084472656
-    ]
-   },
-   "properties": {
-    "cciso2": "JO",
-    "countryName": "Jordan",
-    "displayName": "Amman",
-    "ip": "2a0d:3344:37c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -96.80999755859375,
-     32.779998779296875
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Dallas, TX",
-    "ip": "2605:59c8:4700::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -112.06999969482422,
-     33.45000076293945
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Phoenix, AZ",
-    "ip": "2605:59c0:4300::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     16.3700008392334,
-     48.209999084472656
-    ]
-   },
-   "properties": {
-    "cciso2": "AT",
-    "countryName": "Austria",
-    "displayName": "Vienna",
-    "ip": "2a0d:3344:3880::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     18.06999969482422,
-     59.33000183105469
-    ]
-   },
-   "properties": {
-    "cciso2": "SE",
-    "countryName": "Sweden",
-    "displayName": "Stockholm",
-    "ip": "2a0d:3344:1f40::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -46.63999938964844,
-     -23.549999237060547
-    ]
-   },
-   "properties": {
-    "cciso2": "BR",
-    "countryName": "Brazil",
-    "displayName": "São Paulo",
-    "ip": "2803:9810:63c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     31.049999237060547,
-     -17.829999923706055
-    ]
-   },
-   "properties": {
-    "cciso2": "ZW",
-    "countryName": "Zimbabwe",
-    "displayName": "Harare",
-    "ip": "2c0f:2a80:2680::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -69.88999938964844,
-     18.469999313354492
-    ]
-   },
-   "properties": {
-    "cciso2": "DO",
-    "countryName": "Dominican Republic",
-    "displayName": "Santo Domingo, Nacional",
-    "ip": "2803:9810:a400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -2.5399999618530273,
-     49.459999084472656
-    ]
-   },
-   "properties": {
-    "cciso2": "GG",
-    "countryName": "Guernsey",
-    "displayName": "Saint Peter Port, St Peter Port",
-    "ip": "2a0d:3344:640::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -130.10000610351562,
-     -25.06999969482422
-    ]
-   },
-   "properties": {
-    "cciso2": "PN",
-    "countryName": "Pitcairn",
-    "displayName": "Adamstown",
-    "ip": "2406:2d40:7380::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -10.800000190734863,
-     6.300000190734863
-    ]
-   },
-   "properties": {
-    "cciso2": "LR",
-    "countryName": "Liberia",
-    "displayName": "Monrovia, Montserrado County",
-    "ip": "2c0f:2a80:340::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -68.5199966430664,
-     63.75
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Iqaluit, NU",
-    "ip": "2605:59c7:f003::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     10.75,
-     59.90999984741211
-    ]
-   },
-   "properties": {
-    "cciso2": "NO",
-    "countryName": "Norway",
-    "displayName": "Oslo",
-    "ip": "2a0d:3344:1f00::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -64.93000030517578,
-     18.34000015258789
-    ]
-   },
-   "properties": {
-    "cciso2": "VI",
-    "countryName": "U.S. Virgin Islands",
-    "displayName": "Charlotte Amalie, Saint Thomas Island",
-    "ip": "2605:59c8:6440::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -84.08000183105469,
-     9.930000305175781
-    ]
-   },
-   "properties": {
-    "cciso2": "CR",
-    "countryName": "Costa Rica",
-    "displayName": "San José",
-    "ip": "2803:9810:5400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -84.38999938964844,
-     33.75
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Atlanta, GA",
-    "ip": "2605:59c8:6900::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     33.36000061035156,
-     35.18000030517578
-    ]
-   },
-   "properties": {
-    "cciso2": "CY",
-    "countryName": "Cyprus",
-    "displayName": "Nicosia",
-    "ip": "2a0d:3344:3640::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -56.189998626708984,
-     -34.900001525878906
-    ]
-   },
-   "properties": {
-    "cciso2": "UY",
-    "countryName": "Uruguay",
-    "displayName": "Montevideo, Montevideo Department",
-    "ip": "2803:9810:b100::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     21.43000030517578,
-     42
-    ]
-   },
-   "properties": {
-    "cciso2": "MK",
-    "countryName": "North Macedonia",
-    "displayName": "Skopje, Grad Skopje",
-    "ip": "2a0d:3344:33c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     17.110000610351562,
-     48.150001525878906
-    ]
-   },
-   "properties": {
-    "cciso2": "SK",
-    "countryName": "Slovakia",
-    "displayName": "Bratislava, Bratislava Region",
-    "ip": "2a0d:3344:3780::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     21.010000228881836,
-     52.22999954223633
-    ]
-   },
-   "properties": {
-    "cciso2": "PL",
-    "countryName": "Poland",
-    "displayName": "Warsaw, Mazovia",
-    "ip": "2a0d:3344:1400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.109999895095825,
-     13.510000228881836
-    ]
-   },
-   "properties": {
-    "cciso2": "NE",
-    "countryName": "Niger",
-    "displayName": "Niamey",
-    "ip": "2c0f:2a80:880::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     20.15999984741211,
-     44.63999938964844
-    ]
-   },
-   "properties": {
-    "cciso2": "RS",
-    "countryName": "Serbia",
-    "displayName": "Zvečka, Central Serbia",
-    "ip": "2a0d:3344:3840::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     159.9499969482422,
-     -9.430000305175781
-    ]
-   },
-   "properties": {
-    "cciso2": "SB",
-    "countryName": "Solomon Islands",
-    "displayName": "Honiara",
-    "ip": "2406:2d40:4380::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     12.569999694824219,
-     55.68000030517578
-    ]
-   },
-   "properties": {
-    "cciso2": "DK",
-    "countryName": "Denmark",
-    "displayName": "Copenhagen, Capital Region",
-    "ip": "2a0d:3344:19c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -74.08000183105469,
-     4.610000133514404
-    ]
-   },
-   "properties": {
-    "cciso2": "CO",
-    "countryName": "Colombia",
-    "displayName": "Bogotá, Bogota D.C.",
-    "ip": "2803:9810:7140::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     26.110000610351562,
-     44.43000030517578
-    ]
-   },
-   "properties": {
-    "cciso2": "RO",
-    "countryName": "Romania",
-    "displayName": "Bucharest, București",
-    "ip": "2a0d:3344:3380::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.33000183105469,
-     47.61000061035156
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Seattle, WA",
-    "ip": "2605:59c7:f004::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -77.48999786376953,
-     39.040000915527344
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Ashburn, VA",
-    "ip": "2605:59c0:500::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     55.310001373291016,
-     25.079999923706055
-    ]
-   },
-   "properties": {
-    "cciso2": "AE",
-    "countryName": "United Arab Emirates",
-    "displayName": "Dubai",
-    "ip": "2a0d:3341:d540::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -94.94000244140625,
-     31.489999771118164
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Wells, TX",
-    "ip": "2605:59c7:f009::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     106.8499984741211,
-     -6.210000038146973
-    ]
-   },
-   "properties": {
-    "cciso2": "ID",
-    "countryName": "Indonesia",
-    "displayName": "Jakarta",
-    "ip": "2605:59c0:5100::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -175.1999969482422,
-     -21.139999389648438
-    ]
-   },
-   "properties": {
-    "cciso2": "TO",
-    "countryName": "Tonga",
-    "displayName": "Nuku‘alofa, Tongatapu",
-    "ip": "2406:2d40:74c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -165.41000366210938,
-     64.5
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Nome, AK",
-    "ip": "2605:59c7:f001::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -157.9600067138672,
-     -9.010000228881836
-    ]
-   },
-   "properties": {
-    "cciso2": "CK",
-    "countryName": "Cook Islands",
-    "displayName": "Penrhyn",
-    "ip": "2406:2d40:7340::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     28.860000610351562,
-     47.0099983215332
-    ]
-   },
-   "properties": {
-    "cciso2": "MD",
-    "countryName": "Moldova",
-    "displayName": "Chisinau, Chișinău Municipality",
-    "ip": "2a0d:3344:3480::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      55.54999923706055,
      -21.110000610351562
     ]
@@ -1192,253 +14,6 @@
     "countryName": "Reunion",
     "displayName": "Reunion, Réunion",
     "ip": "216.234.218.225",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -76.79000091552734,
-     18
-    ]
-   },
-   "properties": {
-    "cciso2": "JM",
-    "countryName": "Jamaica",
-    "displayName": "Kingston",
-    "ip": "2605:59c0:1200::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -104.9800033569336,
-     39.7400016784668
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Denver, CO",
-    "ip": "2605:59c8:5300::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     14.420000076293945,
-     50.09000015258789
-    ]
-   },
-   "properties": {
-    "cciso2": "CZ",
-    "countryName": "Czechia",
-    "displayName": "Prague",
-    "ip": "2a0d:3344:38c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     19.040000915527344,
-     47.5
-    ]
-   },
-   "properties": {
-    "cciso2": "HU",
-    "countryName": "Hungary",
-    "displayName": "Budapest",
-    "ip": "2a0d:3344:3600::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     46.720001220703125,
-     24.690000534057617
-    ]
-   },
-   "properties": {
-    "cciso2": "SA",
-    "countryName": "Saudi Arabia",
-    "displayName": "Riyadh, Riyadh Region",
-    "ip": "2a0d:3341:c1c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.5,
-     33.88999938964844
-    ]
-   },
-   "properties": {
-    "cciso2": "LB",
-    "countryName": "Lebanon",
-    "displayName": "Beirut, Beyrouth",
-    "ip": "2a0d:3341:c2c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     79.8499984741211,
-     6.940000057220459
-    ]
-   },
-   "properties": {
-    "cciso2": "LK",
-    "countryName": "Sri Lanka",
-    "displayName": "Colombo, Western Province",
-    "ip": "2406:2d40:6100::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.5999999046325684,
-     6.5
-    ]
-   },
-   "properties": {
-    "cciso2": "BJ",
-    "countryName": "Benin",
-    "displayName": "Porto-Novo, Ouémé",
-    "ip": "2c0f:2a80:380::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -16.579999923706055,
-     13.449999809265137
-    ]
-   },
-   "properties": {
-    "cciso2": "GM",
-    "countryName": "Gambia",
-    "displayName": "Banjul",
-    "ip": "2c0f:2a80:480::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     31.579999923706055,
-     4.849999904632568
-    ]
-   },
-   "properties": {
-    "cciso2": "SS",
-    "countryName": "South Sudan",
-    "displayName": "Juba, Central Equatoria",
-    "ip": "2c0f:2a80:25c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     25.90999984741211,
-     -24.649999618530273
-    ]
-   },
-   "properties": {
-    "cciso2": "BW",
-    "countryName": "Botswana",
-    "displayName": "Gaborone",
-    "ip": "2c0f:2a80:22c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     125.56999969482422,
-     -8.5600004196167
-    ]
-   },
-   "properties": {
-    "cciso2": "TL",
-    "countryName": "Timor Leste",
-    "displayName": "Dili, Dili Municipality",
-    "ip": "2406:2d40:8140::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     166.6199951171875,
-     19.299999237060547
-    ]
-   },
-   "properties": {
-    "cciso2": "UM",
-    "countryName": "United States Minor Outlying Islands",
-    "displayName": "Wake Island",
-    "ip": "2605:59c8:3500::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -1468,253 +43,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     30.520000457763672,
-     50.45000076293945
-    ]
-   },
-   "properties": {
-    "cciso2": "UA",
-    "countryName": "Ukraine",
-    "displayName": "Kyiv, Kyiv City",
-    "ip": "2a0d:3344:1ec0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.29000091552734,
-     51.650001525878906
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "100 Mile House, BC",
-    "ip": "2605:59c7:f006::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -80.19000244140625,
-     25.770000457763672
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Miami, FL",
-    "ip": "2605:59c7:f0c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -93.26000213623047,
-     44.97999954223633
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Minneapolis, MN",
-    "ip": "2605:59ca:1600::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     45.040000915527344,
-     12.779999732971191
-    ]
-   },
-   "properties": {
-    "cciso2": "YE",
-    "countryName": "Yemen",
-    "displayName": "Aden",
-    "ip": "2c0f:2a80:2700::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     31.25,
-     30.059999465942383
-    ]
-   },
-   "properties": {
-    "cciso2": "EG",
-    "countryName": "Egypt",
-    "displayName": "Cairo",
-    "ip": "2a0d:3344:1a00::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     9.1899995803833,
-     45.459999084472656
-    ]
-   },
-   "properties": {
-    "cciso2": "IT",
-    "countryName": "Italy",
-    "displayName": "Milan, Lombardy",
-    "ip": "2a0d:3344:2700::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -52.33000183105469,
-     4.940000057220459
-    ]
-   },
-   "properties": {
-    "cciso2": "GF",
-    "countryName": "French Guiana",
-    "displayName": "Cayenne, Guyane",
-    "ip": "2803:9810:a300::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     8.78905963897705,
-     -82.67627716064453
-    ]
-   },
-   "properties": {
-    "cciso2": "AQ",
-    "countryName": "Antarctica",
-    "displayName": "Antarctica",
-    "ip": "2406:2d40:4500::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -23.510000228881836,
-     14.930000305175781
-    ]
-   },
-   "properties": {
-    "cciso2": "CV",
-    "countryName": "Cabo Verde",
-    "displayName": "Praia",
-    "ip": "2c0f:2a80:300::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -3.700000047683716,
-     40.41999816894531
-    ]
-   },
-   "properties": {
-    "cciso2": "ES",
-    "countryName": "Spain",
-    "displayName": "Madrid",
-    "ip": "2a0d:3344:1a40::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -97.822,
-     37.751
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "United States",
-    "ip": "2605:59c8:8080::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -79.4000015258789,
-     43.709999084472656
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Toronto, ON",
-    "ip": "2605:59ca:1400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -80.5999984741211,
      28.40999984741211
     ]
@@ -1734,186 +62,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -97.822,
-     37.751
+     13.40999984741211,
+     52.52000045776367
     ]
    },
    "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "United States",
-    "ip": "2406:2d40:8300::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     103.8499984741211,
-     1.2899999618530273
-    ]
-   },
-   "properties": {
-    "cciso2": "SG",
-    "countryName": "Singapore",
-    "displayName": "Singapore",
-    "ip": "2406:2d40:8100::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -0.20000000298023224,
-     5.559999942779541
-    ]
-   },
-   "properties": {
-    "cciso2": "GH",
-    "countryName": "Ghana",
-    "displayName": "Accra, Greater Accra",
-    "ip": "2c0f:2a80:780::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     49.88999938964844,
-     40.380001068115234
-    ]
-   },
-   "properties": {
-    "cciso2": "AZ",
-    "countryName": "Azerbaijan",
-    "displayName": "Baku, Baki",
-    "ip": "2a0d:3344:3680::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -111.88999938964844,
-     40.7599983215332
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Salt Lake City, UT",
-    "ip": "2605:59c0:3200::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -118.3499984741211,
-     33.91999816894531
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Hawthorne, CA",
-    "ip": "2a0d:3341:dc01::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     25.280000686645508,
-     54.689998626708984
-    ]
-   },
-   "properties": {
-    "cciso2": "LT",
-    "countryName": "Lithuania",
-    "displayName": "Vilnius",
-    "ip": "2a0d:3344:1b80::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     24.940000534057617,
-     60.16999816894531
-    ]
-   },
-   "properties": {
-    "cciso2": "FI",
-    "countryName": "Finland",
-    "displayName": "Helsinki, Uusimaa",
-    "ip": "2a0d:3344:16c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     14.510000228881836,
-     35.900001525878906
-    ]
-   },
-   "properties": {
-    "cciso2": "MT",
-    "countryName": "Malta",
-    "displayName": "Valletta",
-    "ip": "2a0d:3344:3740::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     166.92999267578125,
-     -0.550000011920929
-    ]
-   },
-   "properties": {
-    "cciso2": "NR",
-    "countryName": "Nauru",
-    "displayName": "Yaren, Yaren District",
-    "ip": "2406:2d40:75c0::1",
+    "cciso2": "DE",
+    "countryName": "Germany",
+    "displayName": "Berlin",
+    "ip": "2a0d:3344:1500::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -1943,15 +100,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -61.06999969482422,
-     14.600000381469727
+     -0.20000000298023224,
+     5.559999942779541
     ]
    },
    "properties": {
-    "cciso2": "MQ",
-    "countryName": "Martinique",
-    "displayName": "Fort-de-France, Martinique",
-    "ip": "2605:59c0:1500::1",
+    "cciso2": "GH",
+    "countryName": "Ghana",
+    "displayName": "Accra, Greater Accra",
+    "ip": "2c0f:2a80:780::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -1962,15 +119,775 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     115.86000061035156,
-     -31.950000762939453
+     3.390000104904175,
+     6.449999809265137
     ]
    },
    "properties": {
-    "cciso2": "AU",
-    "countryName": "Australia",
-    "displayName": "Perth, WA",
-    "ip": "2406:2d40:2000::1",
+    "cciso2": "NG",
+    "countryName": "Nigeria",
+    "displayName": "Lagos",
+    "ip": "2c0f:2a80:a00::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -38.540000915527344,
+     -3.7200000286102295
+    ]
+   },
+   "properties": {
+    "cciso2": "BR",
+    "countryName": "Brazil",
+    "displayName": "Fortaleza, Ceará",
+    "ip": "2803:9810:7200::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.049999237060547,
+     -17.829999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "ZW",
+    "countryName": "Zimbabwe",
+    "displayName": "Harare",
+    "ip": "2c0f:2a80:900::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     96.81999969482422,
+     -12.15999984741211
+    ]
+   },
+   "properties": {
+    "cciso2": "CC",
+    "countryName": "Cocos Islands",
+    "displayName": "West Island",
+    "ip": "2406:2d40:2180::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -104.9800033569336,
+     39.7400016784668
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Denver, CO",
+    "ip": "2605:59c8:5300::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -87.20999908447266,
+     14.079999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "HN",
+    "countryName": "Honduras",
+    "displayName": "Tegucigalpa, Francisco Morazán Department",
+    "ip": "2803:9810:a3c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -170.6999969482422,
+     -14.279999732971191
+    ]
+   },
+   "properties": {
+    "cciso2": "AS",
+    "countryName": "American Samoa",
+    "displayName": "Pago Pago, Eastern District",
+    "ip": "2406:2d40:7400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.87999725341797,
+     19.06999969482422
+    ]
+   },
+   "properties": {
+    "cciso2": "IN",
+    "countryName": "India",
+    "displayName": "Mumbai, Maharashtra",
+    "ip": "2406:2d40:a000::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.860000610351562,
+     47.0099983215332
+    ]
+   },
+   "properties": {
+    "cciso2": "MD",
+    "countryName": "Moldova",
+    "displayName": "Chisinau, Chișinău Municipality",
+    "ip": "2a0d:3344:3480::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.15999984741211,
+     44.63999938964844
+    ]
+   },
+   "properties": {
+    "cciso2": "RS",
+    "countryName": "Serbia",
+    "displayName": "Zvečka, Central Serbia",
+    "ip": "2a0d:3344:3840::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.48999786376953,
+     38.97999954223633
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Annapolis, MD",
+    "ip": "2605:59c0:600::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -111.88999938964844,
+     40.7599983215332
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Salt Lake City, UT",
+    "ip": "2605:59c0:3200::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.23999786376953,
+     34.04999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Los Angeles, CA",
+    "ip": "2605:59c8:3400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.48999786376953,
+     39.040000915527344
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Ashburn, VA",
+    "ip": "2605:59c0:500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -66.66999816894531,
+     45.95000076293945
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Fredericton, NB",
+    "ip": "2605:59c8:2b00::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.729999542236328,
+     37.97999954223633
+    ]
+   },
+   "properties": {
+    "cciso2": "GR",
+    "countryName": "Greece",
+    "displayName": "Athens, Attica",
+    "ip": "2a0d:3344:3340::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     101.69000244140625,
+     3.140000104904175
+    ]
+   },
+   "properties": {
+    "cciso2": "MY",
+    "countryName": "Malaysia",
+    "displayName": "Kuala Lumpur",
+    "ip": "2406:2d40:9100::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -108.5,
+     45.779998779296875
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Billings, MT",
+    "ip": "2605:59c0:5800::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.29000091552734,
+     51.650001525878906
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "100 Mile House, BC",
+    "ip": "2605:59c7:f006::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.33999633789062,
+     25.059999465942383
+    ]
+   },
+   "properties": {
+    "cciso2": "BS",
+    "countryName": "Bahamas",
+    "displayName": "Nassau, New Providence",
+    "ip": "2605:59c8:67c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     25.280000686645508,
+     54.689998626708984
+    ]
+   },
+   "properties": {
+    "cciso2": "LT",
+    "countryName": "Lithuania",
+    "displayName": "Vilnius",
+    "ip": "2a0d:3344:1b80::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -171.77000427246094,
+     -13.829999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "WS",
+    "countryName": "Samoa",
+    "displayName": "Apia, Tuamasaga",
+    "ip": "2406:2d40:7580::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.479999542236328,
+     -29.31999969482422
+    ]
+   },
+   "properties": {
+    "cciso2": "LS",
+    "countryName": "Lesotho",
+    "displayName": "Maseru, Maseru District",
+    "ip": "2c0f:2a80:2580::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.95000076293945,
+     31.959999084472656
+    ]
+   },
+   "properties": {
+    "cciso2": "JO",
+    "countryName": "Jordan",
+    "displayName": "Amman",
+    "ip": "2a0d:3344:37c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -58.380001068115234,
+     -34.61000061035156
+    ]
+   },
+   "properties": {
+    "cciso2": "AR",
+    "countryName": "Argentina",
+    "displayName": "Buenos Aires, Buenos Aires F.D.",
+    "ip": "2803:9810:33c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -114.08999633789062,
+     51.04999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Calgary, AB",
+    "ip": "2605:59ca:1500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45.040000915527344,
+     12.779999732971191
+    ]
+   },
+   "properties": {
+    "cciso2": "YE",
+    "countryName": "Yemen",
+    "displayName": "Aden",
+    "ip": "2c0f:2a80:2700::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.08000183105469,
+     18.06999969482422
+    ]
+   },
+   "properties": {
+    "cciso2": "MF",
+    "countryName": "Saint Martin",
+    "displayName": "Marigot",
+    "ip": "2605:59c0:14c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -52.33000183105469,
+     4.940000057220459
+    ]
+   },
+   "properties": {
+    "cciso2": "GF",
+    "countryName": "French Guiana",
+    "displayName": "Cayenne, Guyane",
+    "ip": "2803:9810:a300::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.130000114440918,
+     49.61000061035156
+    ]
+   },
+   "properties": {
+    "cciso2": "LU",
+    "countryName": "Luxembourg",
+    "displayName": "Luxembourg",
+    "ip": "2a0d:3344:1e80::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.43000030517578,
+     42
+    ]
+   },
+   "properties": {
+    "cciso2": "MK",
+    "countryName": "North Macedonia",
+    "displayName": "Skopje, Grad Skopje",
+    "ip": "2a0d:3344:33c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -23.510000228881836,
+     14.930000305175781
+    ]
+   },
+   "properties": {
+    "cciso2": "CV",
+    "countryName": "Cabo Verde",
+    "displayName": "Praia",
+    "ip": "2c0f:2a80:300::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.19000244140625,
+     25.770000457763672
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Miami, FL",
+    "ip": "2605:59c7:f0c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -68.5199966430664,
+     63.75
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Iqaluit, NU",
+    "ip": "2605:59c7:f003::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.0315,
+     29.7861
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Keystone Heights, FL",
+    "ip": "2605:59c0:16c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.3700008392334,
+     48.209999084472656
+    ]
+   },
+   "properties": {
+    "cciso2": "AT",
+    "countryName": "Austria",
+    "displayName": "Vienna",
+    "ip": "2a0d:3344:3880::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     103.8499984741211,
+     1.2899999618530273
+    ]
+   },
+   "properties": {
+    "cciso2": "SG",
+    "countryName": "Singapore",
+    "displayName": "Singapore",
+    "ip": "2406:2d40:8100::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     25.90999984741211,
+     -24.649999618530273
+    ]
+   },
+   "properties": {
+    "cciso2": "BW",
+    "countryName": "Botswana",
+    "displayName": "Gaborone",
+    "ip": "2c0f:2a80:22c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.5399999618530273,
+     49.459999084472656
+    ]
+   },
+   "properties": {
+    "cciso2": "GG",
+    "countryName": "Guernsey",
+    "displayName": "Saint Peter Port, St Peter Port",
+    "ip": "2a0d:3344:640::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     26.110000610351562,
+     44.43000030517578
+    ]
+   },
+   "properties": {
+    "cciso2": "RO",
+    "countryName": "Romania",
+    "displayName": "Bucharest, București",
+    "ip": "2a0d:3344:3380::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.010000228881836,
+     52.22999954223633
+    ]
+   },
+   "properties": {
+    "cciso2": "PL",
+    "countryName": "Poland",
+    "displayName": "Warsaw, Mazovia",
+    "ip": "2a0d:3344:1400::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -2000,15 +917,528 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -61.72999954223633,
-     16
+     30.059999465942383,
+     -1.9500000476837158
     ]
    },
    "properties": {
-    "cciso2": "GP",
-    "countryName": "Guadeloupe",
-    "displayName": "Basse-Terre, Guadeloupe",
-    "ip": "2605:59c0:1480::1",
+    "cciso2": "RW",
+    "countryName": "Rwanda",
+    "displayName": "Kigali",
+    "ip": "2c0f:2a80:2600::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.51000213623047,
+     14.640000343322754
+    ]
+   },
+   "properties": {
+    "cciso2": "GT",
+    "countryName": "Guatemala",
+    "displayName": "Guatemala City, Guatemala",
+    "ip": "2605:59c0:6000::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -157.86000061035156,
+     21.309999465942383
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Honolulu, HI",
+    "ip": "170.203.195.65",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     166.6199951171875,
+     19.299999237060547
+    ]
+   },
+   "properties": {
+    "cciso2": "UM",
+    "countryName": "United States Minor Outlying Islands",
+    "displayName": "Wake Island",
+    "ip": "2605:59c8:3500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.36000061035156,
+     35.18000030517578
+    ]
+   },
+   "properties": {
+    "cciso2": "CY",
+    "countryName": "Cyprus",
+    "displayName": "Nicosia",
+    "ip": "2a0d:3344:1240::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.33999633789062,
+     18.540000915527344
+    ]
+   },
+   "properties": {
+    "cciso2": "HT",
+    "countryName": "Haiti",
+    "displayName": "Port-au-Prince, Ouest",
+    "ip": "2803:9810:a000::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.3499984741211,
+     33.91999816894531
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Hawthorne, CA",
+    "ip": "2a0d:3341:dc01::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.33000183105469,
+     47.61000061035156
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Seattle, WA",
+    "ip": "2605:59c7:f004::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.822,
+     37.751
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "United States",
+    "ip": "2a0d:3344:3940::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.12999999523162842,
+     51.5099983215332
+    ]
+   },
+   "properties": {
+    "cciso2": "GB",
+    "countryName": "United Kingdom",
+    "displayName": "London, ENG",
+    "ip": "2a0d:3344:300::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     49.88999938964844,
+     40.380001068115234
+    ]
+   },
+   "properties": {
+    "cciso2": "AZ",
+    "countryName": "Azerbaijan",
+    "displayName": "Baku, Baki",
+    "ip": "2a0d:3344:3680::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.79000091552734,
+     18
+    ]
+   },
+   "properties": {
+    "cciso2": "JM",
+    "countryName": "Jamaica",
+    "displayName": "Kingston",
+    "ip": "2605:59c0:1200::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.6500015258789,
+     -33.459999084472656
+    ]
+   },
+   "properties": {
+    "cciso2": "CL",
+    "countryName": "Chile",
+    "displayName": "Santiago, Santiago Metropolitan",
+    "ip": "2803:9810:62c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -166.5399932861328,
+     53.88999938964844
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Dutch Harbor, AK",
+    "ip": "2605:59c7:f002::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     178.42999267578125,
+     -18.139999389648438
+    ]
+   },
+   "properties": {
+    "cciso2": "FJ",
+    "countryName": "Fiji",
+    "displayName": "Suva, Central",
+    "ip": "2406:2d40:43c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -13.239999771118164,
+     8.489999771118164
+    ]
+   },
+   "properties": {
+    "cciso2": "SL",
+    "countryName": "Sierra Leone",
+    "displayName": "Freetown, Western Area",
+    "ip": "2c0f:2a80:4c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.510000228881836,
+     41.88999938964844
+    ]
+   },
+   "properties": {
+    "cciso2": "IT",
+    "countryName": "Italy",
+    "displayName": "Rome, Lazio",
+    "ip": "2a0d:3344:1b40::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.579999923706055,
+     4.849999904632568
+    ]
+   },
+   "properties": {
+    "cciso2": "SS",
+    "countryName": "South Sudan",
+    "displayName": "Juba, Central Equatoria",
+    "ip": "2c0f:2a80:25c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -157.9600067138672,
+     -9.010000228881836
+    ]
+   },
+   "properties": {
+    "cciso2": "CK",
+    "countryName": "Cook Islands",
+    "displayName": "Penrhyn",
+    "ip": "2406:2d40:7340::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     79.8499984741211,
+     6.940000057220459
+    ]
+   },
+   "properties": {
+    "cciso2": "LK",
+    "countryName": "Sri Lanka",
+    "displayName": "Colombo, Western Province",
+    "ip": "2406:2d40:6100::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     36.81999969482422,
+     -1.2799999713897705
+    ]
+   },
+   "properties": {
+    "cciso2": "KE",
+    "countryName": "Kenya",
+    "displayName": "Nairobi, Nairobi County",
+    "ip": "2c0f:2a80:2400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.290000915527344,
+     -15.40999984741211
+    ]
+   },
+   "properties": {
+    "cciso2": "ZM",
+    "countryName": "Zambia",
+    "displayName": "Lusaka, Lusaka Province",
+    "ip": "2c0f:2a80:26c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.822,
+     37.751
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "United States",
+    "ip": "2406:2d40:3540::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.822,
+     37.751
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "United States",
+    "ip": "2406:2d40:8300::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     55.310001373291016,
+     25.079999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "AE",
+    "countryName": "United Arab Emirates",
+    "displayName": "Dubai",
+    "ip": "2a0d:3341:d540::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     24.940000534057617,
+     60.16999816894531
+    ]
+   },
+   "properties": {
+    "cciso2": "FI",
+    "countryName": "Finland",
+    "displayName": "Helsinki, Uusimaa",
+    "ip": "2a0d:3344:16c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -64.93000030517578,
+     18.34000015258789
+    ]
+   },
+   "properties": {
+    "cciso2": "VI",
+    "countryName": "U.S. Virgin Islands",
+    "displayName": "Charlotte Amalie, Saint Thomas Island",
+    "ip": "2605:59c8:6440::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.06999969482422,
+     59.33000183105469
+    ]
+   },
+   "properties": {
+    "cciso2": "SE",
+    "countryName": "Sweden",
+    "displayName": "Stockholm",
+    "ip": "2a0d:3344:1f40::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -2038,15 +1468,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     120.9800033569336,
-     14.600000381469727
+     125.56999969482422,
+     -8.5600004196167
     ]
    },
    "properties": {
-    "cciso2": "PH",
-    "countryName": "Philippines",
-    "displayName": "Manila, National Capital Region",
-    "ip": "2406:2d40:9400::1",
+    "cciso2": "TL",
+    "countryName": "Timor Leste",
+    "displayName": "Dili, Dili Municipality",
+    "ip": "2406:2d40:8140::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -2057,15 +1487,547 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -90.51000213623047,
-     14.640000343322754
+     14.510000228881836,
+     35.900001525878906
     ]
    },
    "properties": {
-    "cciso2": "GT",
-    "countryName": "Guatemala",
-    "displayName": "Guatemala City, Guatemala",
-    "ip": "2605:59c8:72c0::1",
+    "cciso2": "MT",
+    "countryName": "Malta",
+    "displayName": "Valletta",
+    "ip": "2a0d:3344:3740::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     172.97999572753906,
+     1.3300000429153442
+    ]
+   },
+   "properties": {
+    "cciso2": "KI",
+    "countryName": "Kiribati",
+    "displayName": "Tarawa, Gilbert Islands",
+    "ip": "2406:2d40:7500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -46.63999938964844,
+     -23.549999237060547
+    ]
+   },
+   "properties": {
+    "cciso2": "BR",
+    "countryName": "Brazil",
+    "displayName": "São Paulo",
+    "ip": "2803:9810:63c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     30.520000457763672,
+     50.45000076293945
+    ]
+   },
+   "properties": {
+    "cciso2": "UA",
+    "countryName": "Ukraine",
+    "displayName": "Kyiv, Kyiv City",
+    "ip": "2a0d:3344:3500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.58999633789062,
+     45.5099983215332
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Montréal, QC",
+    "ip": "2605:59c8:2700::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.220001220703125,
+     31.770000457763672
+    ]
+   },
+   "properties": {
+    "cciso2": "IL",
+    "countryName": "Israel",
+    "displayName": "Jerusalem",
+    "ip": "2a0d:3344:17c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.08000183105469,
+     9.930000305175781
+    ]
+   },
+   "properties": {
+    "cciso2": "CR",
+    "countryName": "Costa Rica",
+    "displayName": "San José",
+    "ip": "2803:9810:5400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.569999694824219,
+     55.68000030517578
+    ]
+   },
+   "properties": {
+    "cciso2": "DK",
+    "countryName": "Denmark",
+    "displayName": "Copenhagen, Capital Region",
+    "ip": "2a0d:3344:19c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.3100004196167,
+     -4.329999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "CD",
+    "countryName": "Democratic Republic of the Congo",
+    "displayName": "Kinshasa",
+    "ip": "2c0f:2a80:2740::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -17.440000534057617,
+     14.6899995803833
+    ]
+   },
+   "properties": {
+    "cciso2": "SN",
+    "countryName": "Senegal",
+    "displayName": "Dakar",
+    "ip": "2c0f:2a80:500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.5199966430664,
+     -0.23000000417232513
+    ]
+   },
+   "properties": {
+    "cciso2": "EC",
+    "countryName": "Ecuador",
+    "displayName": "Quito, Pichincha",
+    "ip": "2803:9810:6280::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -175.1999969482422,
+     -21.139999389648438
+    ]
+   },
+   "properties": {
+    "cciso2": "TO",
+    "countryName": "Tonga",
+    "displayName": "Nuku‘alofa, Tongatapu",
+    "ip": "2406:2d40:74c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -69.88999938964844,
+     18.469999313354492
+    ]
+   },
+   "properties": {
+    "cciso2": "DO",
+    "countryName": "Dominican Republic",
+    "displayName": "Santo Domingo, Nacional",
+    "ip": "2803:9810:a400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -61.72999954223633,
+     16
+    ]
+   },
+   "properties": {
+    "cciso2": "GP",
+    "countryName": "Guadeloupe",
+    "displayName": "Basse-Terre, Guadeloupe",
+    "ip": "2605:59c0:1480::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.822,
+     37.751
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "United States",
+    "ip": "2605:59c8:8080::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -76.79000091552734,
+     18
+    ]
+   },
+   "properties": {
+    "cciso2": "JM",
+    "countryName": "Jamaica",
+    "displayName": "Kingston",
+    "ip": "2605:59c8:6700::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -165.41000366210938,
+     64.5
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Nome, AK",
+    "ip": "2605:59c7:f001::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -16.579999923706055,
+     13.449999809265137
+    ]
+   },
+   "properties": {
+    "cciso2": "GM",
+    "countryName": "Gambia",
+    "displayName": "Banjul",
+    "ip": "2c0f:2a80:480::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -87.6500015258789,
+     41.849998474121094
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Chicago, IL",
+    "ip": "2605:59c8:1b00::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.049999237060547,
+     -17.829999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "ZW",
+    "countryName": "Zimbabwe",
+    "displayName": "Harare",
+    "ip": "2c0f:2a80:2680::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.790000915527344,
+     -13.970000267028809
+    ]
+   },
+   "properties": {
+    "cciso2": "MW",
+    "countryName": "Malawi",
+    "displayName": "Lilongwe, Central Region",
+    "ip": "2c0f:2a80:2200::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.040000915527344,
+     -26.200000762939453
+    ]
+   },
+   "properties": {
+    "cciso2": "ZA",
+    "countryName": "South Africa",
+    "displayName": "Johannesburg, Gauteng",
+    "ip": "2605:59c0:6400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.822,
+     37.751
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "United States",
+    "ip": "2a0d:3344:2940::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.550000190734863,
+     47.369998931884766
+    ]
+   },
+   "properties": {
+    "cciso2": "CH",
+    "countryName": "Switzerland",
+    "displayName": "Zürich, ZH",
+    "ip": "2a0d:3344:1940::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -112.06999969482422,
+     33.45000076293945
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Phoenix, AZ",
+    "ip": "2605:59c0:4300::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.81999969482422,
+     41.33000183105469
+    ]
+   },
+   "properties": {
+    "cciso2": "AL",
+    "countryName": "Albania",
+    "displayName": "Tirana",
+    "ip": "2a0d:3344:3440::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.040000915527344,
+     47.5
+    ]
+   },
+   "properties": {
+    "cciso2": "HU",
+    "countryName": "Hungary",
+    "displayName": "Budapest",
+    "ip": "2a0d:3344:3600::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     47.97999954223633,
+     29.3700008392334
+    ]
+   },
+   "properties": {
+    "cciso2": "KW",
+    "countryName": "Kuwait",
+    "displayName": "Kuwait City, Al Asimah",
+    "ip": "2a0d:3341:c280::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -96.80999755859375,
+     32.779998779296875
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Dallas, TX",
+    "ip": "2605:59c8:4700::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -2095,15 +2057,1060 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     12.510000228881836,
-     41.88999938964844
+     106.87999725341797,
+     47.90999984741211
+    ]
+   },
+   "properties": {
+    "cciso2": "MN",
+    "countryName": "Mongolia",
+    "displayName": "Ulan Bator, Ulaanbaatar",
+    "ip": "2406:2d40:3300::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.2200000286102295,
+     6.130000114440918
+    ]
+   },
+   "properties": {
+    "cciso2": "TG",
+    "countryName": "Togo",
+    "displayName": "Lomé, Maritime",
+    "ip": "2c0f:2a80:840::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.6432,
+     -33.439
+    ]
+   },
+   "properties": {
+    "cciso2": "CL",
+    "countryName": "Chile",
+    "displayName": "Chile",
+    "ip": "2803:9810:5600::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.75,
+     59.90999984741211
+    ]
+   },
+   "properties": {
+    "cciso2": "NO",
+    "countryName": "Norway",
+    "displayName": "Oslo",
+    "ip": "2a0d:3344:1f00::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.979999542236328,
+     45.810001373291016
+    ]
+   },
+   "properties": {
+    "cciso2": "HR",
+    "countryName": "Croatia",
+    "displayName": "Zagreb",
+    "ip": "2a0d:3344:34c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     55.45000076293945,
+     -20.8799991607666
+    ]
+   },
+   "properties": {
+    "cciso2": "RE",
+    "countryName": "Reunion",
+    "displayName": "Saint-Denis, Réunion",
+    "ip": "2605:59c0:5f00::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.700000047683716,
+     40.41999816894531
+    ]
+   },
+   "properties": {
+    "cciso2": "ES",
+    "countryName": "Spain",
+    "displayName": "Madrid",
+    "ip": "2a0d:3344:1a40::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -61.06999969482422,
+     14.600000381469727
+    ]
+   },
+   "properties": {
+    "cciso2": "MQ",
+    "countryName": "Martinique",
+    "displayName": "Fort-de-France, Martinique",
+    "ip": "2605:59c0:1500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.110000610351562,
+     48.150001525878906
+    ]
+   },
+   "properties": {
+    "cciso2": "SK",
+    "countryName": "Slovakia",
+    "displayName": "Bratislava, Bratislava Region",
+    "ip": "2a0d:3344:3780::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -10.800000190734863,
+     6.300000190734863
+    ]
+   },
+   "properties": {
+    "cciso2": "LR",
+    "countryName": "Liberia",
+    "displayName": "Monrovia, Montserrado County",
+    "ip": "2c0f:2a80:340::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     31.1299991607666,
+     -26.31999969482422
+    ]
+   },
+   "properties": {
+    "cciso2": "SZ",
+    "countryName": "Eswatini",
+    "displayName": "Mbabane, Hhohho Region",
+    "ip": "2c0f:2a80:2000::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     50.59000015258789,
+     26.229999542236328
+    ]
+   },
+   "properties": {
+    "cciso2": "BH",
+    "countryName": "Bahrain",
+    "displayName": "Manama",
+    "ip": "2a0d:3344:1200::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.83000183105469,
+     41.689998626708984
+    ]
+   },
+   "properties": {
+    "cciso2": "GE",
+    "countryName": "Georgia",
+    "displayName": "Tbilisi",
+    "ip": "2a0d:3344:3400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     46.720001220703125,
+     24.690000534057617
+    ]
+   },
+   "properties": {
+    "cciso2": "SA",
+    "countryName": "Saudi Arabia",
+    "displayName": "Riyadh, Riyadh Region",
+    "ip": "2a0d:3341:c1c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -93.26000213623047,
+     44.97999954223633
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Minneapolis, MN",
+    "ip": "2605:59ca:1600::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.58000183105469,
+     44.63999938964844
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Halifax, NS",
+    "ip": "2605:59c8:2c00::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     112.75,
+     -7.25
+    ]
+   },
+   "properties": {
+    "cciso2": "ID",
+    "countryName": "Indonesia",
+    "displayName": "Surabaya, East Java",
+    "ip": "202.65.237.1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.189998626708984,
+     -34.900001525878906
+    ]
+   },
+   "properties": {
+    "cciso2": "UY",
+    "countryName": "Uruguay",
+    "displayName": "Montevideo, Montevideo Department",
+    "ip": "2803:9810:b100::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.420000076293945,
+     50.09000015258789
+    ]
+   },
+   "properties": {
+    "cciso2": "CZ",
+    "countryName": "Czechia",
+    "displayName": "Prague",
+    "ip": "2a0d:3344:38c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.51000213623047,
+     14.640000343322754
+    ]
+   },
+   "properties": {
+    "cciso2": "GT",
+    "countryName": "Guatemala",
+    "displayName": "Guatemala City, Guatemala",
+    "ip": "2605:59c8:72c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -64.93000030517578,
+     18.34000015258789
+    ]
+   },
+   "properties": {
+    "cciso2": "VI",
+    "countryName": "U.S. Virgin Islands",
+    "displayName": "Charlotte Amalie, Saint Thomas Island",
+    "ip": "2605:59c0:1540::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.5,
+     33.88999938964844
+    ]
+   },
+   "properties": {
+    "cciso2": "LB",
+    "countryName": "Lebanon",
+    "displayName": "Beirut, Beyrouth",
+    "ip": "2a0d:3341:c2c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     106.8499984741211,
+     -6.210000038146973
+    ]
+   },
+   "properties": {
+    "cciso2": "ID",
+    "countryName": "Indonesia",
+    "displayName": "Jakarta",
+    "ip": "2605:59c0:5100::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -125.44999694824219,
+     49.650001525878906
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Vancouver Island, BC",
+    "ip": "2605:59c8:500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.31999969482422,
+     42.70000076293945
+    ]
+   },
+   "properties": {
+    "cciso2": "BG",
+    "countryName": "Bulgaria",
+    "displayName": "Sofia, Sofia-Capital",
+    "ip": "2a0d:3344:3100::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45.08000183105469,
+     -12.760000228881836
+    ]
+   },
+   "properties": {
+    "cciso2": "YT",
+    "countryName": "Mayotte",
+    "displayName": "M'Tsangamouji",
+    "ip": "2c0f:2a80:2080::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5199966430664,
+     8.989999771118164
+    ]
+   },
+   "properties": {
+    "cciso2": "PA",
+    "countryName": "Panama",
+    "displayName": "Panamá",
+    "ip": "2605:59c0:6800::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -59.619998931884766,
+     13.109999656677246
+    ]
+   },
+   "properties": {
+    "cciso2": "BB",
+    "countryName": "Barbados",
+    "displayName": "Bridgetown, Saint Michael",
+    "ip": "2605:59c0:1400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.18000030517578,
+     46.779998779296875
+    ]
+   },
+   "properties": {
+    "cciso2": "PM",
+    "countryName": "Saint Pierre and Miquelon",
+    "displayName": "Saint-Pierre",
+    "ip": "2605:59c8:2d00::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -130.10000610351562,
+     -25.06999969482422
+    ]
+   },
+   "properties": {
+    "cciso2": "PN",
+    "countryName": "Pitcairn",
+    "displayName": "Adamstown",
+    "ip": "2406:2d40:7380::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.822,
+     37.751
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "United States",
+    "ip": "2406:2d40:2200::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -104.62000274658203,
+     50.45000076293945
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Regina, SK",
+    "ip": "2605:59ca:1100::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -61.52000045776367,
+     10.670000076293945
+    ]
+   },
+   "properties": {
+    "cciso2": "TT",
+    "countryName": "Trinidad and Tobago",
+    "displayName": "Port of Spain",
+    "ip": "2605:59c8:6780::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.130000114440918,
+     38.720001220703125
+    ]
+   },
+   "properties": {
+    "cciso2": "PT",
+    "countryName": "Portugal",
+    "displayName": "Lisbon",
+    "ip": "2a0d:3344:2100::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8,
+     10
+    ]
+   },
+   "properties": {
+    "cciso2": "NG",
+    "countryName": "Nigeria",
+    "displayName": "Nigeria",
+    "ip": "2c0f:2a80:3000::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.109999895095825,
+     13.510000228881836
+    ]
+   },
+   "properties": {
+    "cciso2": "NE",
+    "countryName": "Niger",
+    "displayName": "Niamey",
+    "ip": "2c0f:2a80:880::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     35.7400016784668,
+     -6.170000076293945
+    ]
+   },
+   "properties": {
+    "cciso2": "TZ",
+    "countryName": "Tanzania",
+    "displayName": "Dodoma",
+    "ip": "2c0f:2a80:440::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.38999938964844,
+     33.75
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Atlanta, GA",
+    "ip": "2605:59c8:6900::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     47.540000915527344,
+     -18.90999984741211
+    ]
+   },
+   "properties": {
+    "cciso2": "MG",
+    "countryName": "Madagascar",
+    "displayName": "Antananarivo, Analamanga",
+    "ip": "2c0f:2a80:2180::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.4000015258789,
+     43.709999084472656
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Toronto, ON",
+    "ip": "2605:59ca:1400::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -63.08000183105469,
+     18.06999969482422
+    ]
+   },
+   "properties": {
+    "cciso2": "MF",
+    "countryName": "Saint Martin",
+    "displayName": "Marigot",
+    "ip": "2605:59c8:64c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.40999984741211,
+     23.579999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "OM",
+    "countryName": "Oman",
+    "displayName": "Muscat",
+    "ip": "2a0d:3341:c180::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.69000244140625,
+     35.689998626708984
+    ]
+   },
+   "properties": {
+    "cciso2": "JP",
+    "countryName": "Japan",
+    "displayName": "Tokyo",
+    "ip": "2406:2d40:3000::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.08000183105469,
+     4.610000133514404
+    ]
+   },
+   "properties": {
+    "cciso2": "CO",
+    "countryName": "Colombia",
+    "displayName": "Bogotá, Bogota D.C.",
+    "ip": "2803:9810:7140::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     89.63999938964844,
+     27.469999313354492
+    ]
+   },
+   "properties": {
+    "cciso2": "BT",
+    "countryName": "Bhutan",
+    "displayName": "Thimphu, Thimphu District",
+    "ip": "2406:2d40:6200::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     145.75,
+     15.1899995803833
+    ]
+   },
+   "properties": {
+    "cciso2": "MP",
+    "countryName": "Northern Mariana Islands",
+    "displayName": "Saipan Island, Saipan",
+    "ip": "2406:2d40:9500::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     44.5099983215332,
+     40.18000030517578
+    ]
+   },
+   "properties": {
+    "cciso2": "AM",
+    "countryName": "Armenia",
+    "displayName": "Yerevan",
+    "ip": "2a0d:3344:3900::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.822,
+     37.751
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "United States",
+    "ip": "143.105.159.1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.889999866485596,
+     52.369998931884766
+    ]
+   },
+   "properties": {
+    "cciso2": "NL",
+    "countryName": "The Netherlands",
+    "displayName": "Amsterdam, North Holland",
+    "ip": "2a0d:3344:1c80::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.1899995803833,
+     45.459999084472656
     ]
    },
    "properties": {
     "cciso2": "IT",
     "countryName": "Italy",
-    "displayName": "Rome, Lazio",
-    "ip": "2a0d:3344:1b40::1",
+    "displayName": "Milan, Lombardy",
+    "ip": "2a0d:3344:2700::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.5999999046325684,
+     6.5
+    ]
+   },
+   "properties": {
+    "cciso2": "BJ",
+    "countryName": "Benin",
+    "displayName": "Porto-Novo, Ouémé",
+    "ip": "2c0f:2a80:380::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     166.92999267578125,
+     -0.550000011920929
+    ]
+   },
+   "properties": {
+    "cciso2": "NR",
+    "countryName": "Nauru",
+    "displayName": "Yaren, Yaren District",
+    "ip": "2406:2d40:75c0::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -94.94000244140625,
+     31.489999771118164
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Wells, TX",
+    "ip": "2605:59c7:f009::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.1500015258789,
+     49.880001068115234
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Winnipeg, MB",
+    "ip": "2605:59ca:1000::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.19000244140625,
+     13.6899995803833
+    ]
+   },
+   "properties": {
+    "cciso2": "SV",
+    "countryName": "El Salvador",
+    "displayName": "San Salvador, San Salvador Department",
+    "ip": "2605:59c8:7200::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -62.849998474121094,
+     17.899999618530273
+    ]
+   },
+   "properties": {
+    "cciso2": "BL",
+    "countryName": "Saint Barthelemy",
+    "displayName": "Gustavia",
+    "ip": "2605:59c0:1440::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -2152,15 +3159,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     139.69000244140625,
-     35.689998626708984
+     8.78905963897705,
+     -82.67627716064453
     ]
    },
    "properties": {
-    "cciso2": "JP",
-    "countryName": "Japan",
-    "displayName": "Tokyo",
-    "ip": "2406:2d40:3000::1",
+    "cciso2": "AQ",
+    "countryName": "Antarctica",
+    "displayName": "Antarctica",
+    "ip": "2406:2d40:4500::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -2171,566 +3178,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     28.040000915527344,
-     -26.200000762939453
+     159.9499969482422,
+     -9.430000305175781
     ]
    },
    "properties": {
-    "cciso2": "ZA",
-    "countryName": "South Africa",
-    "displayName": "Johannesburg, Gauteng",
-    "ip": "2605:59c0:6400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     35.7400016784668,
-     -6.170000076293945
-    ]
-   },
-   "properties": {
-    "cciso2": "TZ",
-    "countryName": "Tanzania",
-    "displayName": "Dodoma",
-    "ip": "2c0f:2a80:440::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     4.889999866485596,
-     52.369998931884766
-    ]
-   },
-   "properties": {
-    "cciso2": "NL",
-    "countryName": "The Netherlands",
-    "displayName": "Amsterdam, North Holland",
-    "ip": "2a0d:3344:1c80::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -170.6999969482422,
-     -14.279999732971191
-    ]
-   },
-   "properties": {
-    "cciso2": "AS",
-    "countryName": "American Samoa",
-    "displayName": "Pago Pago, Eastern District",
-    "ip": "2406:2d40:7400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -78.5199966430664,
-     -0.23000000417232513
-    ]
-   },
-   "properties": {
-    "cciso2": "EC",
-    "countryName": "Ecuador",
-    "displayName": "Quito, Pichincha",
-    "ip": "2803:9810:6280::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     6.130000114440918,
-     49.61000061035156
-    ]
-   },
-   "properties": {
-    "cciso2": "LU",
-    "countryName": "Luxembourg",
-    "displayName": "Luxembourg",
-    "ip": "2a0d:3344:1e80::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     172.97999572753906,
-     1.3300000429153442
-    ]
-   },
-   "properties": {
-    "cciso2": "KI",
-    "countryName": "Kiribati",
-    "displayName": "Tarawa, Gilbert Islands",
-    "ip": "2406:2d40:7500::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     67.01000213623047,
-     24.860000610351562
-    ]
-   },
-   "properties": {
-    "cciso2": "PK",
-    "countryName": "Pakistan",
-    "displayName": "Karachi, Sindh",
-    "ip": "2406:2d40:b000::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     55.45000076293945,
-     -20.8799991607666
-    ]
-   },
-   "properties": {
-    "cciso2": "RE",
-    "countryName": "Reunion",
-    "displayName": "Saint-Denis, Réunion",
-    "ip": "2605:59c0:5f00::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     47.97999954223633,
-     29.3700008392334
-    ]
-   },
-   "properties": {
-    "cciso2": "KW",
-    "countryName": "Kuwait",
-    "displayName": "Kuwait City, Al Asimah",
-    "ip": "2a0d:3341:c280::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     101.69000244140625,
-     3.140000104904175
-    ]
-   },
-   "properties": {
-    "cciso2": "MY",
-    "countryName": "Malaysia",
-    "displayName": "Kuala Lumpur",
-    "ip": "2406:2d40:9100::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -114.08999633789062,
-     51.04999923706055
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Calgary, AB",
-    "ip": "2605:59ca:1500::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -73.9800033569336,
-     45.380001068115234
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Pincourt, QC",
-    "ip": "2605:59c7:f00a::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     31.1299991607666,
-     -26.31999969482422
-    ]
-   },
-   "properties": {
-    "cciso2": "SZ",
-    "countryName": "Eswatini",
-    "displayName": "Mbabane, Hhohho Region",
-    "ip": "2c0f:2a80:2000::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -76.48999786376953,
-     38.97999954223633
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Annapolis, MD",
-    "ip": "2605:59c0:600::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     112.75,
-     -7.25
-    ]
-   },
-   "properties": {
-    "cciso2": "ID",
-    "countryName": "Indonesia",
-    "displayName": "Surabaya, East Java",
-    "ip": "202.65.237.1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -90.51000213623047,
-     14.640000343322754
-    ]
-   },
-   "properties": {
-    "cciso2": "GT",
-    "countryName": "Guatemala",
-    "displayName": "Guatemala City, Guatemala",
-    "ip": "2605:59c0:6000::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -59.619998931884766,
-     13.109999656677246
-    ]
-   },
-   "properties": {
-    "cciso2": "BB",
-    "countryName": "Barbados",
-    "displayName": "Bridgetown, Saint Michael",
-    "ip": "2605:59c0:1400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -62.849998474121094,
-     17.899999618530273
-    ]
-   },
-   "properties": {
-    "cciso2": "BL",
-    "countryName": "Saint Barthelemy",
-    "displayName": "Gustavia",
-    "ip": "2605:59c0:1440::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     15.979999542236328,
-     45.810001373291016
-    ]
-   },
-   "properties": {
-    "cciso2": "HR",
-    "countryName": "Croatia",
-    "displayName": "Zagreb",
-    "ip": "2a0d:3344:34c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     72.87999725341797,
-     19.06999969482422
-    ]
-   },
-   "properties": {
-    "cciso2": "IN",
-    "countryName": "India",
-    "displayName": "Mumbai, Maharashtra",
-    "ip": "2406:2d40:a000::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     33.790000915527344,
-     -13.970000267028809
-    ]
-   },
-   "properties": {
-    "cciso2": "MW",
-    "countryName": "Malawi",
-    "displayName": "Lilongwe, Central Region",
-    "ip": "2c0f:2a80:2200::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     30.059999465942383,
-     -1.9500000476837158
-    ]
-   },
-   "properties": {
-    "cciso2": "RW",
-    "countryName": "Rwanda",
-    "displayName": "Kigali",
-    "ip": "2c0f:2a80:2600::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     89.63999938964844,
-     27.469999313354492
-    ]
-   },
-   "properties": {
-    "cciso2": "BT",
-    "countryName": "Bhutan",
-    "displayName": "Thimphu, Thimphu District",
-    "ip": "2406:2d40:6200::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     44.83000183105469,
-     41.689998626708984
-    ]
-   },
-   "properties": {
-    "cciso2": "GE",
-    "countryName": "Georgia",
-    "displayName": "Tbilisi",
-    "ip": "2a0d:3344:3400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -72.33999633789062,
-     18.540000915527344
-    ]
-   },
-   "properties": {
-    "cciso2": "HT",
-    "countryName": "Haiti",
-    "displayName": "Port-au-Prince, Ouest",
-    "ip": "2803:9810:a000::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     8,
-     10
-    ]
-   },
-   "properties": {
-    "cciso2": "NG",
-    "countryName": "Nigeria",
-    "displayName": "Nigeria",
-    "ip": "2c0f:2a80:b00::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -9.130000114440918,
-     38.720001220703125
-    ]
-   },
-   "properties": {
-    "cciso2": "PT",
-    "countryName": "Portugal",
-    "displayName": "Lisbon",
-    "ip": "2a0d:3344:2100::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -63.08000183105469,
-     18.06999969482422
-    ]
-   },
-   "properties": {
-    "cciso2": "MF",
-    "countryName": "Saint Martin",
-    "displayName": "Marigot",
-    "ip": "2605:59c0:14c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -64.93000030517578,
-     18.34000015258789
-    ]
-   },
-   "properties": {
-    "cciso2": "VI",
-    "countryName": "U.S. Virgin Islands",
-    "displayName": "Charlotte Amalie, Saint Thomas Island",
-    "ip": "2605:59c0:1540::1",
+    "cciso2": "SB",
+    "countryName": "Solomon Islands",
+    "displayName": "Honiara",
+    "ip": "2406:2d40:4380::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -2760,15 +3216,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -171.77000427246094,
-     -13.829999923706055
+     120.9800033569336,
+     14.600000381469727
     ]
    },
    "properties": {
-    "cciso2": "WS",
-    "countryName": "Samoa",
-    "displayName": "Apia, Tuamasaga",
-    "ip": "2406:2d40:7580::1",
+    "cciso2": "PH",
+    "countryName": "Philippines",
+    "displayName": "Manila, National Capital Region",
+    "ip": "2406:2d40:9400::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -2779,338 +3235,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     50.59000015258789,
-     26.229999542236328
-    ]
-   },
-   "properties": {
-    "cciso2": "BH",
-    "countryName": "Bahrain",
-    "displayName": "Manama",
-    "ip": "2a0d:3344:1200::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     28.290000915527344,
-     -15.40999984741211
-    ]
-   },
-   "properties": {
-    "cciso2": "ZM",
-    "countryName": "Zambia",
-    "displayName": "Lusaka, Lusaka Province",
-    "ip": "2c0f:2a80:26c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -166.5399932861328,
-     53.88999938964844
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Dutch Harbor, AK",
-    "ip": "2605:59c7:f002::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     8.550000190734863,
-     47.369998931884766
-    ]
-   },
-   "properties": {
-    "cciso2": "CH",
-    "countryName": "Switzerland",
-    "displayName": "Zürich, ZH",
-    "ip": "2a0d:3344:1940::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     44.5099983215332,
-     40.18000030517578
-    ]
-   },
-   "properties": {
-    "cciso2": "AM",
-    "countryName": "Armenia",
-    "displayName": "Yerevan",
-    "ip": "2a0d:3344:3900::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -66.66999816894531,
-     45.95000076293945
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Fredericton, NB",
-    "ip": "2605:59c8:2b00::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -125.44999694824219,
-     49.650001525878906
-    ]
-   },
-   "properties": {
-    "cciso2": "CA",
-    "countryName": "Canada",
-    "displayName": "Vancouver Island, BC",
-    "ip": "2605:59c8:500::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -89.19000244140625,
-     13.6899995803833
-    ]
-   },
-   "properties": {
-    "cciso2": "SV",
-    "countryName": "El Salvador",
-    "displayName": "San Salvador, San Salvador Department",
-    "ip": "2605:59c8:7200::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -63.08000183105469,
-     18.06999969482422
-    ]
-   },
-   "properties": {
-    "cciso2": "MF",
-    "countryName": "Saint Martin",
-    "displayName": "Marigot",
-    "ip": "2605:59c8:64c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -0.12999999523162842,
-     51.5099983215332
-    ]
-   },
-   "properties": {
-    "cciso2": "GB",
-    "countryName": "United Kingdom",
-    "displayName": "London, ENG",
-    "ip": "2a0d:3344:300::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     13.40999984741211,
-     52.52000045776367
-    ]
-   },
-   "properties": {
-    "cciso2": "DE",
-    "countryName": "Germany",
-    "displayName": "Berlin",
-    "ip": "2a0d:3344:1500::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -118.23999786376953,
-     34.04999923706055
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Los Angeles, CA",
-    "ip": "2605:59c8:3400::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -58.380001068115234,
-     -34.61000061035156
-    ]
-   },
-   "properties": {
-    "cciso2": "AR",
-    "countryName": "Argentina",
-    "displayName": "Buenos Aires, Buenos Aires F.D.",
-    "ip": "2803:9810:33c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     23.729999542236328,
-     37.97999954223633
-    ]
-   },
-   "properties": {
-    "cciso2": "GR",
-    "countryName": "Greece",
-    "displayName": "Athens, Attica",
-    "ip": "2a0d:3344:3340::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     178.42999267578125,
-     -18.139999389648438
-    ]
-   },
-   "properties": {
-    "cciso2": "FJ",
-    "countryName": "Fiji",
-    "displayName": "Suva, Central",
-    "ip": "2406:2d40:43c0::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     19.81999969482422,
-     41.33000183105469
-    ]
-   },
-   "properties": {
-    "cciso2": "AL",
-    "countryName": "Albania",
-    "displayName": "Tirana",
-    "ip": "2a0d:3344:3440::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     1.2200000286102295,
-     6.130000114440918
-    ]
-   },
-   "properties": {
-    "cciso2": "TG",
-    "countryName": "Togo",
-    "displayName": "Lomé, Maritime",
-    "ip": "2c0f:2a80:840::1",
-    "marker-color": "#5A5A5A",
-    "marker-size": "large",
-    "title": "SpaceX Starlink"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     3.390000104904175,
-     6.449999809265137
+     8,
+     10
     ]
    },
    "properties": {
     "cciso2": "NG",
     "countryName": "Nigeria",
-    "displayName": "Lagos",
-    "ip": "2c0f:2a80:a00::1",
+    "displayName": "Nigeria",
+    "ip": "2c0f:2a80:b00::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
@@ -3121,15 +3254,53 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -82.0315,
-     29.7861
+     30.059999465942383,
+     -1.9500000476837158
     ]
    },
    "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Keystone Heights, FL",
-    "ip": "2605:59c0:16c0::1",
+    "cciso2": "RW",
+    "countryName": "Rwanda",
+    "displayName": "Kigali",
+    "ip": "2a0d:3344:1280::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.01000213623047,
+     24.860000610351562
+    ]
+   },
+   "properties": {
+    "cciso2": "PK",
+    "countryName": "Pakistan",
+    "displayName": "Karachi, Sindh",
+    "ip": "2406:2d40:b000::1",
+    "marker-color": "#5A5A5A",
+    "marker-size": "large",
+    "title": "SpaceX Starlink"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9800033569336,
+     45.380001068115234
+    ]
+   },
+   "properties": {
+    "cciso2": "CA",
+    "countryName": "Canada",
+    "displayName": "Pincourt, QC",
+    "ip": "2605:59c7:f00a::1",
     "marker-color": "#5A5A5A",
     "marker-size": "large",
     "title": "SpaceX Starlink"
