@@ -38,4 +38,4 @@ The *code* is licensed under the [MIT License](https://choosealicense.com/licens
 
 ## All rights reserved
 
-Fastah™ is a trademark of Blackbuck Computing, Inc., a Delaware corporation. Contact us at support@getfastah.com. 
+Fastah is a trademark of Fastah Inc. Contact us at support@getfastah.com. 
