@@ -1,13 +1,13 @@
-# StarWatch by Fastah™
+# Satellite Internet tools
 
-Detecting a Starlink® user's geolocation using SpaceX's IP address public data feeds: https://starwatch.getfastah.com
+Detecting a Starlink user's geolocation using SpaceX's IP address public data feeds: https://starwatch.getfastah.com
 
 
 ## Introduction
 
-The [StarWatch project by Fastah™](https://starwatch.getfastah.com) is a web-based tool that helps [Starlink](https://www.starlink.com) (and soon Viasat) satellite internet users detect whether their IP address is being correctly advertised for geolocation by Starlink's public IP Geolocation data feeds. This tool is useful for Starlink users who are experiencing issues with geolocation-based services, such as streaming services, online banking, and other services that rely on accurate geolocation data.
+The [Starlink by Fastah](https://starlink.getfastah.com) is a web-based tool that helps [Starlink](https://www.starlink.com) (and Viasat) satellite internet users detect whether their IP address is being correctly advertised for geolocation by Starlink's public IP Geolocation data feeds. This tool is useful for Starlink users who are experiencing issues with geolocation-based services, such as streaming services, online banking, and other services that rely on accurate geolocation data.
 
-This tool is made by Fastah™, a startup that builds software API tools to help developers use IP-based geolocation and security quickly and accurately. 
+This tool is made by Fastah, a startup that builds software API tools to help developers use IP-based geolocation and security quickly and accurately. 
 
 This project is *not* supported or endorsed by SpaceX, Starlink, or any satellite internet service in any way. All data is sourced from publicly available data feeds provided by SpaceX and Viasat using the [RFC8805 internet standard](https://www.rfc-editor.org/rfc/rfc8805).
 
@@ -21,7 +21,7 @@ In an upcoming release, we will allow StarWatch users to flag wrong data based o
 
 ## How to use
 
-1. Visit StarWatch: <https://starwatch.getfastah.com>
+1. Visit the app: <https://starlink.getfastah.com>
 2. Let the web app scan your public ISP-assigned IP address; Fastah's API web service to lookup IP-bsaed geolocation without storing any personally-identifiable information.
 3. Enjoy looking at your Starlink-advertised geolocation on the world map. 
 4. if you aren't browsing using Starlink connection, you are allowed to simulate an Starlink IP address by clicking "Simulate Starlink IP" button, and see your simulated geolocation on the map.
@@ -32,7 +32,7 @@ In an upcoming release, we will allow StarWatch users to flag wrong data based o
 2. SpaceX and Starlink are trademarks of SpaceX, Inc. Viasat is a trademark of Viasat, Inc.
 
 ## License
-Most *data* files in [StarWatch Github repository](https://github.com/fastah/starwatch/) are built from public domain sources, so they are licensed under Creative Commons Attribution Share Alike 4.0 International ([CC BY-SA 4.0](https://choosealicense.com/licenses/cc-by-sa-4.0/)). 
+Most *data* files in [this Github repository](https://github.com/fastah/space/) are built from public domain sources, so they are licensed under Creative Commons Attribution Share Alike 4.0 International ([CC BY-SA 4.0](https://choosealicense.com/licenses/cc-by-sa-4.0/)). 
 
 The *code* is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
