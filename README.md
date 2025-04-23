@@ -1,6 +1,6 @@
 # Satellite Internet tools
 
-Detecting a Starlink user's geolocation using SpaceX's IP address public data feeds: https://starwatch.getfastah.com
+Detecting a Starlink user's geolocation using SpaceX's IP address public data feeds: https://starlink.getfastah.com
 
 
 ## Introduction
@@ -17,7 +17,7 @@ This project is *not* supported or endorsed by SpaceX, Starlink, or any satellit
 
 We use Fastah's IP-based Geolocation API ([AWS](https://aws.amazon.com/marketplace/pp/B084VR96P3), [Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/fastah.ip_location_api_01)) to detect the geolocation of your IP address using the raw underlying data provided by SpaceX and Viasat themselves. Both SpaceX and Viasat provide [RFC8805 internet standard](https://www.rfc-editor.org/rfc/rfc8805) feeds in the public domain so that app developers and network operators build services such as Netflix, Prime Video, online shopping, and banking services more efficiently and securely. 
 
-In an upcoming release, we will allow StarWatch users to flag wrong data based on real (GPS) location of the user. This will help SpaceX and Viasat improve their geolocation data feeds and make the internet a better place for everyone.
+In an upcoming release, we will allow the app's users to flag wrong data based on real (GPS) location of the user. This will help SpaceX and Viasat improve their geolocation data feeds and make the internet a better place for everyone.
 
 ## How to use
 
