@@ -5,82 +5,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     8.680000305175781,
-     50.119998931884766
-    ]
-   },
-   "properties": {
-    "cciso2": "DE",
-    "countryName": "Germany",
-    "displayName": "Frankfurt am Main, Hesse",
-    "ip": "75.104.163.129",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     135,
-     -25
-    ]
-   },
-   "properties": {
-    "cciso2": "AU",
-    "countryName": "Australia",
-    "displayName": "Australia",
-    "ip": "103.217.100.33",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -99.19999694824219,
-     19.43000030517578
-    ]
-   },
-   "properties": {
-    "cciso2": "MX",
-    "countryName": "Mexico",
-    "displayName": "Miguel Hidalgo, Mexico City",
-    "ip": "213.209.183.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -0.7599999904632568,
-     51.290000915527344
-    ]
-   },
-   "properties": {
-    "cciso2": "GB",
-    "countryName": "United Kingdom",
-    "displayName": "Farnborough, ENG",
-    "ip": "75.104.163.161",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      2,
      46
     ]
@@ -90,272 +14,6 @@
     "countryName": "France",
     "displayName": "France",
     "ip": "185.15.34.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     80.75,
-     7.75
-    ]
-   },
-   "properties": {
-    "cciso2": "LK",
-    "countryName": "Sri Lanka",
-    "displayName": "Sri Lanka",
-    "ip": "184.63.131.9",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     16.3700008392334,
-     48.209999084472656
-    ]
-   },
-   "properties": {
-    "cciso2": "AT",
-    "countryName": "Austria",
-    "displayName": "Vienna",
-    "ip": "37.1.187.225",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     4.349999904632568,
-     50.849998474121094
-    ]
-   },
-   "properties": {
-    "cciso2": "BE",
-    "countryName": "Belgium",
-    "displayName": "Brussels, Brussels Capital",
-    "ip": "37.1.188.129",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -80.19000244140625,
-     25.770000457763672
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Miami, FL",
-    "ip": "8.17.109.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     55.310001373291016,
-     25.079999923706055
-    ]
-   },
-   "properties": {
-    "cciso2": "AE",
-    "countryName": "United Arab Emirates",
-    "displayName": "Dubai",
-    "ip": "103.217.100.113",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -73.25,
-     4
-    ]
-   },
-   "properties": {
-    "cciso2": "CO",
-    "countryName": "Colombia",
-    "displayName": "Colombia",
-    "ip": "198.45.243.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     13.1899995803833,
-     32.88999938964844
-    ]
-   },
-   "properties": {
-    "cciso2": "LY",
-    "countryName": "Libya",
-    "displayName": "Tripoli",
-    "ip": "165.220.235.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     121.45999908447266,
-     25.059999465942383
-    ]
-   },
-   "properties": {
-    "cciso2": "TW",
-    "countryName": "Taiwan",
-    "displayName": "New Taipei City, Taipei",
-    "ip": "103.217.100.49",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -117.3499984741211,
-     33.15999984741211
-    ]
-   },
-   "properties": {
-    "cciso2": "US",
-    "countryName": "United States",
-    "displayName": "Carlsbad, CA",
-    "ip": "75.104.163.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     112.5,
-     2.5
-    ]
-   },
-   "properties": {
-    "cciso2": "MY",
-    "countryName": "Malaysia",
-    "displayName": "Malaysia",
-    "ip": "103.217.100.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -55,
-     -10
-    ]
-   },
-   "properties": {
-    "cciso2": "BR",
-    "countryName": "Brazil",
-    "displayName": "Brazil",
-    "ip": "190.98.181.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -90.51000213623047,
-     14.640000343322754
-    ]
-   },
-   "properties": {
-    "cciso2": "GT",
-    "countryName": "Guatemala",
-    "displayName": "Guatemala City, Guatemala",
-    "ip": "198.45.242.81",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     21.010000228881836,
-     52.22999954223633
-    ]
-   },
-   "properties": {
-    "cciso2": "PL",
-    "countryName": "Poland",
-    "displayName": "Warsaw, Mazovia",
-    "ip": "165.220.235.25",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -9.130000114440918,
-     38.720001220703125
-    ]
-   },
-   "properties": {
-    "cciso2": "PT",
-    "countryName": "Portugal",
-    "displayName": "Lisbon",
-    "ip": "185.15.34.129",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -385,15 +43,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -86.5,
-     15
+     112.5,
+     2.5
     ]
    },
    "properties": {
-    "cciso2": "HN",
-    "countryName": "Honduras",
-    "displayName": "Honduras",
-    "ip": "198.45.242.49",
+    "cciso2": "MY",
+    "countryName": "Malaysia",
+    "displayName": "Malaysia",
+    "ip": "103.217.100.1",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -404,15 +62,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     5.730000019073486,
-     58.970001220703125
+     80.75,
+     7.75
     ]
    },
    "properties": {
-    "cciso2": "NO",
-    "countryName": "Norway",
-    "displayName": "Stavanger, Rogaland",
-    "ip": "165.220.235.49",
+    "cciso2": "LK",
+    "countryName": "Sri Lanka",
+    "displayName": "Sri Lanka",
+    "ip": "184.63.131.9",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -423,15 +81,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     23.729999542236328,
-     37.97999954223633
+     8.680000305175781,
+     50.119998931884766
     ]
    },
    "properties": {
-    "cciso2": "GR",
-    "countryName": "Greece",
-    "displayName": "Athens, Attica",
-    "ip": "185.84.124.1",
+    "cciso2": "DE",
+    "countryName": "Germany",
+    "displayName": "Frankfurt am Main, Hesse",
+    "ip": "75.104.163.129",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -442,15 +100,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     43.499900817871094,
-     41.99998092651367
+     13.1899995803833,
+     32.88999938964844
     ]
    },
    "properties": {
-    "cciso2": "GE",
-    "countryName": "Georgia",
-    "displayName": "Georgia",
-    "ip": "37.1.188.201",
+    "cciso2": "LY",
+    "countryName": "Libya",
+    "displayName": "Tripoli",
+    "ip": "165.220.235.1",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -480,6 +138,63 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -73.25,
+     4
+    ]
+   },
+   "properties": {
+    "cciso2": "CO",
+    "countryName": "Colombia",
+    "displayName": "Colombia",
+    "ip": "198.45.243.1",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     135,
+     -25
+    ]
+   },
+   "properties": {
+    "cciso2": "AU",
+    "countryName": "Australia",
+    "displayName": "Australia",
+    "ip": "103.217.100.33",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.684,
+     40.4172
+    ]
+   },
+   "properties": {
+    "cciso2": "ES",
+    "countryName": "Spain",
+    "displayName": "Spain",
+    "ip": "165.220.244.65",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -4,
      40
     ]
@@ -499,15 +214,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.690000057220459,
-     45.06999969482422
+     5.730000019073486,
+     58.970001220703125
     ]
    },
    "properties": {
-    "cciso2": "IT",
-    "countryName": "Italy",
-    "displayName": "Turin, Piedmont",
-    "ip": "185.84.126.1",
+    "cciso2": "NO",
+    "countryName": "Norway",
+    "displayName": "Stavanger, Rogaland",
+    "ip": "165.220.235.49",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -518,15 +233,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     6.166669845581055,
-     49.75
+     -9.130000114440918,
+     38.720001220703125
     ]
    },
    "properties": {
-    "cciso2": "LU",
-    "countryName": "Luxembourg",
-    "displayName": "Luxembourg",
-    "ip": "37.1.188.145",
+    "cciso2": "PT",
+    "countryName": "Portugal",
+    "displayName": "Lisbon",
+    "ip": "185.15.34.129",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -537,15 +252,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     5.75,
-     52.25
+     121.45999908447266,
+     25.059999465942383
     ]
    },
    "properties": {
-    "cciso2": "NL",
-    "countryName": "The Netherlands",
-    "displayName": "The Netherlands",
-    "ip": "213.209.181.1",
+    "cciso2": "TW",
+    "countryName": "Taiwan",
+    "displayName": "New Taipei City, Taipei",
+    "ip": "103.217.100.49",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -556,15 +271,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     33.36000061035156,
-     35.18000030517578
+     -99.19999694824219,
+     19.43000030517578
     ]
    },
    "properties": {
-    "cciso2": "CY",
-    "countryName": "Cyprus",
-    "displayName": "Nicosia",
-    "ip": "165.220.233.161",
+    "cciso2": "MX",
+    "countryName": "Mexico",
+    "displayName": "Miguel Hidalgo, Mexico City",
+    "ip": "213.209.183.1",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -575,53 +290,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.979999542236328,
-     45.810001373291016
+     -55,
+     -10
     ]
    },
    "properties": {
-    "cciso2": "HR",
-    "countryName": "Croatia",
-    "displayName": "Zagreb",
-    "ip": "165.220.235.97",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     20.079999923706055,
-     41.11000061035156
-    ]
-   },
-   "properties": {
-    "cciso2": "AL",
-    "countryName": "Albania",
-    "displayName": "Elbasan, Elbasan County",
-    "ip": "165.220.248.1",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     45,
-     25
-    ]
-   },
-   "properties": {
-    "cciso2": "SA",
-    "countryName": "Saudi Arabia",
-    "displayName": "Saudi Arabia",
-    "ip": "184.63.131.1",
+    "cciso2": "BR",
+    "countryName": "Brazil",
+    "displayName": "Brazil",
+    "ip": "190.98.181.1",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -651,34 +328,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     6.630000114440918,
-     46.52000045776367
+     23.729999542236328,
+     37.97999954223633
     ]
    },
    "properties": {
-    "cciso2": "CH",
-    "countryName": "Switzerland",
-    "displayName": "Lausanne, VD",
-    "ip": "165.220.235.65",
-    "marker-color": "#009FE3",
-    "marker-size": "large",
-    "title": "Viasat"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     14.420000076293945,
-     50.09000015258789
-    ]
-   },
-   "properties": {
-    "cciso2": "CZ",
-    "countryName": "Czechia",
-    "displayName": "Prague",
-    "ip": "165.220.241.1",
+    "cciso2": "GR",
+    "countryName": "Greece",
+    "displayName": "Athens, Attica",
+    "ip": "185.84.124.1",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -708,15 +366,34 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     26,
-     64
+     5.75,
+     52.25
     ]
    },
    "properties": {
-    "cciso2": "FI",
-    "countryName": "Finland",
-    "displayName": "Finland",
-    "ip": "165.220.148.249",
+    "cciso2": "NL",
+    "countryName": "The Netherlands",
+    "displayName": "The Netherlands",
+    "ip": "213.209.181.1",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     45,
+     25
+    ]
+   },
+   "properties": {
+    "cciso2": "SA",
+    "countryName": "Saudi Arabia",
+    "displayName": "Saudi Arabia",
+    "ip": "184.63.131.1",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -736,6 +413,310 @@
     "countryName": "Sri Lanka",
     "displayName": "Sri Lanka",
     "ip": "184.63.129.249",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.19000244140625,
+     25.770000457763672
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Miami, FL",
+    "ip": "8.17.109.1",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.010000228881836,
+     52.22999954223633
+    ]
+   },
+   "properties": {
+    "cciso2": "PL",
+    "countryName": "Poland",
+    "displayName": "Warsaw, Mazovia",
+    "ip": "165.220.235.25",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.420000076293945,
+     50.09000015258789
+    ]
+   },
+   "properties": {
+    "cciso2": "CZ",
+    "countryName": "Czechia",
+    "displayName": "Prague",
+    "ip": "165.220.241.1",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.979999542236328,
+     45.810001373291016
+    ]
+   },
+   "properties": {
+    "cciso2": "HR",
+    "countryName": "Croatia",
+    "displayName": "Zagreb",
+    "ip": "165.220.235.97",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -117.3499984741211,
+     33.15999984741211
+    ]
+   },
+   "properties": {
+    "cciso2": "US",
+    "countryName": "United States",
+    "displayName": "Carlsbad, CA",
+    "ip": "75.104.163.1",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.5,
+     48.66667175292969
+    ]
+   },
+   "properties": {
+    "cciso2": "SK",
+    "countryName": "Slovakia",
+    "displayName": "Slovakia",
+    "ip": "165.220.240.1",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.166669845581055,
+     49.75
+    ]
+   },
+   "properties": {
+    "cciso2": "LU",
+    "countryName": "Luxembourg",
+    "displayName": "Luxembourg",
+    "ip": "37.1.188.145",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -90.51000213623047,
+     14.640000343322754
+    ]
+   },
+   "properties": {
+    "cciso2": "GT",
+    "countryName": "Guatemala",
+    "displayName": "Guatemala City, Guatemala",
+    "ip": "198.45.242.81",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     33.36000061035156,
+     35.18000030517578
+    ]
+   },
+   "properties": {
+    "cciso2": "CY",
+    "countryName": "Cyprus",
+    "displayName": "Nicosia",
+    "ip": "165.220.233.161",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     43.499900817871094,
+     41.99998092651367
+    ]
+   },
+   "properties": {
+    "cciso2": "GE",
+    "countryName": "Georgia",
+    "displayName": "Georgia",
+    "ip": "37.1.188.201",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     20.079999923706055,
+     41.11000061035156
+    ]
+   },
+   "properties": {
+    "cciso2": "AL",
+    "countryName": "Albania",
+    "displayName": "Elbasan, Elbasan County",
+    "ip": "165.220.248.1",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.690000057220459,
+     45.06999969482422
+    ]
+   },
+   "properties": {
+    "cciso2": "IT",
+    "countryName": "Italy",
+    "displayName": "Turin, Piedmont",
+    "ip": "185.84.126.1",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8,
+     31.6299991607666
+    ]
+   },
+   "properties": {
+    "cciso2": "MA",
+    "countryName": "Morocco",
+    "displayName": "Marrakesh, Marrakesh-Safi",
+    "ip": "165.220.244.33",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.3700008392334,
+     48.209999084472656
+    ]
+   },
+   "properties": {
+    "cciso2": "AT",
+    "countryName": "Austria",
+    "displayName": "Vienna",
+    "ip": "37.1.187.225",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.630000114440918,
+     46.52000045776367
+    ]
+   },
+   "properties": {
+    "cciso2": "CH",
+    "countryName": "Switzerland",
+    "displayName": "Lausanne, VD",
+    "ip": "165.220.235.65",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.5,
+     15
+    ]
+   },
+   "properties": {
+    "cciso2": "HN",
+    "countryName": "Honduras",
+    "displayName": "Honduras",
+    "ip": "198.45.242.49",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -784,15 +765,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -8,
-     31.6299991607666
+     -0.7599999904632568,
+     51.290000915527344
     ]
    },
    "properties": {
-    "cciso2": "MA",
-    "countryName": "Morocco",
-    "displayName": "Marrakesh, Marrakesh-Safi",
-    "ip": "165.220.244.33",
+    "cciso2": "GB",
+    "countryName": "United Kingdom",
+    "displayName": "Farnborough, ENG",
+    "ip": "75.104.163.161",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
@@ -803,15 +784,53 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     19.5,
-     48.66667175292969
+     4.349999904632568,
+     50.849998474121094
     ]
    },
    "properties": {
-    "cciso2": "SK",
-    "countryName": "Slovakia",
-    "displayName": "Slovakia",
-    "ip": "165.220.240.1",
+    "cciso2": "BE",
+    "countryName": "Belgium",
+    "displayName": "Brussels, Brussels Capital",
+    "ip": "37.1.188.129",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     26,
+     64
+    ]
+   },
+   "properties": {
+    "cciso2": "FI",
+    "countryName": "Finland",
+    "displayName": "Finland",
+    "ip": "165.220.148.249",
+    "marker-color": "#009FE3",
+    "marker-size": "large",
+    "title": "Viasat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     55.310001373291016,
+     25.079999923706055
+    ]
+   },
+   "properties": {
+    "cciso2": "AE",
+    "countryName": "United Arab Emirates",
+    "displayName": "Dubai",
+    "ip": "103.217.100.113",
     "marker-color": "#009FE3",
     "marker-size": "large",
     "title": "Viasat"
